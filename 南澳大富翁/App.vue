@@ -8,6 +8,7 @@
     },
     onHide: function () {
       console.log('App Hide');
+      复活复活
     },
   };
 </script>
