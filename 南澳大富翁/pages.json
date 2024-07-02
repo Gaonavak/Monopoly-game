@@ -1,0 +1,27 @@
+{
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "南澳大富翁",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "background": "#efeff4"
+        }
+    },
+    
+  "pages": [
+    {
+      "path": "pages/Interaction/interaction",
+      "style": {
+          "navigationBarTextStyle": "black"
+      }
+    },
+    {
+        "path" : "pages/Home/home/home",
+        "style" : 
+        {
+            "navigationBarTitleText" : ""
+        }
+    }
+  ]
+}
