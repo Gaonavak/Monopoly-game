@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/Home/home",
+    "pages/Interaction/interaction",
+    "pages/Person/person"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "南澳大富翁",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}
