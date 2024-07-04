@@ -89,9 +89,9 @@
 <style lang="scss" scoped>
     .user {
         min-height: 100vh;
-        background-color: #F7F7F7;
-
+        background-color: $page-bg-color;
         .user_info {
+            width: 690rpx;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -104,7 +104,7 @@
                 .avatar {
                     width: 120rpx;
                     height: 120rpx;
-                    border: 3px solid #fff;
+                    border: 3px solid $border-color;
                     border-radius: 50%;
                     overflow: hidden;
 
@@ -112,7 +112,6 @@
                         width: 100%;
                         height: 100%;
                     }
-
                 }
 
                 .info {
@@ -125,7 +124,7 @@
                     .description {
                         padding-top: 10rpx;
                         font-size: 26rpx;
-                        color: #999;
+                        color: $text-font-color-subheading;
                     }
                 }
 
@@ -137,7 +136,7 @@
                 align-items: center;
 
                 .text {
-                    color: #999;
+                    color: $text-font-color-subheading;
                 }
 
                 .icon {}
@@ -146,7 +145,7 @@
 
         .card {
             width: 690rpx;
-            background: #fff;
+            background: $page-bg-card;
             border-radius: 20rpx;
             margin: 0 auto 30rpx auto;
 
@@ -161,20 +160,19 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-
                 }
             }
         }
 
         .cardLayout {
             width: 690rpx;
-            background: #fff;
+            background: $page-bg-card;
             border-radius: 20rpx;
             margin: 30px auto;
 
             .list {
                 padding: 10rpx;
-                border-bottom: 1px solid #efefef;
+                border-bottom: 1px solid $border-color;
 
                 .item {
                     display: flex;
@@ -192,10 +190,6 @@
                             height: 50rpx;
                             overflow: hidden;
 
-                            image {
-                                width: 100%;
-                                height: 100%;
-                            }
                         }
 
                         .text {
@@ -213,7 +207,6 @@
                     }
                 }
             }
-
         }
     }
 </style>
