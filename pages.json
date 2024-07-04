@@ -1,47 +1,56 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		},
-		{
-		    "path" : "pages/user/user",
-		    "style" : 
-		    {
-		        "navigationBarTitleText" : "user"
-		    }
-		},
-		{
-		    "path" : "pages/rank/rank",
-		    "style" : 
-		    {
-		        "navigationBarTitleText" : "rank"
-		    }
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
+    "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "首页"
+            }
+        },
+        {
+            "path": "pages/user/user",
+            "style": {
+                "navigationBarTitleText": "用户中心"
+            }
+        },
+        {
+            "path": "pages/rank/rank",
+            "style": {
+                "navigationBarTitleText": "排行榜"
+            }
+        },
+        {
+            "path": "pages/store/store",
+            "style": {
+                "navigationBarTitleText": "商店"
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
     "tabBar": {
-        "list": [
-            {
-                "text": "Home",
+        "list": [{
+                "text": "首页",
                 "pagePath": "pages/index/index",
                 "iconPath": "static/tabBar/home.svg",
                 "selectedIconPath": "static/tabBar/home-filled.svg"
             },
             {
-                "text": "User",
+                "text": "商店",
+                "pagePath": "pages/store/store",
+                "iconPath": "static/tabBar/store.svg",
+                "selectedIconPath": "static/tabBar/store-filled.svg"
+            },
+            {
+                "text": "用户中心",
                 "pagePath": "pages/user/user",
                 "iconPath": "static/tabBar/user.svg",
                 "selectedIconPath": "static/tabBar/user-filled.svg"
             }
         ]
     },
-	"uniIdRouter": {}
+    "uniIdRouter": {}
 }

@@ -90,6 +90,7 @@
     .user {
         min-height: 100vh;
         background-color: $page-bg-color;
+
         .user_info {
             width: 690rpx;
             display: flex;
