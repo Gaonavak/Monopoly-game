@@ -35,7 +35,7 @@
         </view>
 
         <!-- 菜单列表 -->
-        <view class="cardLayout">
+        <view class="cardList">
             <view class="list" v-for="item in centerList" :key="item.title">
                 <view class="item">
                     <view class="left">
@@ -212,7 +212,7 @@
             }
         }
 
-        .cardLayout {
+        .cardList {
             width: 100%;
             max-width: 690rpx;
             background: $page-bg-card;
@@ -238,6 +238,7 @@
                         align-items: center;
 
                         .icon {
+                            padding-top: 15rpx;
                             padding-left: 30rpx;
                             width: 50rpx;
                             height: 50rpx;
