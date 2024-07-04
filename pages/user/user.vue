@@ -1,21 +1,23 @@
 <template>
     <view class="user">
         <!-- 用户的信息 -->
-        <view class="user_info">
-            <view class="left">
-                <view class="avatar">
-                    <image src="../../static/logo.png" mode=""></image>
+        <view class="card_user">
+            <view class="user_info">
+                <view class="left">
+                    <view class="avatar">
+                        <image src="../../static/logo.png" mode=""></image>
+                    </view>
+                    <view class="info">
+                        <view class="name">用户名</view>
+                        <view class="description">用户注册了 n 天</view>
+                    </view>
                 </view>
-                <view class="info">
-                    <view class="name">用户名</view>
-                    <view class="description">用户注册了 n 天</view>
-                </view>
-            </view>
 
-            <view class="right">
-                <view class="text">编辑资料</view>
-                <view class="icon">
-                    <uni-icons type="right" size="30" color="#999"></uni-icons>
+                <view class="right">
+                    <view class="text">编辑资料</view>
+                    <view class="icon">
+                        <uni-icons type="right" size="30" color="#999"></uni-icons>
+                    </view>
                 </view>
             </view>
         </view>
@@ -88,71 +90,84 @@
 
 <style lang="scss" scoped>
     .user {
-        min-height: 100vh;
         background-color: $page-bg-color;
+        min-height: 100vh;
+        padding-bottom: 20rpx;
+        align-items: center;
 
-        .user_info {
-            width: 690rpx;
+        .card_user {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 50rpx;
+            justify-content: space-between;
 
-            .left {
+            width: 690rpx;
+            background-color: $page-bg-color;
+            margin: 0 auto;
+            padding: 40rpx;
+
+            .user_info {
+                width: 100%;
+                padding: 30rpx;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
 
-                .avatar {
-                    width: 120rpx;
-                    height: 120rpx;
-                    border: 3px solid $border-color;
-                    border-radius: 50%;
-                    overflow: hidden;
 
-                    image {
-                        width: 100%;
-                        height: 100%;
+                .left {
+                    display: flex;
+                    align-items: center;
+
+                    .avatar {
+                        width: 120rpx;
+                        height: 120rpx;
+                        border: 3px solid $border-color;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        image {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .info {
+                        padding-left: 20rpx;
+
+                        .name {
+                            font-size: 38rpx;
+                        }
+
+                        .description {
+                            padding-top: 10rpx;
+                            font-size: 26rpx;
+                            color: $text-font-color-subheading;
+                        }
                     }
                 }
 
-                .info {
-                    padding-left: 20rpx;
+                .right {
+                    display: flex;
+                    align-items: center;
 
-                    .name {
-                        font-size: 38rpx;
-                    }
-
-                    .description {
-                        padding-top: 10rpx;
-                        font-size: 26rpx;
+                    .text {
                         color: $text-font-color-subheading;
                     }
+
+                    .icon {}
                 }
-
-
-            }
-
-            .right {
-                display: flex;
-                align-items: center;
-
-                .text {
-                    color: $text-font-color-subheading;
-                }
-
-                .icon {}
             }
         }
 
         .card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
             width: 690rpx;
             background: $page-bg-card;
             border-radius: 20rpx;
             margin: 0 auto 30rpx auto;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
 
             .list {
                 padding: 30rpx 50rpx;
