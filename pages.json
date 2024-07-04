@@ -12,6 +12,13 @@
 		    {
 		        "navigationBarTitleText" : "user"
 		    }
+		},
+		{
+		    "path" : "pages/rank/rank",
+		    "style" : 
+		    {
+		        "navigationBarTitleText" : "rank"
+		    }
 		}
 	],
 	"globalStyle": {
