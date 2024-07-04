@@ -5,7 +5,7 @@
             <view class="user_info">
                 <view class="left">
                     <view class="avatar">
-                        <image src="../../static/logo.png" mode=""></image>
+                        <image src="../../static/logo.png" mode="aspectFit" class="image"></image>
                     </view>
                     <view class="info">
                         <view class="name">用户名</view>
@@ -16,7 +16,7 @@
                 <view class="right">
                     <view class="text">编辑资料</view>
                     <view class="icon">
-                        <uni-icons type="right" size="30" color="#999"></uni-icons>
+                        <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
                     </view>
                 </view>
             </view>
@@ -27,13 +27,12 @@
             <view class="list" v-for="item in tripList" :key="item.title">
                 <view class="item">
                     <view class="icon">
-                        <uni-icons :type="item.type" size="30"></uni-icons>
+                        <image :src="item.type" mode="aspectFit" class="image"></image>
                     </view>
                     <view class="text">{{item.title}}</view>
                 </view>
             </view>
         </view>
-
 
         <!-- 菜单列表 -->
         <view class="cardLayout">
@@ -41,14 +40,14 @@
                 <view class="item">
                     <view class="left">
                         <view class="icon">
-                            <uni-icons :type="item.type" size="30"></uni-icons>
+                            <image :src="item.type" mode="aspectFit" class="image"></image>
                         </view>
                         <view class="text">{{item.title}}</view>
                     </view>
 
                     <view class="right">
                         <view class="icon">
-                            <uni-icons type="right" size="30" color="#999"></uni-icons>
+                            <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
                         </view>
                     </view>
                 </view>
@@ -60,50 +59,62 @@
 <script setup>
     import {
         ref
-    } from "vue"
+    } from 'vue';
 
     const centerList = ref([{
-        "title": "用户反馈",
-        "type": "email"
-    }, {
-        "title": "关于我们",
-        "type": "info"
-    }, {
-        "title": "联系我们",
-        "type": "personadd"
-    }, {
-        "title": "清除缓存",
-        "type": "trash"
-    }])
+            title: '用户反馈',
+            type: '../../static/user/phone.png'
+        },
+        {
+            title: '关于我们',
+            type: '../../static/user/info.png'
+        },
+        {
+            title: '联系我们',
+            type: '../../static/user/personadd.png'
+        },
+        {
+            title: '清除缓存',
+            type: '../../static/user/trash.png'
+        },
+    ]);
 
     const tripList = ref([{
-        "title": "打卡点",
-        "type": "flag"
-    }, {
-        "title": "足迹",
-        "type": "map"
-    }, {
-        "title": "收藏",
-        "type": "flag"
-    }])
+            title: '打卡点',
+            type: '../../static/user/flag.png'
+        },
+        {
+            title: '足迹',
+            type: '../../static/user/map.png'
+        },
+        {
+            title: '收藏',
+            type: '../../static/user/star.png'
+        },
+    ]);
 </script>
 
 <style lang="scss" scoped>
     .user {
-        background-color: $page-bg-color;
+        width: 100%;
+        height: 100%;
         min-height: 100vh;
+        background-color: $page-bg-color;
         padding-bottom: 20rpx;
+        display: flex;
+        flex-direction: column;
         align-items: center;
 
         .card_user {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            width: 690rpx;
+            width: 100%;
+            max-width: 690rpx;
             background-color: $page-bg-color;
             margin: 0 auto;
             padding: 40rpx;
+            border-radius: 20rpx;
 
             .user_info {
                 width: 100%;
@@ -111,7 +122,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-
 
                 .left {
                     display: flex;
@@ -124,9 +134,10 @@
                         border-radius: 50%;
                         overflow: hidden;
 
-                        image {
+                        .image {
                             width: 100%;
                             height: 100%;
+                            object-fit: cover;
                         }
                     }
 
@@ -151,9 +162,20 @@
 
                     .text {
                         color: $text-font-color-subheading;
+                        margin-right: 10rpx;
+                        /* 确保文本和图标之间有间隔 */
                     }
 
-                    .icon {}
+                    .icon {
+                        width: 50rpx;
+                        height: 50rpx;
+
+                        .image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }
@@ -162,12 +184,11 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-
-            width: 690rpx;
+            width: 100%;
+            max-width: 690rpx;
             background: $page-bg-card;
             border-radius: 20rpx;
             margin: 0 auto 30rpx auto;
-
 
             .list {
                 padding: 30rpx 50rpx;
@@ -176,12 +197,24 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+
+                    .icon {
+                        width: 50rpx;
+                        height: 50rpx;
+
+                        .image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
                 }
             }
         }
 
         .cardLayout {
-            width: 690rpx;
+            width: 100%;
+            max-width: 690rpx;
             background: $page-bg-card;
             border-radius: 20rpx;
             margin: 30px auto;
@@ -189,6 +222,10 @@
             .list {
                 padding: 10rpx;
                 border-bottom: 1px solid $border-color;
+
+                &:last-child {
+                    border: none;
+                }
 
                 .item {
                     display: flex;
@@ -206,6 +243,11 @@
                             height: 50rpx;
                             overflow: hidden;
 
+                            .image {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
                         }
 
                         .text {
@@ -218,8 +260,16 @@
                         display: flex;
                         align-items: center;
 
-                        .icon {}
+                        .icon {
+                            width: 50rpx;
+                            height: 50rpx;
 
+                            .image {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
                     }
                 }
             }
