@@ -181,6 +181,8 @@
                         .icon {
                             width: 50rpx;
                             height: 50rpx;
+                            // 偏移，使箭头居中
+                            padding-top: 15rpx;
 
                             .image {
                                 width: 100%;
@@ -283,6 +285,9 @@
                                 width: 50rpx;
                                 height: 50rpx;
                                 min-width: 50rpx;
+                                padding-right: 20rpx;
+                                // 偏移，使箭头居中
+                                padding-top: 15rpx;
 
                                 .image {
                                     width: 100%;
