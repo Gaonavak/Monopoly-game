@@ -65,20 +65,20 @@
         "list": [{
                 "text": "首页",
                 "pagePath": "pages/index/index",
-                "iconPath": "static/tabBar/home.svg",
-                "selectedIconPath": "static/tabBar/home-filled.svg"
+                "iconPath": "static/tabBar/home.png",
+                "selectedIconPath": "static/tabBar/home-filled.png"
             },
             {
                 "text": "商店",
                 "pagePath": "pages/store/store",
-                "iconPath": "static/tabBar/store.svg",
-                "selectedIconPath": "static/tabBar/store-filled.svg"
+                "iconPath": "static/tabBar/cart.png",
+                "selectedIconPath": "static/tabBar/cart-filled.png"
             },
             {
                 "text": "用户中心",
                 "pagePath": "pages/user/user",
-                "iconPath": "static/tabBar/user.svg",
-                "selectedIconPath": "static/tabBar/user-filled.svg"
+                "iconPath": "static/tabBar/person.png",
+                "selectedIconPath": "static/tabBar/person-filled.png"
             }
         ]
     },
