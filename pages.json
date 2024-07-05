@@ -13,24 +13,54 @@
             }
         },
         {
-            "path": "pages/rank/rank",
-            "style": {
-                "navigationBarTitleText": "排行榜"
-            }
-        },
-        {
             "path": "pages/store/store",
             "style": {
                 "navigationBarTitleText": "商店"
             }
         }
     ],
+    "subPackages": [{
+        "root": "pages_user",
+        "pages": [{
+                "path": "edit",
+                "style": {
+                    "navigationBarTitleText": "编辑"
+                }
+            },
+            {
+                "path": "about",
+                "style": {
+                    "navigationBarTitleText": "关于我们"
+                }
+            },
+            {
+                "path": "clean",
+                "style": {
+                    "navigationBarTitleText": "清理缓存"
+                }
+            },
+            {
+                "path": "contact",
+                "style": {
+                    "navigationBarTitleText": "联系我们"
+                }
+            },
+            {
+                "path": "feedback",
+                "style": {
+                    "navigationBarTitleText": "用户反馈"
+                }
+            }
+        ]
+    }],
+
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "uni-app",
         "navigationBarBackgroundColor": "#F8F8F8",
         "backgroundColor": "#F8F8F8"
     },
+
     "tabBar": {
         "list": [{
                 "text": "首页",

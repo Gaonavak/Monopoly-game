@@ -13,12 +13,15 @@
                     </view>
                 </view>
 
-                <view class="right">
-                    <view class="text">编辑资料</view>
-                    <view class="icon">
-                        <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
+                <!-- 包装 navigator 内容 -->
+                <navigator url="/pages_user/edit" class="right">
+                    <view class="navigator-content">
+                        <view class="text">编辑资料</view>
+                        <view class="icon">
+                            <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
+                        </view>
                     </view>
-                </view>
+                </navigator>
             </view>
         </view>
 
@@ -37,20 +40,22 @@
         <!-- 菜单列表 -->
         <view class="cardList">
             <view class="list" v-for="item in centerList" :key="item.title">
-                <view class="item">
-                    <view class="left">
-                        <view class="icon">
-                            <image :src="item.type" mode="aspectFit" class="image"></image>
+                <navigator :url="item.page" class="item">
+                    <view class="navigator-content">
+                        <view class="left">
+                            <view class="icon">
+                                <image :src="item.type" mode="aspectFit" class="image"></image>
+                            </view>
+                            <view class="text">{{item.title}}</view>
                         </view>
-                        <view class="text">{{item.title}}</view>
-                    </view>
 
-                    <view class="right">
-                        <view class="icon">
-                            <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
+                        <view class="right">
+                            <view class="icon">
+                                <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
+                            </view>
                         </view>
                     </view>
-                </view>
+                </navigator>
             </view>
         </view>
     </view>
@@ -63,33 +68,37 @@
 
     const centerList = ref([{
             title: '用户反馈',
-            type: '../../static/user/phone.png'
+            type: '../../static/user/phone.png',
+            page: '/pages_user/feedback',
         },
         {
             title: '关于我们',
-            type: '../../static/user/info.png'
+            type: '../../static/user/info.png',
+            page: '/pages_user/about',
         },
         {
             title: '联系我们',
-            type: '../../static/user/personadd.png'
+            type: '../../static/user/personadd.png',
+            page: '/pages_user/contact',
         },
         {
             title: '清除缓存',
-            type: '../../static/user/trash.png'
+            type: '../../static/user/trash.png',
+            page: '/pages_user/clean',
         },
     ]);
 
     const tripList = ref([{
             title: '打卡点',
-            type: '../../static/user/flag.png'
+            type: '../../static/user/flag.png',
         },
         {
             title: '足迹',
-            type: '../../static/user/map.png'
+            type: '../../static/user/map.png',
         },
         {
             title: '收藏',
-            type: '../../static/user/star.png'
+            type: '../../static/user/star.png',
         },
     ]);
 </script>
@@ -114,7 +123,6 @@
             background-color: $page-bg-color;
             margin: 0 auto;
             padding: 40rpx;
-            border-radius: 20rpx;
 
             .user_info {
                 width: 100%;
@@ -157,25 +165,32 @@
                 }
 
                 .right {
-                    display: flex;
-                    align-items: center;
 
-                    .text {
-                        color: $text-font-color-subheading;
-                        margin-right: 10rpx;
-                        /* 确保文本和图标之间有间隔 */
-                    }
+                    // 为了解决编译后自动生成的多余的 navigator-warp 标签页
+                    .navigator-content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
 
-                    .icon {
-                        width: 50rpx;
-                        height: 50rpx;
-
-                        .image {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
+                        .text {
+                            color: $text-font-color-subheading;
+                            margin-right: 10rpx;
+                            /* 确保文本和图标之间有间隔 */
                         }
+
+                        .icon {
+                            width: 50rpx;
+                            height: 50rpx;
+
+                            .image {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
                     }
+
                 }
             }
         }
@@ -188,7 +203,6 @@
             max-width: 690rpx;
             background: $page-bg-card;
             border-radius: 20rpx;
-            margin: 0 auto 30rpx auto;
 
             .list {
                 padding: 30rpx 50rpx;
@@ -228,47 +242,53 @@
                 }
 
                 .item {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 20rpx 0;
-
-                    .left {
+                    
+                    // 为了解决编译后自动生成的多余的 navigator-warp 标签页
+                    .navigator-content {
+                        width: 100%;
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
+                        padding: 20rpx 0;
 
-                        .icon {
-                            padding-top: 15rpx;
-                            padding-left: 30rpx;
-                            width: 50rpx;
-                            height: 50rpx;
-                            overflow: hidden;
+                        .left {
+                            display: flex;
+                            align-items: center;
 
-                            .image {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
+                            .icon {
+                                padding-top: 15rpx;
+                                padding-left: 30rpx;
+                                width: 50rpx;
+                                height: 50rpx;
+                                overflow: hidden;
+
+                                .image {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .text {
+                                font-size: 30rpx;
+                                padding-left: 28rpx;
                             }
                         }
 
-                        .text {
-                            font-size: 30rpx;
-                            padding-left: 28rpx;
-                        }
-                    }
+                        .right {
+                            display: flex;
+                            align-items: center;
 
-                    .right {
-                        display: flex;
-                        align-items: center;
+                            .icon {
+                                width: 50rpx;
+                                height: 50rpx;
+                                min-width: 50rpx;
 
-                        .icon {
-                            width: 50rpx;
-                            height: 50rpx;
-
-                            .image {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
+                                .image {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
                             }
                         }
                     }
@@ -276,4 +296,6 @@
             }
         }
     }
+
+    /* 确保 navigator-content 内的元素在同一行显示 */
 </style>
