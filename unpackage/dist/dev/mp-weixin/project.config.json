@@ -18,8 +18,8 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.4.9",
-  "appid": "touristappid",
+  "libVersion": "",
+  "appid": "wx7fe178465de20a7d",
   "projectname": "nan-ao",
   "condition": {},
   "editorSetting": {

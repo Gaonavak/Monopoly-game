@@ -17,7 +17,10 @@
             "delay" : 0
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules" : {
+            "Barcode" : {},
+            "Camera" : {}
+        },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
@@ -43,18 +46,67 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "geolocation" : {
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "amap" : {
+                        "name" : "",
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "",
+                        "appkey_android" : ""
+                    }
+                },
+                "maps" : {
+                    "amap" : {
+                        "name" : "",
+                        "appkey_ios" : "",
+                        "appkey_android" : ""
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "",
+                        "UniversalLinks" : ""
+                    }
+                }
+            }
         }
     },
     /* 快应用特有相关 */
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx7fe178465de20a7d",
         "setting" : {
             "urlCheck" : false
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {},
+        "unipush" : {
+            "enable" : true
+        }
+    },
+    "h5" : {
+        // "template" : "template.h5.html",
+        "router" : {
+            "mode" : "history",
+            "base" : ""
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "XPJBZ-NTK3U-MLUVU-GNVNK-GEBXQ-2QFMY"
+                }
+            }
+        },
+        "async" : {
+            "timeout" : 20000
+        },
+        "uniStatistics" : {
+            "enable" : true
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true

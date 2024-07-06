@@ -17,10 +17,12 @@
 
         </view>
         <view class="cardList">
-            <view class="list" v-for="item in funcList" :key="item.title">
-                <view class="left">{{item.title}}</view>
+            <view class="list">
+                <view class="left">{{userNameCard.title}}</view>
                 <view class="right">
-                    <view class="text">张三</view>
+                    <input class="text" v-if="userNameCard.editable" v-model="userNameCard.user"
+                        @confirm="confirmEdit(item)" auto-blur @blur="onblur(userNameCard)" />
+                    <view class="text" v-else @click="editName(userNameCard)">{{userNameCard.user}}</view>
                     <view class="arrow">
                         <image src="../static/user/arrowright.png" mode="" class="image"></image>
                     </view>
@@ -33,16 +35,49 @@
 <script setup>
     import {
         ref
-    } from "vue"
+    } from "vue";
+    import {
+        onLoad,
+        onUnload
+    } from '@dcloudio/uni-app';
 
     const func_avatar = ref({
         "title": "头像",
         "imagePath": "/static/logo.png"
     });
-    const funcList = ref([{
+    const userNameCard = ref({
         "title": "名字",
-        "text": "张三"
-    }]);
+        "user": "",
+        "editable": false
+    });
+
+    onLoad((options) => {
+        userNameCard.value.user = options.user;
+    });
+
+    onUnload(() => {
+        uni.$emit('userName', userNameCard.value.user);
+    });
+
+    function editName(item) {
+        if (item) {
+            item.editable = true;
+
+        }
+    };
+
+    function confirmEdit(item) {
+        if (item) {
+            item.editable = false;
+            console.log('名字已更改为：', item.user);
+        }
+    }
+
+    function onblur(item) {
+        if (item) {
+            item.editable = false;
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
@@ -68,6 +103,9 @@
 
                 .left {
                     margin-left: 30rpx;
+                    height: 100rpx;
+                    display: flex;
+                    align-items: center;
                 }
 
                 .right {

@@ -3,5 +3,6 @@
   "projectname": "nan-ao",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.4.9"
 }

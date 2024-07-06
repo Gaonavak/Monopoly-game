@@ -8,13 +8,13 @@
                         <image src="../../static/logo.png" mode="aspectFit" class="image"></image>
                     </view>
                     <view class="info">
-                        <view class="name">用户名</view>
-                        <view class="description">用户注册了 n 天</view>
+                        <view class="name">{{userName}}</view>
+                        <view class="description">注册了 n 天</view>
                     </view>
                 </view>
 
                 <!-- 包装 navigator 内容 -->
-                <navigator url="/pages_user/edit" class="right">
+                <navigator :url="'/pages_user/edit?user=' + userName" class="right">
                     <view class="navigator-content">
                         <view class="text">编辑资料</view>
                         <view class="icon">
@@ -63,8 +63,20 @@
 
 <script setup>
     import {
-        ref
+        ref,
+        watch
     } from 'vue';
+    import {
+        onShow
+    } from '@dcloudio/uni-app';
+
+    import editPage from '../../pages_user/edit.vue'
+    const userName = ref('张三');
+    onShow(() => {
+        uni.$on('userName', (res) => {
+            userName.value = res;
+        });
+    })
 
     const centerList = ref([{
             title: '用户反馈',
@@ -244,7 +256,7 @@
                 }
 
                 .item {
-                    
+
                     // 为了解决编译后自动生成的多余的 navigator-warp 标签页
                     .navigator-content {
                         width: 100%;

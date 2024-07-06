@@ -4,6 +4,12 @@ const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   __name: "user",
   setup(__props) {
+    const userName = common_vendor.ref("张三");
+    common_vendor.onShow(() => {
+      common_vendor.index.$on("userName", (res) => {
+        userName.value = res;
+      });
+    });
     const centerList = common_vendor.ref([
       {
         title: "用户反馈",
@@ -43,15 +49,17 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return {
         a: common_assets._imports_0,
-        b: common_assets._imports_0$1,
-        c: common_vendor.f(tripList.value, (item, k0, i0) => {
+        b: common_vendor.t(userName.value),
+        c: common_assets._imports_0$1,
+        d: "/pages_user/edit?user=" + userName.value,
+        e: common_vendor.f(tripList.value, (item, k0, i0) => {
           return {
             a: item.type,
             b: common_vendor.t(item.title),
             c: item.title
           };
         }),
-        d: common_vendor.f(centerList.value, (item, k0, i0) => {
+        f: common_vendor.f(centerList.value, (item, k0, i0) => {
           return {
             a: item.type,
             b: common_vendor.t(item.title),
@@ -59,7 +67,7 @@ const _sfc_main = {
             d: item.title
           };
         }),
-        e: common_assets._imports_0$1
+        g: common_assets._imports_0$1
       };
     };
   }
