@@ -1,0 +1,181 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.user.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #F7F7F7;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user .card_user.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 690rpx;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  padding: 40rpx;
+}
+.user .card_user .user_info.data-v-0f7520f0 {
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user .card_user .user_info .left.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+}
+.user .card_user .user_info .left .avatar.data-v-0f7520f0 {
+  width: 120rpx;
+  height: 120rpx;
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user .card_user .user_info .left .avatar .image.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user .card_user .user_info .left .info.data-v-0f7520f0 {
+  padding-left: 20rpx;
+}
+.user .card_user .user_info .left .info .name.data-v-0f7520f0 {
+  font-size: 38rpx;
+}
+.user .card_user .user_info .left .info .description.data-v-0f7520f0 {
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #676767;
+}
+.user .card_user .user_info .right .navigator-content.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user .card_user .user_info .right .navigator-content .text.data-v-0f7520f0 {
+  color: #676767;
+  margin-right: 10rpx;
+  /* 确保文本和图标之间有间隔 */
+}
+.user .card_user .user_info .right .navigator-content .icon.data-v-0f7520f0 {
+  width: 50rpx;
+  height: 50rpx;
+}
+.user .card_user .user_info .right .navigator-content .icon .image.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user .card.data-v-0f7520f0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 690rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.user .card .list.data-v-0f7520f0 {
+  padding: 30rpx 50rpx;
+}
+.user .card .list .item.data-v-0f7520f0 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user .card .list .item .icon.data-v-0f7520f0 {
+  width: 50rpx;
+  height: 50rpx;
+}
+.user .card .list .item .icon .image.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user .cardList.data-v-0f7520f0 {
+  width: 100%;
+  max-width: 690rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 30px auto;
+}
+.user .cardList .list.data-v-0f7520f0 {
+  padding: 10rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+.user .cardList .list.data-v-0f7520f0:last-child {
+  border: none;
+}
+.user .cardList .list .item .navigator-content.data-v-0f7520f0 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.user .cardList .list .item .navigator-content .left.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+}
+.user .cardList .list .item .navigator-content .left .icon.data-v-0f7520f0 {
+  padding-top: 15rpx;
+  padding-left: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+}
+.user .cardList .list .item .navigator-content .left .icon .image.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user .cardList .list .item .navigator-content .left .text.data-v-0f7520f0 {
+  font-size: 30rpx;
+  padding-left: 28rpx;
+}
+.user .cardList .list .item .navigator-content .right.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+}
+.user .cardList .list .item .navigator-content .right .icon.data-v-0f7520f0 {
+  width: 50rpx;
+  height: 50rpx;
+  min-width: 50rpx;
+}
+.user .cardList .list .item .navigator-content .right .icon .image.data-v-0f7520f0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 确保 navigator-content 内的元素在同一行显示 */
