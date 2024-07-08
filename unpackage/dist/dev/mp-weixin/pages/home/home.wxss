@@ -35,6 +35,9 @@
   margin-top: 35rpx;
   border-radius: 50%;
 }
+.nav-item.data-v-07e72d3c:first-child {
+  margin-top: 20rpx;
+}
 .nav-item .image.data-v-07e72d3c {
   width: 60rpx;
   height: 60rpx;

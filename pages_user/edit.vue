@@ -129,20 +129,6 @@
                         margin: 30rpx;
                         color: $text-font-color-subheading;
                     }
-
-                    .arrow {
-                        width: 50rpx;
-                        height: 50rpx;
-                        padding-right: 20rpx;
-                        // 偏移，使箭头居中
-                        padding-top: 15rpx;
-
-                        .image {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
                 }
             }
         }

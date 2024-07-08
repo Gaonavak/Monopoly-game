@@ -17,7 +17,6 @@
   height: 100%;
   min-height: 100vh;
   background-color: #F0F4F9;
-  padding-bottom: 20rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,12 +47,6 @@
   height: 120rpx;
   border: 3px solid #e0e0e0;
   border-radius: 50%;
-  overflow: hidden;
-}
-.user .card_user .user_info .left .avatar .image.data-v-0f7520f0 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .user .card_user .user_info .left .info.data-v-0f7520f0 {
   padding-left: 20rpx;
@@ -76,15 +69,10 @@
   margin-right: 10rpx;
   /* 确保文本和图标之间有间隔 */
 }
-.user .card_user .user_info .right .navigator-content .icon.data-v-0f7520f0 {
+.user .card_user .user_info .right .navigator-content .arrowright.data-v-0f7520f0 {
   width: 50rpx;
   height: 50rpx;
   padding-top: 15rpx;
-}
-.user .card_user .user_info .right .navigator-content .icon .image.data-v-0f7520f0 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .user .card.data-v-0f7520f0 {
   display: flex;
@@ -106,10 +94,6 @@
 .user .card .list .item .icon.data-v-0f7520f0 {
   width: 50rpx;
   height: 50rpx;
-}
-.user .card .list .item .icon .image.data-v-0f7520f0 {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .user .cardList.data-v-0f7520f0 {
@@ -138,16 +122,12 @@
   align-items: center;
 }
 .user .cardList .list .item .navigator-content .left .icon.data-v-0f7520f0 {
+  width: 50rpx;
+  height: 50rpx;
   padding-top: 15rpx;
   padding-left: 30rpx;
   width: 50rpx;
   height: 50rpx;
-  overflow: hidden;
-}
-.user .cardList .list .item .navigator-content .left .icon .image.data-v-0f7520f0 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .user .cardList .list .item .navigator-content .left .text.data-v-0f7520f0 {
   font-size: 30rpx;
@@ -157,17 +137,10 @@
   display: flex;
   align-items: center;
 }
-.user .cardList .list .item .navigator-content .right .icon.data-v-0f7520f0 {
+.user .cardList .list .item .navigator-content .right .arrowright.data-v-0f7520f0 {
   width: 50rpx;
   height: 50rpx;
   min-width: 50rpx;
   padding-right: 20rpx;
   padding-top: 15rpx;
 }
-.user .cardList .list .item .navigator-content .right .icon .image.data-v-0f7520f0 {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* 确保 navigator-content 内的元素在同一行显示 */

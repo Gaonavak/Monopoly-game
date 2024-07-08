@@ -72,7 +72,10 @@
     .nav-item {
         margin-top: 35rpx;
         border-radius: 50%;
-
+        &:first-child {
+            margin-top: 20rpx;
+        }
+        
         .image {
             width: 60rpx;
             height: 60rpx;

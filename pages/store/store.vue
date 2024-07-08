@@ -1,7 +1,7 @@
 <template>
     <view class="store">
         <!-- 搜索框 -->
-        <uni-search-bar @confirm="search" :focus="true" bgColor="#fff" />
+        <uni-search-bar @confirm="search" :focus="true" bgColor="#fff" class="search" />
 
         <!-- 滚动区域布局 -->
         <view class="scrollLayout">
@@ -55,7 +55,7 @@
 
     function selectItem(index) {
         selectedIndex.value = index; // 更新选中的项目索引
-        
+
         rightScrollIndex.value = rightHeights.value[index]; // 更新右侧滚动位置
     }
 
@@ -83,17 +83,21 @@
 
 <style lang="scss" scoped>
     .store {
+        width: 100vh;
+        height: 100vh;
         width: 100%;
         background: $page-bg-color;
         display: flex;
         flex-direction: column;
 
+        .search{
+            height: 100rpx;
+        }
+        
         .scrollLayout {
             display: flex;
             width: 100%;
-            /* 减去搜索框的高度 */
-            height: calc(100vh - 80rpx);
-            margin: 20rpx 0;
+            height: calc(100vh - 100rpx);
         }
 
         .scrollView {

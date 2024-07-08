@@ -113,7 +113,6 @@
         height: 100%;
         min-height: 100vh;
         background-color: $page-bg-color;
-        padding-bottom: 20rpx;
         display: flex;
         flex-direction: column;
         align-items: center;

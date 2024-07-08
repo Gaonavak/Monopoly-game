@@ -44,30 +44,20 @@
   justify-content: space-between;
 }
 .edit .cardList .list .right .avatar.data-v-deea46ec {
-  width: 80rpx;
-  height: 80rpx;
-  margin: 30rpx;
+  width: 90rpx;
+  height: 90rpx;
+  margin: 30rpx 10rpx;
   border: 3px solid #e0e0e0;
   border-radius: 50%;
   overflow: hidden;
 }
-.edit .cardList .list .right .avatar .image.data-v-deea46ec {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.edit .cardList .list .right .arrowright.data-v-deea46ec {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  padding-top: 15rpx;
 }
 .edit .cardList .list .right .text.data-v-deea46ec {
   margin: 30rpx;
   color: #676767;
-}
-.edit .cardList .list .right .arrow.data-v-deea46ec {
-  width: 50rpx;
-  height: 50rpx;
-  padding-right: 20rpx;
-  padding-top: 15rpx;
-}
-.edit .cardList .list .right .arrow .image.data-v-deea46ec {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
