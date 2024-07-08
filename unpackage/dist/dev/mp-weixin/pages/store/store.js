@@ -51,7 +51,7 @@ const _sfc_main = {
           focus: true,
           bgColor: "#fff"
         }),
-        c: common_vendor.f(10, (item, index, i0) => {
+        c: common_vendor.f(5, (item, index, i0) => {
           return {
             a: common_vendor.t(item),
             b: item,
@@ -59,10 +59,10 @@ const _sfc_main = {
             d: common_vendor.o(($event) => selectItem(index), item)
           };
         }),
-        d: common_vendor.f(10, (i, k0, i0) => {
+        d: common_vendor.f(5, (i, k0, i0) => {
           return {
             a: common_vendor.t(i),
-            b: common_vendor.f(5, (item, k1, i1) => {
+            b: common_vendor.f(1, (item, k1, i1) => {
               return {
                 a: "c1a2745a-1-" + i0 + "-" + i1,
                 b: item

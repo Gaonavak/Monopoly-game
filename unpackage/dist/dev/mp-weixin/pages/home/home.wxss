@@ -25,6 +25,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 5;
   margin: 30rpx;
   padding: 20rpx;
   background-color: rgba(255, 255, 255, 0.9);
@@ -42,8 +43,6 @@
   width: 60rpx;
   height: 60rpx;
   object-fit: cover;
-  -webkit-clip-path: circle(50rpx at center);
-          clip-path: circle(50rpx at center);
 }
 .card-container.data-v-07e72d3c {
   position: absolute;

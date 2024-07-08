@@ -63,24 +63,26 @@
   background: #F0F4F9;
 }
 .store .rightScroll .productView.data-v-c1a2745a {
-  margin: 20rpx;
+  margin: 30rpx;
   border-radius: 20rpx;
   overflow: hidden;
 }
 .store .rightScroll .productView.data-v-c1a2745a:first-child {
-  margin-top: 10rpx;
+  margin-top: 20rpx;
+}
+.store .rightScroll .productView.data-v-c1a2745a:last-child {
+  margin-bottom: 0rpx;
 }
 .store .rightScroll .productView .productCategory.data-v-c1a2745a {
   padding: 15rpx;
   background: #9FDBFC;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 .store .rightScroll .productView .product-item.data-v-c1a2745a {
   border-bottom: 1rpx solid #efefef;
 }
 .store .rightScroll .productView .product-item.data-v-c1a2745a:last-child {
   border: none;
+}
+.store .rightScroll .bottomSapce.data-v-c1a2745a {
+  height: 15rpx;
 }

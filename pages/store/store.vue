@@ -8,7 +8,7 @@
             <!-- 左侧滚动区域 -->
             <view class="leftScroll">
                 <scroll-view scroll-y="true" class="scrollView">
-                    <view class="row" v-for="(item, index) in 10" :key="item"
+                    <view class="row" v-for="(item, index) in 5" :key="item"
                         :class="{ selected: selectedIndex === index }" @click="selectItem(index)">
                         <view class="content">分类{{ item }}</view>
                     </view>
@@ -18,14 +18,15 @@
             <!-- 右侧滚动区域 -->
             <view class="rightScroll">
                 <scroll-view scroll-y="true" :scroll-top="rightScrollIndex" scroll-with-animation class="scrollView">
-                    <view class="productView" v-for="i in 10" :key="i">
+                    <view class="productView" v-for="i in 5" :key="i">
                         <view class="productCategory">产品分类{{ i }}</view>
-                        <view class="product-item" v-for="item in 5" :key="item">
+                        <view class="product-item" v-for="item in 1" :key="item">
                             <product
                                 :src="'http://nanaodao.org/data/upload/201602/f_8c0babc7d916d7caee1c4d6d27317336.jpg'">
                             </product>
                         </view>
                     </view>
+                    <view class="bottomSapce"></view>
                 </scroll-view>
             </view>
         </view>
@@ -90,10 +91,10 @@
         display: flex;
         flex-direction: column;
 
-        .search{
+        .search {
             height: 100rpx;
         }
-        
+
         .scrollLayout {
             display: flex;
             width: 100%;
@@ -140,21 +141,20 @@
             background: $page-bg-color;
 
             .productView {
-                margin: 20rpx;
+                margin: 30rpx;
                 border-radius: 20rpx;
                 overflow: hidden;
 
                 &:first-child {
-                    margin-top: 10rpx;
+                    margin-top: 20rpx;
                 }
-
+                &:last-child{
+                    margin-bottom: 0rpx;
+                }
+                
                 .productCategory {
                     padding: 15rpx;
                     background: #9FDBFC;
-                    position: -webkit-sticky;
-                    position: sticky;
-                    top: 0;
-                    z-index: 10;
                 }
 
                 .product-item {
@@ -164,6 +164,10 @@
                         border: none;
                     }
                 }
+            }
+            
+            .bottomSapce{
+                height: 15rpx;
             }
         }
     }

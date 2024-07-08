@@ -3,7 +3,7 @@
         <map :latitude="latitude" :longitude="longitude" class="map">
             <view class="nav-container">
                 <view class="nav-item" v-for="item in navList" :key="item.title">
-                    <navigator :url="item.url">
+                    <navigator :url="item.url" open-type="navigate">
                         <cover-image :src="item.icon" class="image"></cover-image>
                     </navigator>
                 </view>
@@ -62,6 +62,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 5;
         margin: 30rpx;
         padding: 20rpx;
         background-color: rgba(255, 255, 255, 0.9);
@@ -80,7 +81,6 @@
             width: 60rpx;
             height: 60rpx;
             object-fit: cover;
-            clip-path: circle(50rpx at center);
         }
     }
 
