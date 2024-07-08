@@ -1,19 +1,25 @@
 <template>
     <view class="home">
         <map :latitude="latitude" :longitude="longitude" class="map">
+            <!-- 换页按钮容器 -->
             <view class="nav-container">
-                <view class="nav-item" v-for="item in navList" :key="item.title">
-                    <navigator :url="item.url" open-type="navigate">
-                        <cover-image :src="item.icon" class="image"></cover-image>
-                    </navigator>
-                </view>
+                <navigator v-for="item in navList" :key="item.title" :url="item.url" open-type="navigate"
+                    hover-start-time="1000" hover-stay-time="0">
+                    <cover-image :src="item.icon" class="image"></cover-image>
+                </navigator>
             </view>
 
-            <cover-view class="card-container">
-                <uni-card class="card" :title="places.title" :thumbnail="places.thumb" :extra="places.extra">
-                    <text>{{places.desp}}</text>
-                </uni-card>
-            </cover-view>
+            <!-- 功能按钮容器 -->
+            <view class="btn-container">
+                <cover-image v-for="btn in btns" :key="btn.title" :src="btn.icon" class="image"
+                    @click="btn.func"></cover-image>
+            </view>
+
+            <!-- 地点详情 -->
+            <uni-card class="card" :title="place.title" :thumbnail="place.thumb" :extra="place.extra"
+                @click="clickCard">
+                <text>{{place.desp}}</text>
+            </uni-card>
         </map>
     </view>
 </template>
@@ -23,27 +29,82 @@
         ref
     } from 'vue';
 
+    const scanQRCode = () => {
+        uni.showToast({
+            title: '二维码'
+        });
+    };
+
+    const getLocation = () => {
+        uni.showToast({
+            title: '重新获取位置'
+        });
+    };
+
+    const checkIn = () => {
+        uni.showToast({
+            title: '签到',
+            icon: 'none'
+        });
+    }
+
+    const getPlaceInfo = () => {
+        uni.showToast({
+            title: '更多',
+            icon: 'none'
+        });
+    }
+
+    const clickCard = (type) => {
+        switch (type) {
+            case 'title':
+                getPlaceInfo();
+            case 'extra':
+                checkIn();
+        };
+
+    };
+
+
     const navList = ref([{
-            title: 'about',
-            icon: '../../static/user/info.png',
+            title: '关于',
+            icon: '/static/user/info.png',
             url: '/pages_user/about'
         },
         {
-            title: 'help',
-            icon: '../../static/user/phone.png',
+            title: '帮助',
+            icon: '/static/user/phone.png',
             url: '/pages_user/contact'
+        },
+        {
+            title: '开发者',
+            icon: '/static/dev.png',
+            url: '/pages_home/location'
         }
-    ])
+    ]);
 
+    const btns = ref([{
+            title: '扫描二维码',
+            icon: '/static/home/scan.png',
+            func: scanQRCode
+        },
+        {
+            title: '重新获取位置',
+            icon: '/static/home/relocation.png',
+            func: getLocation
+        }
+    ]);
+
+    // 南澳岛的经纬度
     const latitude = ref(23.434194);
     const longitude = ref(117.062956);
 
-    const places = ref({
+    const place = ref({
         title: '景点',
-        thumb: '../../static/logo.png',
+        thumb: '/static/logo.png',
         extra: '打卡',
-        desp: '这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。'
-    })
+        desp: '这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。',
+    });
 </script>
 
 <style lang="scss" scoped>
@@ -70,28 +131,32 @@
         box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
     }
 
-    .nav-item {
-        margin-top: 35rpx;
-        border-radius: 50%;
-        &:first-child {
-            margin-top: 20rpx;
-        }
-        
-        .image {
-            width: 60rpx;
-            height: 60rpx;
-            object-fit: cover;
-        }
+    .btn-container {
+        position: absolute;
+        top: 350rpx;
+        right: 0;
+        z-index: 5;
+        margin: 30rpx;
+        padding: 20rpx;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20rpx;
+        box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
     }
 
-    .card-container {
+    .image {
+        width: 60rpx;
+        height: 60rpx;
+        padding: 15rpx 0;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .card {
         position: absolute;
         bottom: 25rpx;
         left: 0;
         right: 0;
-
-        .card {
-            border-radius: 20rpx;
-        }
+        border-radius: 20rpx;
+        z-index: 5;
     }
 </style>

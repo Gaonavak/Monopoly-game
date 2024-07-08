@@ -52,6 +52,14 @@
                 }
             }
         ]
+    }, {
+        "root": "pages_home",
+        "pages": [{
+            "path": "location",
+            "style": {
+                "navigationBarTitleText": "位置测试"
+            }
+        }]
     }],
 
     "globalStyle": {
@@ -82,7 +90,7 @@
             }
         ]
     },
-    
+
     "easycom": {
         "autoscan": true,
         // 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175

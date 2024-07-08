@@ -12,7 +12,8 @@
                 </view>
 
                 <!-- 包装 navigator 内容 -->
-                <navigator :url="'/pages_user/edit?user=' + userName" class="right">
+                <navigator :url="'/pages_user/edit?user=' + userName" class="right" hover-start-time="1000"
+                    hover-stay-time="0">
                     <view class="navigator-content">
                         <view class="text">编辑资料</view>
                         <image src="../../static/user/arrowright.png" mode="aspectFit" class="arrowright"></image>
@@ -34,7 +35,7 @@
         <!-- 菜单列表 -->
         <view class="cardList">
             <view class="list" v-for="item in centerList" :key="item.title">
-                <navigator :url="item.page" class="item">
+                <navigator :url="item.page" class="item"  hover-start-time="1000" hover-stay-time="0">
                     <view class="navigator-content">
                         <view class="left">
                             <image :src="item.type" mode="aspectFit" class="icon"></image>

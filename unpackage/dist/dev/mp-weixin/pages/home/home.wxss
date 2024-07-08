@@ -32,24 +32,29 @@
   border-radius: 20rpx;
   box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
 }
-.nav-item.data-v-07e72d3c {
-  margin-top: 35rpx;
-  border-radius: 50%;
+.btn-container.data-v-07e72d3c {
+  position: absolute;
+  top: 350rpx;
+  right: 0;
+  z-index: 5;
+  margin: 30rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
 }
-.nav-item.data-v-07e72d3c:first-child {
-  margin-top: 20rpx;
-}
-.nav-item .image.data-v-07e72d3c {
+.image.data-v-07e72d3c {
   width: 60rpx;
   height: 60rpx;
+  padding: 15rpx 0;
+  border-radius: 50%;
   object-fit: cover;
 }
-.card-container.data-v-07e72d3c {
+.card.data-v-07e72d3c {
   position: absolute;
   bottom: 25rpx;
   left: 0;
   right: 0;
-}
-.card-container .card.data-v-07e72d3c {
   border-radius: 20rpx;
+  z-index: 5;
 }

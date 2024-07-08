@@ -10,6 +10,7 @@ if (!Math) {
   "./pages_user/clean.js";
   "./pages_user/contact.js";
   "./pages_user/feedback.js";
+  "./pages_home/location.js";
 }
 const _sfc_main = {
   onLaunch: function() {
