@@ -6,12 +6,8 @@
                     <view class="title">{{func_avatar.title}}</view>
                 </view>
                 <view class="right">
-                    <view class="avatar">
-                        <image :src="func_avatar.imagePath" mode="" class="image"></image>
-                    </view>
-                    <view class="arrow">
-                        <image src="../static/user/arrowright.png" mode="" class="image"></image>
-                    </view>
+                    <image :src="func_avatar.imagePath" mode="" class="avatar"></image>
+                    <image src="../static/user/arrowright.png" mode="" class="arrowright"></image>
                 </view>
             </view>
 
@@ -23,9 +19,7 @@
                     <input class="text" v-if="userNameCard.editable" v-model="userNameCard.user"
                         @confirm="confirmEdit(item)" auto-blur @blur="onblur(userNameCard)" />
                     <view class="text" v-else @click="editName(userNameCard)">{{userNameCard.user}}</view>
-                    <view class="arrow">
-                        <image src="../static/user/arrowright.png" mode="" class="image"></image>
-                    </view>
+                    <image src="../static/user/arrowright.png" mode="" class="arrowright"></image>
                 </view>
             </view>
         </view>
@@ -89,6 +83,7 @@
         flex-direction: column;
         align-items: center;
 
+
         .cardList {
             width: 100%;
             max-width: 690rpx;
@@ -114,18 +109,20 @@
                     justify-content: space-between;
 
                     .avatar {
-                        width: 80rpx;
-                        height: 80rpx;
-                        margin: 30rpx;
+                        width: 90rpx;
+                        height: 90rpx;
+                        margin: 30rpx 10rpx;
                         border: 3px solid $border-color;
                         border-radius: 50%;
                         overflow: hidden;
+                    }
 
-                        .image {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
+                    .arrowright {
+                        width: 50rpx;
+                        height: 50rpx;
+                        margin-right: 20rpx;
+                        // 偏移使图标水平居中
+                        padding-top: 15rpx;
                     }
 
                     .text {

@@ -4,9 +4,7 @@
         <view class="card_user">
             <view class="user_info">
                 <view class="left">
-                    <view class="avatar">
-                        <image src="../../static/logo.png" mode="aspectFit" class="image"></image>
-                    </view>
+                    <image src="../../static/logo.png" mode="aspectFit" class="avatar"></image>
                     <view class="info">
                         <view class="name">{{userName}}</view>
                         <view class="description">注册了 n 天</view>
@@ -17,9 +15,7 @@
                 <navigator :url="'/pages_user/edit?user=' + userName" class="right">
                     <view class="navigator-content">
                         <view class="text">编辑资料</view>
-                        <view class="icon">
-                            <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
-                        </view>
+                        <image src="../../static/user/arrowright.png" mode="aspectFit" class="arrowright"></image>
                     </view>
                 </navigator>
             </view>
@@ -29,9 +25,7 @@
         <view class="card">
             <view class="list" v-for="item in tripList" :key="item.title">
                 <view class="item">
-                    <view class="icon">
-                        <image :src="item.type" mode="aspectFit" class="image"></image>
-                    </view>
+                    <image :src="item.type" mode="aspectFit" class="icon"></image>
                     <view class="text">{{item.title}}</view>
                 </view>
             </view>
@@ -43,16 +37,14 @@
                 <navigator :url="item.page" class="item">
                     <view class="navigator-content">
                         <view class="left">
-                            <view class="icon">
-                                <image :src="item.type" mode="aspectFit" class="image"></image>
-                            </view>
+                            <image :src="item.type" mode="aspectFit" class="icon"></image>
+                            <!-- <view class="icon">
+                            </view> -->
                             <view class="text">{{item.title}}</view>
                         </view>
 
                         <view class="right">
-                            <view class="icon">
-                                <image src="../../static/user/arrowright.png" mode="aspectFit" class="image"></image>
-                            </view>
+                            <image src="../../static/user/arrowright.png" mode="aspectFit" class="arrowright"></image>
                         </view>
                     </view>
                 </navigator>
@@ -152,13 +144,6 @@
                         height: 120rpx;
                         border: 3px solid $border-color;
                         border-radius: 50%;
-                        overflow: hidden;
-
-                        .image {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
                     }
 
                     .info {
@@ -190,21 +175,13 @@
                             /* 确保文本和图标之间有间隔 */
                         }
 
-                        .icon {
+                        .arrowright {
                             width: 50rpx;
                             height: 50rpx;
                             // 偏移，使箭头居中
                             padding-top: 15rpx;
-
-                            .image {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            }
                         }
-
                     }
-
                 }
             }
         }
@@ -229,12 +206,8 @@
                     .icon {
                         width: 50rpx;
                         height: 50rpx;
+                        object-fit: cover;
 
-                        .image {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
                     }
                 }
             }
@@ -270,17 +243,13 @@
                             align-items: center;
 
                             .icon {
+                                width: 50rpx;
+                                height: 50rpx;
                                 padding-top: 15rpx;
                                 padding-left: 30rpx;
                                 width: 50rpx;
                                 height: 50rpx;
-                                overflow: hidden;
 
-                                .image {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                }
                             }
 
                             .text {
@@ -293,19 +262,13 @@
                             display: flex;
                             align-items: center;
 
-                            .icon {
+                            .arrowright {
                                 width: 50rpx;
                                 height: 50rpx;
                                 min-width: 50rpx;
                                 padding-right: 20rpx;
                                 // 偏移，使箭头居中
                                 padding-top: 15rpx;
-
-                                .image {
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                }
                             }
                         }
                     }
@@ -313,6 +276,4 @@
             }
         }
     }
-
-    /* 确保 navigator-content 内的元素在同一行显示 */
 </style>
