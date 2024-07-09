@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "论坛",
+  "usingComponents": {
+    "tn-graphic-card": "../../node-modules/tnuiv3p-tn-graphic-card/index",
+    "tn-tabs": "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs",
+    "tn-tabs-item": "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs-item"
+  }
+}

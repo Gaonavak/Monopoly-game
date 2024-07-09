@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "用户",
+  "usingComponents": {
+    "my-card-row": "../../components/my-card-row/my-card-row",
+    "my-card": "../../components/my-card/my-card"
+  }
+}

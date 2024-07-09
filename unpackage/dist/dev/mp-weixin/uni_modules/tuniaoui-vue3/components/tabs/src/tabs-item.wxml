@@ -1,0 +1,1 @@
+<view id="{{g}}" class="{{['data-v-2b0541ae', h]}}" style="{{i}}" catchtap="{{j}}"><block wx:if="{{$slots.d}}"><slot></slot></block><block wx:else><view class="{{['data-v-2b0541ae', f]}}"><view class="{{['data-v-2b0541ae', e]}}"><tn-badge wx:if="{{a}}" class="data-v-2b0541ae" bindclick="{{b}}" u-i="2b0541ae-0" bind:__l="__l" u-p="{{c}}"/> {{d}}</view></view></block></view>

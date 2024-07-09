@@ -1,0 +1,46 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.my-card-row.data-v-b31a7f34 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #FDFFFF;
+  border-radius: 20rpx;
+}
+.item.data-v-b31a7f34 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin: 40rpx;
+}
+.icon.data-v-b31a7f34 {
+  width: 60rpx;
+  height: 60rpx;
+  object-fit: cover;
+}
+.title.data-v-b31a7f34 {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #333333;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "主页",
+  "usingComponents": {
+    "my-btn-box": "../../components/my-btn-box/my-btn-box",
+    "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card",
+    "my-store-card": "../../components/my-store-card/my-store-card",
+    "my-card": "../../components/my-card/my-card",
+    "tn-switch-tab": "../../uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="my-btn-box data-v-ceebadbf"><image wx:for="{{a}}" wx:for-item="item" wx:key="a" src="{{item.b}}" mode="aspectFill" class="icon data-v-ceebadbf" bindtap="{{item.c}}"></image></view>

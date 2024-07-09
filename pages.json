@@ -1,0 +1,98 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path": "pages/home/home",
+            "style": {
+                "navigationBarTitleText": "主页"
+            }
+        },
+        {
+            "path": "pages/forum/forum",
+            "style": {
+                "navigationBarTitleText": "论坛"
+            }
+        },
+        {
+            "path": "pages/user/user",
+            "style": {
+                "navigationBarTitleText": "用户"
+            }
+        }
+    ],
+    "subPackages": [{
+        "root": "pages_user",
+        "pages": [{
+                "path": "about/about",
+                "style": {
+                    "navigationBarTitleText": "关于我们"
+                }
+            },
+            {
+                "path": "contact/contact",
+                "style": {
+                    "navigationBarTitleText": "联系我们"
+                }
+            },
+            {
+                "path": "edit/edit",
+                "style": {
+                    "navigationBarTitleText": "编辑信息"
+                }
+            },
+            {
+                "path" : "clean/clean",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "清理缓存"
+                }
+            }
+        ]
+    },{
+        "root": "pages_home",
+        "pages": [{
+            "path" : "store/store",
+            "style" : 
+            {
+                "navigationBarTitleText" : ""
+            }
+        }
+            
+        ]
+    }],
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+
+    "tabBar": {
+        "list": [{
+                "text": "首页",
+                "pagePath": "pages/home/home",
+                "iconPath": "static/tabBar/home.png",
+                "selectedIconPath": "static/tabBar/home-filled.png"
+            },
+            {
+                "text": "论坛",
+                "pagePath": "pages/forum/forum",
+                "iconPath": "static/forum/chatboxes.png",
+                "selectedIconPath": "static/forum/chatboxes-filled.png"
+            },
+            {
+                "text": "用户中心",
+                "pagePath": "pages/user/user",
+                "iconPath": "static/tabBar/person.png",
+                "selectedIconPath": "static/tabBar/person-filled.png"
+            }
+        ]
+    },
+    "easycom": {
+        "custom": {
+            "^tn-(.*)-(item|group)$": "@/uni_modules/tuniaoui-vue3/components/$1/src/$1-$2.vue",
+            "^tn-(.*)": "@/uni_modules/tuniaoui-vue3/components/$1/src/$1.vue"
+        }
+    },
+
+    "uniIdRouter": {}
+}

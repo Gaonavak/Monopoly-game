@@ -1,0 +1,72 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.tn-switch-tab.data-v-d709ea0c {
+  position: relative;
+  width: 100%;
+  border-radius: 15rpx;
+  /* 标签 start */
+  /* 标签 end */
+}
+.tn-switch-tab__tabs.data-v-d709ea0c {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.tn-switch-tab__tab.data-v-d709ea0c {
+  position: relative;
+  flex: 1;
+  height: 70rpx;
+  /* tab内部内容 start */
+  /* tab内部内容 end */
+  /* 激活状态 start */
+  /* 激活状态 end */
+}
+.tn-switch-tab__tab .tab-item.data-v-d709ea0c {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  transition-property: height, border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius, background-color, color;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+.tn-switch-tab__tab .tab-item.bg.data-v-d709ea0c {
+  transform-origin: center bottom;
+  background-color: inherit;
+}
+.tn-switch-tab__tab .tab-item.text.data-v-d709ea0c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.tn-switch-tab__tab.data-v-d709ea0c:nth-of-type(1) {
+  border-top-left-radius: 15rpx;
+}
+.tn-switch-tab__tab.data-v-d709ea0c:nth-last-of-type(1) {
+  border-top-right-radius: 15rpx;
+}
+.tn-switch-tab__tab.is-active .tab-item.data-v-d709ea0c {
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  height: 90rpx;
+}

@@ -1,0 +1,59 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.switchBar.data-v-2b5f0ee8 {
+  background-color: red;
+  border-radius: 20rpx;
+}
+.card-goods.data-v-2b5f0ee8 {
+  width: 100%;
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20rpx;
+}
+.item.data-v-2b5f0ee8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+  width: calc(33.33% - 40rpx);
+  box-sizing: border-box;
+}
+.thumb.data-v-2b5f0ee8 {
+  width: 100rpx;
+  height: 100rpx;
+  object-fit: cover;
+  border-radius: 20rpx;
+}
+.name.data-v-2b5f0ee8 {
+  margin-top: 15rpx;
+}
+.price.data-v-2b5f0ee8 {
+  margin-top: 15rpx;
+}
+
+/* 处理最后一行的对齐 */
+.goods.data-v-2b5f0ee8::after {
+  content: "";
+  flex: auto;
+}

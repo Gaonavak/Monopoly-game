@@ -1,0 +1,82 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.user.data-v-0f7520f0 {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+}
+.card_user.data-v-0f7520f0 {
+  width: 100%;
+  max-width: 690rpx;
+  padding-top: 80rpx;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_user .avatar.data-v-0f7520f0 {
+  width: 120rpx;
+  height: 120rpx;
+  border: 3px solid #eee;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+.card_user .info.data-v-0f7520f0 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  padding-left: 30rpx;
+}
+.card_user .info .name.data-v-0f7520f0 {
+  text-align: start;
+  font-size: 38rpx;
+}
+.card_user .info .desc.data-v-0f7520f0 {
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #676767;
+}
+.card_user .right.data-v-0f7520f0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.card_user .right .text.data-v-0f7520f0 {
+  color: grey;
+  margin-right: 10rpx;
+}
+.card_user .right .arrowright.data-v-0f7520f0 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.rowCard.data-v-0f7520f0 {
+  width: 100%;
+  max-width: 690rpx;
+  margin-top: 60rpx;
+}
+.colCard.data-v-0f7520f0 {
+  width: 100%;
+  max-width: 690rpx;
+  margin-top: 60rpx;
+}

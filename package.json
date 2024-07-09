@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "tnuiv3p-tn-graphic-card": "^1.0.15",
+    "tnuiv3p-tn-image-crop": "^1.0.5",
+    "tnuiv3p-tn-update-user-info-popup": "^1.0.2"
+  }
+}
