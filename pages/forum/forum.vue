@@ -1,27 +1,20 @@
 <template>
     <view class="forum">
         <TnTabs class="tabs" v-model="currentTabIndex" :scroll="false">
-            <TnTabsItem v-for="(item, index) in tabsData"
-                :key="index"
-                :title="item.text" />
+            <TnTabsItem v-for="(item, index) in tabsData" :key="index" :title="item.text" />
         </Tntabs>
-        <scroll-view class="scroll-view"
-            scroll-y="true">
-            <view class="card"
-                v-for="i in 3"
-                :key="i">
-                <TnGraphicCard :avatar="graphicData.avatar"
-                    :title="graphicData.title"
-                    :description="graphicData.description"
-                    :tags="graphicData.tags"
-                    :content="graphicData.content"
-                    :images="graphicData.images"
-                    :view-count="graphicData.viewCount"
-                    :comment-count="graphicData.commentCount"
-                    :like-count="graphicData.likeCount"
-                    :view-user-avatars="graphicData.viewUserAvatars" />
-            </view>
-        </scroll-view>
+        <view class="scroll-view">
+            <scroll-view scroll-y="true">
+                <view class="card" v-for="i in 6" :key="i">
+                    <TnGraphicCard :avatar="graphicData.avatar" :title="graphicData.title"
+                        :description="graphicData.description" :tags="graphicData.tags" :content="graphicData.content"
+                        :images="graphicData.images" :view-count="graphicData.viewCount"
+                        :comment-count="graphicData.commentCount" :like-count="graphicData.likeCount"
+                        :view-user-avatars="graphicData.viewUserAvatars" />
+                </view>
+            </scroll-view>
+        </view>
+
     </view>
 </template>
 
@@ -82,28 +75,24 @@
 <style lang="scss" scoped>
     .forum {
         width: 100%;
-        height: 100vh;
-        background-color: skyblue;
+        min-height: 100vh;
+    }
+
+    .scroll-view {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        background-color: skyblue;
+    }
 
-        .scroll-view {
-            width: 100%;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card {
-            width: 100%;
-            max-width: 690rpx;
-            border-radius: 15rpx;
-            overflow: hidden;
-            margin: 30rpx auto;
-            background-color: #fff;
-            box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
-        }
+    .card {
+        width: 100%;
+        max-width: 690rpx;
+        border-radius: 15rpx;
+        overflow: hidden;
+        margin: 30rpx auto;
+        background-color: #fff;
+        box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
     }
 </style>

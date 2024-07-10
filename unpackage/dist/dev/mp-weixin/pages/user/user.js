@@ -2,7 +2,7 @@
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
 const data_pagesUser = require("../../data/pages-user.js");
-const logic_common = require("../../logic/common.js");
+const utils_common = require("../../utils/common.js");
 if (!Array) {
   const _easycom_my_card_row2 = common_vendor.resolveComponent("my-card-row");
   const _easycom_my_card2 = common_vendor.resolveComponent("my-card");
@@ -23,7 +23,7 @@ const _sfc_main = {
         a: avatarUrl.value,
         b: common_vendor.t(userName.value),
         c: common_assets._imports_0,
-        d: common_vendor.o(($event) => common_vendor.unref(logic_common.naviTo)("/pages_user/edit/edit")),
+        d: common_vendor.o(($event) => common_vendor.unref(utils_common.naviTo)("/pages_user/edit/edit")),
         e: common_vendor.p({
           arr: common_vendor.unref(data_pagesUser.rowCardData)
         }),

@@ -1,10 +1,8 @@
 "use strict";
-const _sfc_main = {
-  __name: "timeline",
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return {};
-    };
-  }
-};
-wx.createPage(_sfc_main);
+const common_vendor = require("../../common/vendor.js");
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  return {};
+}
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
+wx.createPage(MiniProgramPage);

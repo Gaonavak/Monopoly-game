@@ -14,7 +14,8 @@
         </map>
 
         <!-- 选项卡 -->
-        <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="tabs" active-bg-color="#8CAED1" inactive-bg-color="#E1E9F0">
+        <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="tabs" active-bg-color="#8CAED1"
+            inactive-bg-color="#E1E9F0">
             <!-- 商店 -->
             <view class="store" v-if="currentTabIndex === 0">
                 <view class="type-card">
@@ -28,7 +29,8 @@
             <!-- 周榜 -->
             <view class="rank" v-if="currentTabIndex === 1">
                 <view class="switchBar_rank">
-                    <TnSwitchTab v-model="currentTabIndex_rank" :tabs="tabs_rank" active-bg-color="#FFA726" inactive-bg-color="#E1E9F0">
+                    <TnSwitchTab v-model="currentTabIndex_rank" :tabs="tabs_rank" active-bg-color="#FFA726"
+                        inactive-bg-color="#E1E9F0">
                         <view class="dayList" v-if="currentTabIndex_rank === 0">
                             <my-rank-card :arr="group1" />
                         </view>

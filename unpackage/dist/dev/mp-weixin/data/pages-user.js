@@ -9,7 +9,7 @@ const rowCardData = common_vendor.ref([
   {
     title: "足迹",
     icon: "/static/user/map.png",
-    path: "/pages_user/about/about"
+    path: "/pages_user/timeline/timeline"
   },
   {
     title: "收藏",

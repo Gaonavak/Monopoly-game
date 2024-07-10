@@ -70,7 +70,7 @@ const _sfc_main = {
           scroll: false,
           modelValue: currentTabIndex.value
         }),
-        d: common_vendor.f(3, (i, k0, i0) => {
+        d: common_vendor.f(6, (i, k0, i0) => {
           return {
             a: "aeadbf01-2-" + i0,
             b: i

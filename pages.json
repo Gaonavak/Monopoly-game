@@ -9,7 +9,7 @@
         {
             "path": "pages/forum/forum",
             "style": {
-                "navigationBarTitleText": "论坛"
+                "navigationBarTitleText": "社区"
             }
         },
         {

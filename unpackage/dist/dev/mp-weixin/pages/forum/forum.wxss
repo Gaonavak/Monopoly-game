@@ -19,20 +19,16 @@
 /* 文章场景相关 */
 .forum.data-v-aeadbf01 {
   width: 100%;
-  height: 100vh;
-  background-color: skyblue;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
-.forum .scroll-view.data-v-aeadbf01 {
+.scroll-view.data-v-aeadbf01 {
   width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  background-color: skyblue;
 }
-.forum .card.data-v-aeadbf01 {
+.card.data-v-aeadbf01 {
   width: 100%;
   max-width: 690rpx;
   border-radius: 15rpx;
