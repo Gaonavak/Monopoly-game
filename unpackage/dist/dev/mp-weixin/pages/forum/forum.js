@@ -14,8 +14,8 @@ const _sfc_main = {
       avatar: "https://resource.tuniaokj.com/images/album/xiong1.jpg",
       title: "文章标题",
       description: "2023年6月30日",
-      tags: ["标签1", "标签2"],
-      content: "看看打开打开年份记得当年开始放假哦额外欺骗人u饿哦漂亮放佛怕打雷舒服呢我脾气破费了发多少呢；否，可能打飞机哦喷泉哦怕可能地方打开螺丝粉年份的肌肤看能否。",
+      // tags: ['标签1', '标签2'],
+      content: "小时候养老院里有一家的爷爷和奶奶。那个奶奶是个特别泼辣和急脾气的人，那个爷爷性子很慢，整天乐呵呵的。他俩出去遛弯，就只能听到那个奶奶不停的说话，那爷爷听着。前段时间，那个爷爷突发心脏病去世了。那个奶奶说了句，死老头子，磨磨蹭蹭一辈子，就这件事干的这么利索。说完沉默了一下就哭了。",
       images: [
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
@@ -72,8 +72,8 @@ const _sfc_main = {
         }),
         d: common_vendor.f(3, (i, k0, i0) => {
           return {
-            a: i,
-            b: "aeadbf01-2-" + i0
+            a: "aeadbf01-2-" + i0,
+            b: i
           };
         }),
         e: common_vendor.p({

@@ -1,33 +1,24 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const data_pagesHome = require("../../data/pages-home.js");
 if (!Array) {
   const _easycom_my_btn_box2 = common_vendor.resolveComponent("my-btn-box");
   const _easycom_uni_card2 = common_vendor.resolveComponent("uni-card");
   const _easycom_my_store_card2 = common_vendor.resolveComponent("my-store-card");
-  const _easycom_my_card2 = common_vendor.resolveComponent("my-card");
-  (_easycom_my_btn_box2 + _easycom_uni_card2 + _easycom_my_store_card2 + _easycom_my_card2)();
+  const _easycom_my_rank_card2 = common_vendor.resolveComponent("my-rank-card");
+  (_easycom_my_btn_box2 + _easycom_uni_card2 + _easycom_my_store_card2 + _easycom_my_rank_card2)();
 }
 const _easycom_my_btn_box = () => "../../components/my-btn-box/my-btn-box.js";
 const _easycom_uni_card = () => "../../uni_modules/uni-card/components/uni-card/uni-card.js";
 const _easycom_my_store_card = () => "../../components/my-store-card/my-store-card.js";
-const _easycom_my_card = () => "../../components/my-card/my-card.js";
+const _easycom_my_rank_card = () => "../../components/my-rank-card/my-rank-card.js";
 if (!Math) {
-  (_easycom_my_btn_box + _easycom_uni_card + _easycom_my_store_card + _easycom_my_card + TnSwitchTab)();
+  (_easycom_my_btn_box + _easycom_uni_card + _easycom_my_store_card + _easycom_my_rank_card + TnSwitchTab)();
 }
 const TnSwitchTab = () => "../../uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.js";
 const _sfc_main = {
   __name: "home",
   setup(__props) {
-    const scanQRCode = () => {
-      common_vendor.index.scanCode({
-        success(res) {
-          common_vendor.index.showToast({
-            title: res.scanType,
-            icon: "none"
-          });
-        }
-      });
-    };
     const getLocation = () => {
       common_vendor.index.getLocation({
         type: "gcj02",
@@ -68,23 +59,28 @@ const _sfc_main = {
           break;
       }
     };
-    const navList = common_vendor.ref([
-      {
-        title: "关于",
-        icon: "/static/user/info.png",
-        path: "/pages_user/about/about"
-      },
-      {
-        title: "帮助",
-        icon: "/static/user/phone.png",
-        path: "/pages_user/contact/contact"
-      },
-      {
-        title: "开发者",
-        icon: "/static/dev.png",
-        path: "/pages_home/location/location"
-      }
-    ]);
+    const longitude = common_vendor.ref(117.062956);
+    const latitude = common_vendor.ref(23.434194);
+    const place = common_vendor.ref({
+      title: "景点",
+      thumb: "/static/logo.png",
+      extra: "打卡",
+      desp: "这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。"
+    });
+    const scanQRCode = () => {
+      common_vendor.index.scanCode({
+        success(res) {
+          common_vendor.index.showToast({
+            title: res.scanType,
+            icon: "none"
+          });
+        }
+      });
+    };
+    const currentTabIndex = common_vendor.ref(0);
+    const currentTabIndex_rank = common_vendor.ref(0);
+    const tabs = common_vendor.ref(["商店", "周榜"]);
+    const tabs_rank = common_vendor.ref(["日榜", "周榜", "月榜"]);
     const btns = common_vendor.ref([
       {
         title: "扫描二维码",
@@ -97,103 +93,10 @@ const _sfc_main = {
         path: getLocation
       }
     ]);
-    const longitude = common_vendor.ref(117.062956);
-    const latitude = common_vendor.ref(23.434194);
-    const place = common_vendor.ref({
-      title: "景点",
-      thumb: "/static/logo.png",
-      extra: "打卡",
-      desp: "这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。"
-    });
-    const currentTabIndex = common_vendor.ref(0);
-    const tabs = common_vendor.ref(["商店", "周榜"]);
-    const data1 = common_vendor.ref([
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单1",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      },
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单2",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      },
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单3",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      },
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单1",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      },
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单2",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      },
-      {
-        leftIcon: "/static/logo.png",
-        title: "data1-表单3",
-        desc: "",
-        rightIcon: "/static/logo.png"
-      }
-    ]);
-    const fruit = common_vendor.ref({
-      title: ["水果"],
-      list: [
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        },
-        {
-          name: "西瓜",
-          thumb: "/static/logo.png",
-          price: 999
-        }
-      ]
-    });
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.p({
-          arr: navList.value
+          arr: common_vendor.unref(data_pagesHome.navList)
         }),
         b: common_vendor.p({
           arr: btns.value
@@ -210,18 +113,45 @@ const _sfc_main = {
         h: currentTabIndex.value === 0
       }, currentTabIndex.value === 0 ? {
         i: common_vendor.p({
-          arr: fruit.value
+          arr: common_vendor.unref(data_pagesHome.fruit)
+        }),
+        j: common_vendor.p({
+          arr: common_vendor.unref(data_pagesHome.fruit)
         })
       } : {}, {
-        j: currentTabIndex.value === 1
-      }, currentTabIndex.value === 1 ? {
-        k: common_vendor.p({
-          arr: data1.value
-        })
-      } : {}, {
-        l: common_vendor.o(($event) => currentTabIndex.value = $event),
+        k: currentTabIndex.value === 1
+      }, currentTabIndex.value === 1 ? common_vendor.e({
+        l: currentTabIndex_rank.value === 0
+      }, currentTabIndex_rank.value === 0 ? {
         m: common_vendor.p({
+          arr: common_vendor.unref(data_pagesHome.group1)
+        })
+      } : {}, {
+        n: currentTabIndex_rank.value === 1
+      }, currentTabIndex_rank.value === 1 ? {
+        o: common_vendor.p({
+          arr: common_vendor.unref(data_pagesHome.group2)
+        })
+      } : {}, {
+        p: currentTabIndex_rank.value === 2
+      }, currentTabIndex_rank.value === 2 ? {
+        q: common_vendor.p({
+          arr: common_vendor.unref(data_pagesHome.group3)
+        })
+      } : {}, {
+        r: common_vendor.o(($event) => currentTabIndex_rank.value = $event),
+        s: common_vendor.p({
+          tabs: tabs_rank.value,
+          ["active-bg-color"]: "#FFA726",
+          ["inactive-bg-color"]: "#E1E9F0",
+          modelValue: currentTabIndex_rank.value
+        })
+      }) : {}, {
+        t: common_vendor.o(($event) => currentTabIndex.value = $event),
+        v: common_vendor.p({
           tabs: tabs.value,
+          ["active-bg-color"]: "#8CAED1",
+          ["inactive-bg-color"]: "#E1E9F0",
           modelValue: currentTabIndex.value
         })
       });

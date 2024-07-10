@@ -25,7 +25,7 @@
             <my-card :arr="colCardData"></my-card>
         </view>
         <view class="colCard">
-            <my-card :arr="cleanCache"></my-card>
+            <my-card :arr="cleanCacheCard"></my-card>
         </view>
 
     </view>
@@ -36,69 +36,18 @@
     import {
         ref
     } from 'vue';
+    import {
+        rowCardData,
+        colCardData,
+        cleanCacheCard
+    } from '@/data/pages-user.js';
+
+    import {
+        naviTo
+    } from '@/logic/common.js';
+
     const userName = ref('张三')
     const avatarUrl = ref('/static/logo.png');
-    const naviTo = (path) => {
-        if (!path) {
-            return;
-        }
-        uni.navigateTo({
-            url: path,
-            fail() {
-                uni.showToast({
-                    title: '跳转失败，请检查网络...'
-                })
-            }
-        })
-    };
-    const clean = () => {
-        uni.showToast({
-            title: '清理完成',
-            icon: 'none'
-        })
-    }
-    const rowCardData = ref([{
-            title: '打卡点',
-            icon: '/static/user/flag.png',
-            path: '/pages_user/about/about'
-        },
-        {
-            title: '足迹',
-            icon: '/static/user/map.png',
-            path: '/pages_user/about/about'
-        },
-        {
-            title: '收藏',
-            icon: '/static/user/star.png',
-            path: '/pages_user/about/about'
-        }
-    ]);
-
-    const colCardData = ref([{
-            title: '用户反馈',
-            leftIcon: '/static/user/phone.png',
-            rightIcon: '/static/user/arrowright.png',
-            path: '/pages_user/contact/contact'
-        }, {
-            title: '联系我们',
-            leftIcon: '/static/user/personadd.png',
-            rightIcon: '/static/user/arrowright.png',
-            path: '/pages_user/contact/contact'
-        },
-        {
-            title: '关于我们',
-            leftIcon: '/static/user/info.png',
-            rightIcon: '/static/user/arrowright.png',
-            path: '/pages_user/about/about'
-        }
-    ]);
-
-    const cleanCache = ref([{
-        title: '清理缓存',
-        leftIcon: '/static/user/trash.png',
-        rightIcon: '/static/user/arrowright.png',
-        path: clean
-    }])
 </script>
 
 <style lang="scss" scoped>

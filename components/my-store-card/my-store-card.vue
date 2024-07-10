@@ -1,10 +1,11 @@
 <template>
-    <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="arr.title" active-bg-color="#B3ECFF" disabled inactive-bg-color="#FFFFFF">
+    <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="arr.title" active-bg-color="#B3ECFF" disabled
+        inactive-bg-color="#FFFFFF">
         <view class="card-goods">
             <view class="item" v-for="(item, index) in arr.list" :key="index">
                 <image class="thumb" :src="item.thumb" mode="aspectFill" />
                 <view class="name">{{ item.name }}</view>
-                <TnButton class="price">￥ {{item.price}}</TnButton>
+                <TnButton class="price" @click="buy">积分 {{item.price}}</TnButton>
             </view>
         </view>
     </TnSwitchTab>
@@ -12,17 +13,22 @@
 
 <script setup>
     import {
-        ref
+        ref,
+        computed
     } from 'vue';
     defineProps(['arr'])
     import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
     const currentTabIndex = ref(0)
+    const buy = () => {
+        uni.showToast({
+            title: '你点击了购买按钮'
+        });
+    };
 </script>
 
 <style lang="scss" scoped>
     .switchBar {
-        background-color: red;
         border-radius: 20rpx;
     }
 
@@ -44,12 +50,11 @@
         margin: 10rpx;
         width: calc(33.33% - 40rpx);
         box-sizing: border-box;
-
     }
 
     .thumb {
-        width: 100rpx;
-        height: 100rpx;
+        width: 120rpx;
+        height: 120rpx;
         object-fit: cover;
         border-radius: 20rpx;
     }
@@ -59,12 +64,6 @@
     }
 
     .price {
-        margin-top: 15rpx;
-    }
-
-    /* 处理最后一行的对齐 */
-    .goods::after {
-        content: "";
-        flex: auto;
+        margin-top: 20rpx;
     }
 </style>

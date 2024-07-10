@@ -1,14 +1,26 @@
 <template>
     <view class="forum">
-        <TnTabs v-model="currentTabIndex" :scroll="false">
-            <TnTabsItem v-for="(item, index) in tabsData" :key="index" :title="item.text" />
+        <TnTabs class="tabs" v-model="currentTabIndex" :scroll="false">
+            <TnTabsItem v-for="(item, index) in tabsData"
+                :key="index"
+                :title="item.text" />
         </Tntabs>
-        <scroll-view class="scroll-view" scroll-y="true">
-            <TnGraphicCard class="card" v-for="i in 3" :key="i" :avatar="graphicData.avatar" :title="graphicData.title"
-                :description="graphicData.description" :tags="graphicData.tags" :content="graphicData.content"
-                :images="graphicData.images" :view-count="graphicData.viewCount"
-                :comment-count="graphicData.commentCount" :like-count="graphicData.likeCount"
-                :view-user-avatars="graphicData.viewUserAvatars" />
+        <scroll-view class="scroll-view"
+            scroll-y="true">
+            <view class="card"
+                v-for="i in 3"
+                :key="i">
+                <TnGraphicCard :avatar="graphicData.avatar"
+                    :title="graphicData.title"
+                    :description="graphicData.description"
+                    :tags="graphicData.tags"
+                    :content="graphicData.content"
+                    :images="graphicData.images"
+                    :view-count="graphicData.viewCount"
+                    :comment-count="graphicData.commentCount"
+                    :like-count="graphicData.likeCount"
+                    :view-user-avatars="graphicData.viewUserAvatars" />
+            </view>
         </scroll-view>
     </view>
 </template>
@@ -25,8 +37,8 @@
         avatar: 'https://resource.tuniaokj.com/images/album/xiong1.jpg',
         title: '文章标题',
         description: '2023年6月30日',
-        tags: ['标签1', '标签2'],
-        content: '看看打开打开年份记得当年开始放假哦额外欺骗人u饿哦漂亮放佛怕打雷舒服呢我脾气破费了发多少呢；否，可能打飞机哦喷泉哦怕可能地方打开螺丝粉年份的肌肤看能否。',
+        // tags: ['标签1', '标签2'],
+        content: '小时候养老院里有一家的爷爷和奶奶。那个奶奶是个特别泼辣和急脾气的人，那个爷爷性子很慢，整天乐呵呵的。他俩出去遛弯，就只能听到那个奶奶不停的说话，那爷爷听着。前段时间，那个爷爷突发心脏病去世了。那个奶奶说了句，死老头子，磨磨蹭蹭一辈子，就这件事干的这么利索。说完沉默了一下就哭了。',
         images: [
             'https://resource.tuniaokj.com/images/album/xiong1.jpg',
             'https://resource.tuniaokj.com/images/album/xiong1.jpg',
@@ -72,23 +84,26 @@
         width: 100%;
         height: 100vh;
         background-color: skyblue;
+        display: flex;
+        flex-direction: column;
 
         .scroll-view {
             width: 100%;
-            height: 100%;
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
 
-            .card {
-                width: 100%;
-                max-width: 690rpx;
-                border-radius: 12rpx;
-                margin: 30rpx auto;
-                background-color: #fff;
-                box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
-            }
+        .card {
+            width: 100%;
+            max-width: 690rpx;
+            border-radius: 15rpx;
+            overflow: hidden;
+            margin: 30rpx auto;
+            background-color: #fff;
+            box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
         }
     }
 </style>

@@ -10,6 +10,11 @@ const _sfc_main = {
   props: ["arr"],
   setup(__props) {
     const currentTabIndex = common_vendor.ref(0);
+    const buy = () => {
+      common_vendor.index.showToast({
+        title: "你点击了购买按钮"
+      });
+    };
     return (_ctx, _cache) => {
       return {
         a: common_vendor.f(__props.arr.list, (item, index, i0) => {
@@ -17,8 +22,9 @@ const _sfc_main = {
             a: item.thumb,
             b: common_vendor.t(item.name),
             c: common_vendor.t(item.price),
-            d: "2b5f0ee8-1-" + i0 + ",2b5f0ee8-0",
-            e: index
+            d: common_vendor.o(buy, index),
+            e: "2b5f0ee8-1-" + i0 + ",2b5f0ee8-0",
+            f: index
           };
         }),
         b: common_vendor.o(($event) => currentTabIndex.value = $event),

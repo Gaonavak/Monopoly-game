@@ -45,6 +45,13 @@
                 {
                     "navigationBarTitleText" : "清理缓存"
                 }
+            },
+            {
+                "path" : "timeline/timeline",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "足迹"
+                }
             }
         ]
     },{

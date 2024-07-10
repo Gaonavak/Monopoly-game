@@ -23,7 +23,7 @@
 }
 .map.data-v-07e72d3c {
   width: 100%;
-  height: 88%;
+  height: 92%;
   position: relative;
 }
 .btn-box1.data-v-07e72d3c {
@@ -36,25 +36,36 @@
 }
 .btn-box2.data-v-07e72d3c {
   position: absolute;
-  top: 340rpx;
+  top: 300rpx;
   right: 0;
   z-index: 5;
   margin: 30rpx;
   padding: 20rpx;
 }
-.card.data-v-07e72d3c {
+.checkIn-card.data-v-07e72d3c {
   position: absolute;
-  bottom: 25rpx;
+  bottom: 40rpx;
   left: 0;
   right: 0;
   border-radius: 20rpx;
   z-index: 5;
 }
-.switchBar.data-v-07e72d3c {
-  margin-top: -10rpx;
-}
 .store.data-v-07e72d3c {
   width: 100%;
-  max-width: 600rpx;
+  max-width: 690rpx;
   margin: 100rpx auto;
+}
+.store .type-card.data-v-07e72d3c {
+  margin: 110rpx auto;
+}
+.switchBar.data-v-07e72d3c {
+  margin-top: -30rpx;
+}
+.switchBar .switchBar_rank.data-v-07e72d3c {
+  margin-top: 80rpx;
+}
+.rank.data-v-07e72d3c {
+  width: 100%;
+  max-width: 690rpx;
+  margin: 0 auto;
 }

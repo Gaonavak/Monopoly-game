@@ -1,0 +1,56 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.my-rank-card.data-v-b7bdbf13 {
+  width: 100%;
+  margin: 50rpx auto;
+  background: linear-gradient(to bottom, transparent, #fff 30%), radial-gradient(90% 30% at left top, #80A6CD, #DCE5EC), radial-gradient(60% 30% at right top, #DCE5EC, #80A6CD);
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.list.data-v-b7bdbf13 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx;
+}
+.left.data-v-b7bdbf13 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15rpx;
+}
+.left .order.data-v-b7bdbf13 {
+  margin: 0 30rpx;
+}
+.left .icon.data-v-b7bdbf13 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.left .title.data-v-b7bdbf13 {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+.right.data-v-b7bdbf13 {
+  margin-right: 50rpx;
+}

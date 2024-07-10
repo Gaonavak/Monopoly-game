@@ -11,7 +11,8 @@
         "about/about",
         "contact/contact",
         "edit/edit",
-        "clean/clean"
+        "clean/clean",
+        "timeline/timeline"
       ]
     },
     {

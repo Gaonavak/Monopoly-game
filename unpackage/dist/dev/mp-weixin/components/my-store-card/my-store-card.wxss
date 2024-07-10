@@ -18,7 +18,6 @@
 /* 透明度 */
 /* 文章场景相关 */
 .switchBar.data-v-2b5f0ee8 {
-  background-color: red;
   border-radius: 20rpx;
 }
 .card-goods.data-v-2b5f0ee8 {
@@ -40,8 +39,8 @@
   box-sizing: border-box;
 }
 .thumb.data-v-2b5f0ee8 {
-  width: 100rpx;
-  height: 100rpx;
+  width: 120rpx;
+  height: 120rpx;
   object-fit: cover;
   border-radius: 20rpx;
 }
@@ -49,11 +48,5 @@
   margin-top: 15rpx;
 }
 .price.data-v-2b5f0ee8 {
-  margin-top: 15rpx;
-}
-
-/* 处理最后一行的对齐 */
-.goods.data-v-2b5f0ee8::after {
-  content: "";
-  flex: auto;
+  margin-top: 20rpx;
 }

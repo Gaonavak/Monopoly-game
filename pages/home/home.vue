@@ -7,18 +7,41 @@
             <my-btn-box class="btn-box2" :arr="btns"></my-btn-box>
 
             <!-- 地点详情 -->
-            <uni-card class="card" :title="place.title" :thumbnail="place.thumb" :extra="place.extra"
+            <uni-card class="checkIn-card" :title="place.title" :thumbnail="place.thumb" :extra="place.extra"
                 @click="clickCard">
                 <text>{{place.desp}}</text>
             </uni-card>
         </map>
 
         <!-- 选项卡 -->
-        <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="tabs">
+        <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="tabs" active-bg-color="#8CAED1" inactive-bg-color="#E1E9F0">
             <!-- 商店 -->
-            <my-store-card class="store" v-if="currentTabIndex === 0" :arr="fruit"></my-store-card>
+            <view class="store" v-if="currentTabIndex === 0">
+                <view class="type-card">
+                    <my-store-card :arr="fruit"></my-store-card>
+                </view>
+                <view class="type-card">
+                    <my-store-card :arr="fruit" />
+                </view>
+            </view>
+
             <!-- 周榜 -->
-            <my-card class="switchBar-content" v-if="currentTabIndex === 1" :arr="data1"></my-card>
+            <view class="rank" v-if="currentTabIndex === 1">
+                <view class="switchBar_rank">
+                    <TnSwitchTab v-model="currentTabIndex_rank" :tabs="tabs_rank" active-bg-color="#FFA726" inactive-bg-color="#E1E9F0">
+                        <view class="dayList" v-if="currentTabIndex_rank === 0">
+                            <my-rank-card :arr="group1" />
+                        </view>
+                        <view class="weekList" v-if="currentTabIndex_rank === 1">
+                            <my-rank-card :arr="group2" />
+                        </view>
+                        <view class="monthList" v-if="currentTabIndex_rank === 2">
+                            <my-rank-card :arr="group3" />
+                        </view>
+                    </TnSwitchTab>
+                </view>
+
+            </view>
         </TnSwitchTab>
     </view>
 </template>
@@ -29,17 +52,14 @@
     } from 'vue';
 
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
-    // 扫描二维码
-    const scanQRCode = () => {
-        uni.scanCode({
-            success(res) {
-                uni.showToast({
-                    title: res.scanType,
-                    icon: 'none'
-                })
-            }
-        })
-    };
+
+    import {
+        navList,
+        fruit,
+        group1,
+        group2,
+        group3
+    } from '@/data/pages-home';
 
     // 获取定位
     const getLocation = () => {
@@ -77,7 +97,7 @@
         });
     }
 
-    // 
+    // 点击打卡那张卡片
     const clickCard = (type) => {
         switch (type) {
             case 'thumb':
@@ -87,37 +107,7 @@
                 checkIn();
                 break;
         };
-
     };
-
-    const navList = ref([{
-            title: '关于',
-            icon: '/static/user/info.png',
-            path: '/pages_user/about/about'
-        },
-        {
-            title: '帮助',
-            icon: '/static/user/phone.png',
-            path: '/pages_user/contact/contact'
-        },
-        {
-            title: '开发者',
-            icon: '/static/dev.png',
-            path: '/pages_home/location/location'
-        }
-    ]);
-
-    const btns = ref([{
-            title: '扫描二维码',
-            icon: '/static/home/scan.png',
-            path: scanQRCode
-        },
-        {
-            title: '重新获取位置',
-            icon: '/static/home/relocation.png',
-            path: getLocation
-        }
-    ]);
 
     // 南澳岛的经纬度
     const longitude = ref(117.062956);
@@ -129,89 +119,34 @@
         extra: '打卡',
         desp: '这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。',
     });
+    // 扫描二维码
+    const scanQRCode = () => {
+        uni.scanCode({
+            success(res) {
+                uni.showToast({
+                    title: res.scanType,
+                    icon: 'none'
+                })
+            }
+        })
+    };
 
     // 当前选中的标签索引
     const currentTabIndex = ref(0);
+    const currentTabIndex_rank = ref(0);
     const tabs = ref(['商店', '周榜']);
-    const data1 = ref([{
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单1',
-            desc: '',
-            rightIcon: '/static/logo.png'
+    const tabs_rank = ref(['日榜', '周榜', '月榜']);
+    const btns = ref([{
+            title: '扫描二维码',
+            icon: '/static/home/scan.png',
+            path: scanQRCode
         },
         {
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单2',
-            desc: '',
-            rightIcon: '/static/logo.png'
-        },
-        {
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单3',
-            desc: '',
-            rightIcon: '/static/logo.png'
-        },
-        {
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单1',
-            desc: '',
-            rightIcon: '/static/logo.png'
-        },
-        {
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单2',
-            desc: '',
-            rightIcon: '/static/logo.png'
-        },
-        {
-            leftIcon: '/static/logo.png',
-            title: 'data1-表单3',
-            desc: '',
-            rightIcon: '/static/logo.png'
+            title: '重新获取位置',
+            icon: '/static/home/relocation.png',
+            path: getLocation
         }
     ]);
-
-    const fruit = ref({
-        title: ['水果'],
-        list: [{
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            }, {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            },
-            {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            },
-            {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            }, {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            }, {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            },
-            {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            },
-            {
-                name: '西瓜',
-                thumb: '/static/logo.png',
-                price: 999
-            }
-        ],
-    });
 </script>
 
 <style lang="scss" scoped>
@@ -222,7 +157,7 @@
 
     .map {
         width: 100%;
-        height: 88%;
+        height: 92%;
         position: relative;
     }
 
@@ -237,29 +172,43 @@
 
     .btn-box2 {
         position: absolute;
-        top: 340rpx;
+        top: 300rpx;
         right: 0;
         z-index: 5;
         margin: 30rpx;
         padding: 20rpx;
     }
 
-    .card {
+    .checkIn-card {
         position: absolute;
-        bottom: 25rpx;
+        bottom: 40rpx;
         left: 0;
         right: 0;
         border-radius: 20rpx;
         z-index: 5;
     }
 
-    .switchBar {
-        margin-top: -10rpx;
-    }
-
     .store {
         width: 100%;
-        max-width: 600rpx;
+        max-width: 690rpx;
         margin: 100rpx auto;
+
+        .type-card {
+            margin: 110rpx auto;
+        }
+    }
+
+    .switchBar {
+        margin-top: -30rpx;
+
+        .switchBar_rank {
+            margin-top: 80rpx;
+        }
+    }
+
+    .rank {
+        width: 100%;
+        max-width: 690rpx;
+        margin: 0 auto;
     }
 </style>
