@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "用户反馈",
+  "usingComponents": {
+    "tn-subsection": "../../uni_modules/tuniaoui-vue3/components/subsection/src/subsection",
+    "tn-subsection-item": "../../uni_modules/tuniaoui-vue3/components/subsection/src/subsection-item",
+    "tn-input": "../../uni_modules/tuniaoui-vue3/components/input/src/input",
+    "tn-popup": "../../uni_modules/tuniaoui-vue3/components/popup/src/popup"
+  }
+}

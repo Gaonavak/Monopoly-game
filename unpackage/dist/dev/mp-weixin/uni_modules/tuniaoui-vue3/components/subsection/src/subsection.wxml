@@ -1,0 +1,1 @@
+<view id="{{d}}" class="{{['data-v-4288fe58', e]}}" style="{{f}}"><view class="{{['data-v-4288fe58', a]}}" style="{{b}}"/><view class="{{['data-v-4288fe58', c]}}"><slot/></view></view>
