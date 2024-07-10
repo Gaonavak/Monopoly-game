@@ -8484,6 +8484,120 @@ const useGraphicCard = (props, emits) => {
     handleLikeClick
   };
 };
+const timeLineKey = Symbol("timeLineKey");
+const timeLineProps = buildProps({
+  /**
+   * @description 显示竖线
+   */
+  showLine: {
+    type: Boolean,
+    default: true
+  }
+});
+const timeLineItemProps = buildProps({
+  /**
+   * @description 标题
+   */
+  title: String,
+  /**
+   * @description 标题icon
+   */
+  titleIcon: String,
+  /**
+   * @description 节点背景
+   */
+  dotBgColor: String,
+  /**
+   * @description 节点字体颜色
+   */
+  dotTextColor: String
+});
+const timeLineItemEmits = {
+  /**
+   * @description 点击事件
+   */
+  click: () => true
+};
+const useTimeLineCustomStyle = (props) => {
+  const ns = useNamespace("time-line-item");
+  const [dotBgColorClass, dotBgColorStyle] = useComponentColor(
+    toRef(props, "dotBgColor"),
+    "bg"
+  );
+  const [dotTextColorClass, dotTextColorStyle] = useComponentColor(
+    toRef(props, "dotTextColor"),
+    "text"
+  );
+  const dotClass = computed(() => {
+    const cls = [];
+    if (dotBgColorClass.value)
+      cls.push(dotBgColorClass.value);
+    if (dotTextColorClass.value)
+      cls.push(dotTextColorClass.value);
+    return cls.join(" ");
+  });
+  const dotStyle = computed(() => {
+    const style = {};
+    if (!dotBgColorClass.value) {
+      style.backgroundColor = dotBgColorStyle.value || "var(--tn-color-blue)";
+    }
+    if (dotTextColorStyle.value) {
+      style.color = dotTextColorStyle.value;
+    } else if (!dotBgColorClass.value && !dotTextColorClass.value) {
+      style.color = "#fff";
+    }
+    return style;
+  });
+  return {
+    ns,
+    dotClass,
+    dotStyle
+  };
+};
+const useTimeLineDataCustomStyle = (props) => {
+  const ns = useNamespace("time-line-data");
+  const [dotColorClass, dotColorStyle] = useComponentColor(
+    toRef(props, "dotColor"),
+    "text"
+  );
+  const dotClass = computed(() => {
+    const cls = [];
+    if (dotColorClass.value)
+      cls.push(dotColorClass.value);
+    return cls.join(" ");
+  });
+  const dotStyle = computed(() => {
+    const style = {};
+    if (!dotColorClass.value) {
+      style.color = dotColorStyle.value || "var(--tn-color-red)";
+    }
+    return style;
+  });
+  return {
+    ns,
+    dotClass,
+    dotStyle
+  };
+};
+const timeLineDataProps = buildProps({
+  /**
+   * @description 节点图标
+   */
+  dotIcon: {
+    type: String,
+    default: "circle-fill"
+  },
+  /**
+   * @description 节点颜色
+   */
+  dotColor: String
+});
+const timeLineDataEmits = {
+  /**
+   * @description 点击事件
+   */
+  click: () => true
+};
 const useComponentBoolean = buildProp({
   type: [Boolean, void 0],
   default: void 0
@@ -9592,6 +9706,12 @@ exports.resolveComponent = resolveComponent;
 exports.s = s;
 exports.shallowRef = shallowRef;
 exports.t = t;
+exports.timeLineDataEmits = timeLineDataEmits;
+exports.timeLineDataProps = timeLineDataProps;
+exports.timeLineItemEmits = timeLineItemEmits;
+exports.timeLineItemProps = timeLineItemProps;
+exports.timeLineKey = timeLineKey;
+exports.timeLineProps = timeLineProps;
 exports.toRef = toRef;
 exports.toRefs = toRefs;
 exports.unref = unref;
@@ -9611,5 +9731,7 @@ exports.useLazyLoadCustomStyle = useLazyLoadCustomStyle;
 exports.useNamespace = useNamespace;
 exports.usePhotoAlbum = usePhotoAlbum;
 exports.useSlots = useSlots;
+exports.useTimeLineCustomStyle = useTimeLineCustomStyle;
+exports.useTimeLineDataCustomStyle = useTimeLineDataCustomStyle;
 exports.warn = warn;
 exports.watch = watch;

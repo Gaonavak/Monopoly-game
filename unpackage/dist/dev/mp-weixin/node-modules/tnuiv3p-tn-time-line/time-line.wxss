@@ -17,12 +17,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-14aea6d3 {
+.tn-time-line {
   position: relative;
   width: 100%;
-  padding: 30rpx;
-}
-.content .time-line__title.data-v-14aea6d3 {
-  font-size: 32rpx;
-  margin-bottom: 20rpx;
 }
