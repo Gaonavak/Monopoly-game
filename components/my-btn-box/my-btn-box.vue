@@ -8,24 +8,9 @@
 
 <script setup>
     defineProps(['arr'])
-    const onclick = (path) => {
-        if (!path) {
-            return;
-        }
-        if (typeof path === 'function') {
-            path();
-            return;
-        }
-        uni.navigateTo({
-            url: path,
-            fail() {
-                uni.showToast({
-                    title: '页面不存在，或网络错误',
-                    icon: 'closeempty'
-                })
-            }
-        });
-    }
+    import {
+        naviTo
+    } from '@/utils/common.js';
 </script>
 
 <style lang="scss" scoped>
