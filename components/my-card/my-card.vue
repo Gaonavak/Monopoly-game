@@ -47,8 +47,7 @@
 <style lang="scss" scoped>
     .my-card {
         width: 100%;
-        max-width: 690rpx;
-        margin: 0 auto;
+        margin: 50rpx auto;
         background: $bg-card;
         border-radius: $border-radius;
         overflow: hidden;
@@ -62,7 +61,6 @@
         align-items: center;
         border-bottom: 1rpx solid $border-seperator;
         padding: 25rpx;
-        overflow: hidden;
 
         &:last-child {
             border-bottom: none;

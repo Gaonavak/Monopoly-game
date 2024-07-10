@@ -10,7 +10,7 @@ const _sfc_main = {
   setup(__props) {
     return (_ctx, _cache) => {
       return {
-        a: common_assets._imports_0,
+        a: common_assets._imports_0$1,
         b: common_vendor.p({
           content: "Copyright © 2024 汕头大学-三下乡-科技队",
           fixed: true

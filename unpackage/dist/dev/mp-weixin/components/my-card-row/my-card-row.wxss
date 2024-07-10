@@ -19,19 +19,20 @@
 /* 文章场景相关 */
 .my-card-row.data-v-b31a7f34 {
   width: 100%;
-  margin: 0 auto;
+  margin: 50rpx auto;
+  background: #FDFFFF;
+  border-radius: 20rpx;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background: #FDFFFF;
-  border-radius: 20rpx;
 }
 .item.data-v-b31a7f34 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
   margin: 40rpx;
 }
 .icon.data-v-b31a7f34 {

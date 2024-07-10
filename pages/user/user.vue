@@ -16,13 +16,18 @@
         </view>
 
         <!-- 横向列表 -->
-        <my-card-row class="rowCard" :arr="rowCardData"></my-card-row>
+        <view class="rowCard">
+            <my-card-row :arr="rowCardData"></my-card-row>
+        </view>
 
         <!-- 纵向列表 -->
-        <my-card class="colCard" :arr="colCardData"></my-card>
+        <view class="colCard">
+            <my-card :arr="colCardData"></my-card>
+        </view>
+        <view class="colCard">
+            <my-card :arr="cleanCache"></my-card>
+        </view>
 
-        <!-- 纵向列表 -->
-        <my-card class="colCard" :arr="cleanCache" @click="clean"></my-card>
     </view>
 </template>
 
@@ -92,6 +97,7 @@
         title: '清理缓存',
         leftIcon: '/static/user/trash.png',
         rightIcon: '/static/user/arrowright.png',
+        path: clean
     }])
 </script>
 
@@ -158,15 +164,10 @@
         }
     }
 
-    .rowCard {
-        width: 100%;
-        max-width: 690rpx;
-        margin-top: 60rpx;
-    }
-
+    .rowCard,
     .colCard {
         width: 100%;
         max-width: 690rpx;
-        margin-top: 60rpx;
+        margin: 0 auto;
     }
 </style>

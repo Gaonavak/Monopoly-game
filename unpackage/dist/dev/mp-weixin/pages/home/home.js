@@ -125,10 +125,28 @@ const _sfc_main = {
         title: "data1-表单3",
         desc: "",
         rightIcon: "/static/logo.png"
+      },
+      {
+        leftIcon: "/static/logo.png",
+        title: "data1-表单1",
+        desc: "",
+        rightIcon: "/static/logo.png"
+      },
+      {
+        leftIcon: "/static/logo.png",
+        title: "data1-表单2",
+        desc: "",
+        rightIcon: "/static/logo.png"
+      },
+      {
+        leftIcon: "/static/logo.png",
+        title: "data1-表单3",
+        desc: "",
+        rightIcon: "/static/logo.png"
       }
     ]);
     const fruit = common_vendor.ref({
-      title: ["水果", ""],
+      title: ["水果"],
       list: [
         {
           name: "西瓜",

@@ -70,13 +70,9 @@
   height: 50rpx;
   margin-top: 15rpx;
 }
-.rowCard.data-v-0f7520f0 {
-  width: 100%;
-  max-width: 690rpx;
-  margin-top: 60rpx;
-}
+.rowCard.data-v-0f7520f0,
 .colCard.data-v-0f7520f0 {
   width: 100%;
   max-width: 690rpx;
-  margin-top: 60rpx;
+  margin: 0 auto;
 }

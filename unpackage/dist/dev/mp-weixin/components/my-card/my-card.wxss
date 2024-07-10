@@ -19,8 +19,7 @@
 /* 文章场景相关 */
 .my-card.data-v-98ac0ec3 {
   width: 100%;
-  max-width: 690rpx;
-  margin: 0 auto;
+  margin: 50rpx auto;
   background: #FDFFFF;
   border-radius: 20rpx;
   overflow: hidden;
@@ -33,7 +32,6 @@
   align-items: center;
   border-bottom: 1rpx solid #F0F0F0;
   padding: 25rpx;
-  overflow: hidden;
 }
 .list.data-v-98ac0ec3:last-child {
   border-bottom: none;

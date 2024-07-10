@@ -15,6 +15,7 @@ const _sfc_main = {
   __name: "user",
   setup(__props) {
     const userName = common_vendor.ref("张三");
+    const avatarUrl = common_vendor.ref("/static/logo.png");
     const naviTo = (path) => {
       if (!path) {
         return;
@@ -53,6 +54,12 @@ const _sfc_main = {
     ]);
     const colCardData = common_vendor.ref([
       {
+        title: "用户反馈",
+        leftIcon: "/static/user/phone.png",
+        rightIcon: "/static/user/arrowright.png",
+        path: "/pages_user/contact/contact"
+      },
+      {
         title: "联系我们",
         leftIcon: "/static/user/personadd.png",
         rightIcon: "/static/user/arrowright.png",
@@ -68,13 +75,14 @@ const _sfc_main = {
     const cleanCache = common_vendor.ref([{
       title: "清理缓存",
       leftIcon: "/static/user/trash.png",
-      rightIcon: "/static/user/arrowright.png"
+      rightIcon: "/static/user/arrowright.png",
+      path: clean
     }]);
     return (_ctx, _cache) => {
       return {
-        a: common_assets._imports_0,
+        a: avatarUrl.value,
         b: common_vendor.t(userName.value),
-        c: common_assets._imports_1,
+        c: common_assets._imports_0,
         d: common_vendor.o(($event) => naviTo("/pages_user/edit/edit")),
         e: common_vendor.p({
           arr: rowCardData.value
@@ -82,8 +90,7 @@ const _sfc_main = {
         f: common_vendor.p({
           arr: colCardData.value
         }),
-        g: common_vendor.o(clean),
-        h: common_vendor.p({
+        g: common_vendor.p({
           arr: cleanCache.value
         })
       };

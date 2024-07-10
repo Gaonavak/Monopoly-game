@@ -19,20 +19,21 @@
 <style lang="scss" scoped>
     .my-card-row {
         width: 100%;
-        margin: 0 auto;
+        margin: 50rpx auto;
+        background: $bg-card;
+        border-radius: $border-radius;
+        overflow: hidden;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        background: $bg-card;
-        border-radius: $border-radius;
     }
-    
+
     .item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-self: center;
+        justify-content: center;
         margin: 40rpx;
     }
 

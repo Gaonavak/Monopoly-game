@@ -24,6 +24,9 @@ const _sfc_main = {
         b: common_vendor.o(($event) => currentTabIndex.value = $event),
         c: common_vendor.p({
           tabs: __props.arr.title,
+          ["active-bg-color"]: "#B3ECFF",
+          disabled: true,
+          ["inactive-bg-color"]: "#FFFFFF",
           modelValue: currentTabIndex.value
         })
       };
