@@ -12,29 +12,25 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     const timeLineData = [
       {
         month: "2023-07",
-        icon: "/static/logo.png",
+        icon: "moments",
         data: [
           {
             date: "1",
-            version: "1.0.0",
-            content: "/static/logo.png"
-          },
-          {
-            content: "图鸟科技，图鸟UI vue3 uniapp版本全新发布，欢迎各位开发者进行使用"
+            status: "打卡成功",
+            content: "南澳岛面积达117.73平方千米，海岸线长94.3千米。",
+            image: "/static/logo.png"
           }
         ]
       },
       {
         month: "2023-08",
-        icon: "/static/logo.png",
+        icon: "creative",
         data: [
           {
-            content: "图鸟科技，图鸟UI vue3 uniapp版本全新发布，欢迎各位开发者进行使用"
-          },
-          {
             date: "2",
-            version: "1.0.0",
-            content: "图鸟科技，图鸟UI vue3 uniapp版本全新发布，欢迎各位开发者进行使用"
+            status: "打卡成功",
+            content: "南澳岛面积达117.73平方千米，海岸线长94.3千米。",
+            image: ""
           }
         ]
       }
@@ -48,11 +44,12 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
                 a: dataItem == null ? void 0 : dataItem.date
               }, (dataItem == null ? void 0 : dataItem.date) ? {
                 b: common_vendor.t((dataItem == null ? void 0 : dataItem.date) || ""),
-                c: common_vendor.t((dataItem == null ? void 0 : dataItem.version) || "")
+                c: common_vendor.t((dataItem == null ? void 0 : dataItem.status) || "")
               } : {}, {
                 d: common_vendor.t(dataItem.content),
-                e: dataIndex,
-                f: "14aea6d3-2-" + i0 + "-" + i1 + "," + ("14aea6d3-1-" + i0)
+                e: dataItem == null ? void 0 : dataItem.image,
+                f: dataIndex,
+                g: "14aea6d3-2-" + i0 + "-" + i1 + "," + ("14aea6d3-1-" + i0)
               });
             }),
             b: index,

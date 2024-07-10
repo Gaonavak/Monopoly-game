@@ -26,3 +26,7 @@
   font-size: 32rpx;
   margin-bottom: 20rpx;
 }
+.image.data-v-14aea6d3 {
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+}

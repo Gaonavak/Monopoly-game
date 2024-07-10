@@ -1,5 +1,10 @@
 # 界面如下：
 
+## 2024-07-11 反馈页面
+
+<img src="./docx/PixPin_2024-07-11_03-28-42.png" alt="界面展示" style="width: 50%; height: 50%;">
+
+
 ## 2024-07-11 时间轴
 
 <img src="./docx/PixPin_2024-07-11_00-42-37.gif" alt="界面展示" style="width: 50%; height: 50%;">

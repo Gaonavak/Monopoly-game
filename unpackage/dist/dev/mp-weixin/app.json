@@ -12,7 +12,8 @@
         "contact/contact",
         "edit/edit",
         "clean/clean",
-        "timeline/timeline"
+        "timeline/timeline",
+        "feedback/feedback"
       ]
     },
     {

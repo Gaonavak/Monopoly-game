@@ -10,6 +10,7 @@ if (!Math) {
   "./pages_user/edit/edit.js";
   "./pages_user/clean/clean.js";
   "./pages_user/timeline/timeline.js";
+  "./pages_user/feedback/feedback.js";
   "./pages_home/store/store.js";
 }
 const _sfc_main = {

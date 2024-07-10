@@ -13,7 +13,7 @@ const useComponentSizeProp = uni_modules_tuniaouiVue3_utils_vue_props_runtime.bu
   values: uni_modules_tuniaouiVue3_constants_size.componentSizes,
   required: false
 });
-uni_modules_tuniaouiVue3_utils_vue_props_runtime.buildProp({
+const useFormSizeProps = uni_modules_tuniaouiVue3_utils_vue_props_runtime.buildProp({
   type: String,
   values: uni_modules_tuniaouiVue3_constants_size.formComponentSizes,
   required: false
@@ -26,10 +26,12 @@ const useComponentIndexProp = uni_modules_tuniaouiVue3_utils_vue_props_runtime.b
   type: uni_modules_tuniaouiVue3_utils_vue_props_runtime.definePropType([String, Number]),
   default: () => uni_modules_tuniaouiVue3_utils_rand.generateId()
 });
-uni_modules_tuniaouiVue3_utils_vue_props_runtime.buildProp({
+const useComponentSafeAreaInsetBottomProp = uni_modules_tuniaouiVue3_utils_vue_props_runtime.buildProp({
   type: Boolean,
   default: true
 });
 exports.useComponentCustomStyleProp = useComponentCustomStyleProp;
 exports.useComponentIndexProp = useComponentIndexProp;
+exports.useComponentSafeAreaInsetBottomProp = useComponentSafeAreaInsetBottomProp;
 exports.useComponentSizeProp = useComponentSizeProp;
+exports.useFormSizeProps = useFormSizeProps;

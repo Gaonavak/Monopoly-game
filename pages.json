@@ -52,6 +52,13 @@
                 {
                     "navigationBarTitleText" : "足迹"
                 }
+            },
+            {
+                "path" : "feedback/feedback",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "用户反馈"
+                }
             }
         ]
     },{

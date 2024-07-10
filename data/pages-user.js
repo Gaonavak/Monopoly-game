@@ -23,7 +23,7 @@ export const colCardData = ref([{
         title: '用户反馈',
         leftIcon: '/static/user/phone.png',
         rightIcon: '/static/user/arrowright.png',
-        path: '/pages_user/contact/contact'
+        path: '/pages_user/feedback/feedback'
     }, {
         title: '联系我们',
         leftIcon: '/static/user/personadd.png',
