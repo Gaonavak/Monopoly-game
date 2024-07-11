@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "打卡点",
   "usingComponents": {
+    "tn-icon": "../../uni_modules/tuniaoui-vue3/components/icon/src/icon",
     "tn-circle-progress": "../../uni_modules/tuniaoui-vue3/components/circle-progress/src/circle-progress",
     "tn-collapse": "../../uni_modules/tuniaoui-vue3/components/collapse/src/collapse",
     "tn-collapse-item": "../../uni_modules/tuniaoui-vue3/components/collapse/src/collapse-item",

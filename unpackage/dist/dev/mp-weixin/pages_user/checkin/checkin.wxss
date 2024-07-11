@@ -53,6 +53,13 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.title .title-left.data-v-915d845d {
+  display: inline-flex;
+  flex-direction: row;
+}
+.title .title-left .title-name.data-v-915d845d {
+  margin-left: 20rpx;
+}
 .title .title-count.data-v-915d845d {
   margin-right: 30rpx;
 }
