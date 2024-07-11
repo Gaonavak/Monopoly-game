@@ -9688,6 +9688,7 @@ exports.isArray = isArray;
 exports.isFunction = isFunction;
 exports.isObject = isObject;
 exports.isPromise = isPromise;
+exports.isRef = isRef;
 exports.isString = isString;
 exports.isSymbol = isSymbol;
 exports.lazyLoadEmits = lazyLoadEmits;

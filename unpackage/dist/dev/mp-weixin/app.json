@@ -38,7 +38,7 @@
         "selectedIconPath": "static/tabBar/home-filled.png"
       },
       {
-        "text": "论坛",
+        "text": "社区",
         "pagePath": "pages/forum/forum",
         "iconPath": "static/forum/chatboxes.png",
         "selectedIconPath": "static/forum/chatboxes-filled.png"

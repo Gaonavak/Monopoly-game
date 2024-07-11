@@ -1,6 +1,6 @@
 "use strict";
 const common_vendor = require("../common/vendor.js");
-const rowCardData = common_vendor.ref([
+const firstSowCardData = common_vendor.ref([
   {
     title: "打卡点",
     icon: "/static/user/flag.png",
@@ -14,6 +14,28 @@ const rowCardData = common_vendor.ref([
   {
     title: "收藏",
     icon: "/static/user/star.png",
+    path: "/pages_user/about/about"
+  }
+]);
+const secondRowCardData = common_vendor.ref([
+  {
+    title: "我的积分",
+    icon: "/static/user/reward.png",
+    path: "/pages_user/about/about"
+  },
+  {
+    title: "在途中",
+    icon: "/static/user/on-road.png",
+    path: "/pages_user/about/about"
+  },
+  {
+    title: "已完成",
+    icon: "/static/user/check.png",
+    path: "/pages_user/about/about"
+  },
+  {
+    title: "售后",
+    icon: "/static/user/after-sale.png",
     path: "/pages_user/about/about"
   }
 ]);
@@ -51,4 +73,5 @@ const cleanCacheCard = common_vendor.ref([{
 }]);
 exports.cleanCacheCard = cleanCacheCard;
 exports.colCardData = colCardData;
-exports.rowCardData = rowCardData;
+exports.firstSowCardData = firstSowCardData;
+exports.secondRowCardData = secondRowCardData;

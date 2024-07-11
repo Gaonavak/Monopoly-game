@@ -17,16 +17,29 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-14aea6d3 {
+.timeline.data-v-14aea6d3 {
   position: relative;
   width: 100%;
   padding: 30rpx;
 }
-.content .time-line__title.data-v-14aea6d3 {
+.time-line__day .time-line__title.data-v-14aea6d3 {
   font-size: 32rpx;
   margin-bottom: 20rpx;
 }
-.image.data-v-14aea6d3 {
-  margin-top: 30rpx;
+.text.data-v-14aea6d3 {
+  width: 100%;
+}
+.image-box.data-v-14aea6d3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15rpx auto;
+  overflow: hidden;
+}
+.image-box .image.data-v-14aea6d3 {
+  width: 100%;
+  height: 400rpx;
   border-radius: 20rpx;
+  object-fit: cover;
 }
