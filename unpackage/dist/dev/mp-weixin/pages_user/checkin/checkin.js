@@ -1,8 +1,9 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 if (!Math) {
-  (TnCountScroll + TnCircleProgress + TnCollapseItem + TnCollapse)();
+  (TnCountScroll + TnCircleProgress + TnIcon + TnCollapseItem + TnCollapse)();
 }
+const TnIcon = () => "../../uni_modules/tuniaoui-vue3/components/icon/src/icon.js";
 const TnCircleProgress = () => "../../uni_modules/tuniaoui-vue3/components/circle-progress/src/circle-progress.js";
 const TnCollapse = () => "../../uni_modules/tuniaoui-vue3/components/collapse/src/collapse.js";
 const TnCollapseItem = () => "../../uni_modules/tuniaoui-vue3/components/collapse/src/collapse-item.js";
@@ -18,14 +19,17 @@ const _sfc_main = {
     const currentCollapse = common_vendor.ref(-1);
     const collapseData = [{
       title: "总积分",
+      icon: "star",
       count: point.value,
       content: ""
     }, {
       title: "已打卡",
+      icon: "success-circle",
       count: count_finished.value,
       content: "广东、南昌、西安、武汉、浙江"
     }, {
       title: "未打卡",
+      icon: "close-circle",
       count: count_todo.value,
       content: "秋风起兮白云飞，草木黄落兮雁南归。兰有秀兮菊有芳，怀佳人兮不能忘。泛楼船兮济汾河，横中流兮扬素波。少壮几时兮奈老何！"
     }];
@@ -46,15 +50,20 @@ const _sfc_main = {
         }),
         c: common_vendor.f(collapseData, (item, index, i0) => {
           return common_vendor.e({
-            a: common_vendor.t(item.title),
-            b: common_vendor.t(item.count),
-            c: item.content
+            a: "915d845d-4-" + i0 + "," + ("915d845d-3-" + i0),
+            b: common_vendor.p({
+              name: item.icon,
+              size: "40rpx"
+            }),
+            c: common_vendor.t(item.title),
+            d: common_vendor.t(item.count),
+            e: item.content
           }, item.content ? {
-            d: common_vendor.t(item.content)
+            f: common_vendor.t(item.content)
           } : {}, {
-            e: index,
-            f: "915d845d-3-" + i0 + ",915d845d-2",
-            g: common_vendor.p({
+            g: index,
+            h: "915d845d-3-" + i0 + ",915d845d-2",
+            i: common_vendor.p({
               title: item.title
             })
           });

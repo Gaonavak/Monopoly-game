@@ -15,9 +15,13 @@
         <view class="bottom-area">
             <TnCollapse v-model="currentCollapse">
                 <TnCollapseItem v-for="(item, index) in collapseData" :key="index" :title="item.title">
+                    <!-- 自定义标题 -->
                     <template #title>
                         <view class="title">
-                            <view class="title-name">{{item.title}}</view>
+                            <view class="title-left">
+                                <TnIcon class="title-icon" :name="item.icon" size="40rpx" />
+                                <view class="title-name">{{item.title}}</view>
+                            </view>
                             <view class="title-count">{{item.count}}</view>
                         </view>
                     </template>
@@ -34,6 +38,7 @@
     import {
         ref
     } from 'vue'
+    import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
     import TnLineProgress from '@/uni_modules/tuniaoui-vue3/components/line-progress/src/line-progress.vue'
     import TnCircleProgress from '@/uni_modules/tuniaoui-vue3/components/circle-progress/src/circle-progress.vue'
     import TnCollapse from '@/uni_modules/tuniaoui-vue3/components/collapse/src/collapse.vue'
@@ -49,14 +54,17 @@
     const currentCollapse = ref(-1)
     const collapseData = [{
         title: '总积分',
+        icon: 'star',
         count: point.value,
         content: ''
     }, {
         title: '已打卡',
+        icon: 'success-circle',
         count: count_finished.value,
         content: '广东、南昌、西安、武汉、浙江'
     }, {
         title: '未打卡',
+        icon: 'close-circle',
         count: count_todo.value,
         content: '秋风起兮白云飞，草木黄落兮雁南归。兰有秀兮菊有芳，怀佳人兮不能忘。泛楼船兮济汾河，横中流兮扬素波。少壮几时兮奈老何！'
     }]
@@ -104,7 +112,14 @@
         flex-direction: row;
         justify-content: space-between;
 
-        .title-name {}
+        .title-left {
+            display: inline-flex;
+            flex-direction: row;
+            
+            .title-name{
+                margin-left: 20rpx;
+            }
+        }
 
         .title-count {
             margin-right: 30rpx;
