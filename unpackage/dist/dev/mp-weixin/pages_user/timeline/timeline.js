@@ -18,7 +18,13 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
             date: "1",
             status: "打卡成功",
             content: "南澳岛面积达117.73平方千米，海岸线长94.3千米。",
-            image: "/static/logo.png"
+            image: "/static/exhibit.jpg"
+          },
+          {
+            date: "2",
+            status: "打卡成功",
+            content: "微信开发者工具真的难用，卡顿，恶心",
+            image: "/static/exhibit.jpg"
           }
         ]
       },
@@ -30,6 +36,12 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
             date: "2",
             status: "打卡成功",
             content: "南澳岛面积达117.73平方千米，海岸线长94.3千米。",
+            image: ""
+          },
+          {
+            date: "3",
+            status: "打卡成功",
+            content: "东南西北风，你是罗贯中。",
             image: ""
           }
         ]
@@ -47,9 +59,12 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
                 c: common_vendor.t((dataItem == null ? void 0 : dataItem.status) || "")
               } : {}, {
                 d: common_vendor.t(dataItem.content),
-                e: dataItem == null ? void 0 : dataItem.image,
-                f: dataIndex,
-                g: "14aea6d3-2-" + i0 + "-" + i1 + "," + ("14aea6d3-1-" + i0)
+                e: dataItem.image
+              }, dataItem.image ? {
+                f: dataItem.image
+              } : {}, {
+                g: dataIndex,
+                h: "14aea6d3-2-" + i0 + "-" + i1 + "," + ("14aea6d3-1-" + i0)
               });
             }),
             b: index,
