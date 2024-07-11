@@ -12,19 +12,12 @@ const _sfc_main = {
   setup(__props) {
     const subsectionValue = common_vendor.ref(0);
     const showPopup = common_vendor.ref(false);
-    const popMsg = common_vendor.ref(["提交内容为空，无法提交！", "反馈提交成功！"]);
-    const popMsgIndex = common_vendor.ref(0);
     const inputValue = common_vendor.ref("");
     const submit = () => {
-      if (inputValue.value.trim()) {
-        popMsgIndex.value = 1;
-      } else {
-        popMsgIndex.value = 0;
-      }
       showPopup.value = true;
     };
     return (_ctx, _cache) => {
-      return {
+      return common_vendor.e({
         a: common_vendor.p({
           title: "界面不合理"
         }),
@@ -46,19 +39,26 @@ const _sfc_main = {
         h: common_vendor.p({
           type: "textarea",
           height: "500rpx",
-          maxlength: "3000",
+          maxlength: 3e3,
           ["active-color"]: "#01BEFF",
           placeholder: "请输入您的反馈",
           modelValue: inputValue.value
         }),
-        i: common_vendor.o(submit),
-        j: common_vendor.t(popMsg.value.value[popMsgIndex.value.value]),
-        k: common_vendor.o(($event) => showPopup.value = $event),
-        l: common_vendor.p({
-          ["bg-color"]: "transparent",
+        i: !inputValue.value
+      }, !inputValue.value ? {
+        j: common_vendor.o(($event) => showPopup.value = $event),
+        k: common_vendor.p({
+          width: "60%",
           modelValue: showPopup.value
         })
-      };
+      } : {
+        l: common_vendor.o(($event) => showPopup.value = $event),
+        m: common_vendor.p({
+          modelValue: showPopup.value
+        })
+      }, {
+        n: common_vendor.o(submit)
+      });
     };
   }
 };

@@ -1,21 +1,29 @@
 <template>
     <view class="feedback">
 
-        <TnSubsection class="subsection" v-model="subsectionValue" mode="default">
-            <TnSubsectionItem title="界面不合理" />
-            <TnSubsectionItem title="玩法不合理" />
-            <TnSubsectionItem title="内容不合规" />
-            <TnSubsectionItem title="其他" />
-        </TnSubsection>
+        <view class="subsection">
+            <TnSubsection v-model="subsectionValue" mode="default">
+                <TnSubsectionItem title="界面不合理" />
+                <TnSubsectionItem title="玩法不合理" />
+                <TnSubsectionItem title="内容不合规" />
+                <TnSubsectionItem title="其他" />
+            </TnSubsection>
+        </view>
 
-        <TnInput class="input" v-model="inputValue" type="textarea" height="500rpx" maxlength="3000"
-            active-color="#01BEFF" placeholder="请输入您的反馈" />
+        <view class="input">
+            <TnInput v-model="inputValue" type="textarea" height="500rpx" :maxlength="3000" active-color="#01BEFF"
+                placeholder="请输入您的反馈" />
+        </view>
+
+
+        <TnPopup class="popup" v-if="!inputValue" v-model="showPopup" width="60%">
+            <view class="tn-p-lg"> 提交内容为空，提交失败 😭</view>
+        </TnPopup>
+        <TnPopup v-else v-model="showPopup">
+            <view class="tn-p-lg">反馈提交成功 😊</view>
+        </TnPopup>
 
         <button class="bottom" @click="submit">提交反馈</button>
-
-        <TnPopup v-model="showPopup" bg-color="transparent">
-            <view class="tn-p-lg tn-white_bg tn-radius">{{popMsg.value[popMsgIndex.value]}} </view>
-        </TnPopup>
     </view>
 </template>
 
@@ -30,15 +38,8 @@
 
     const subsectionValue = ref(0)
     const showPopup = ref(false)
-    const popMsg = ref(['提交内容为空，无法提交！', '反馈提交成功！'])
-    const popMsgIndex = ref(0)
     const inputValue = ref('')
     const submit = () => {
-        if (inputValue.value.trim()) {
-            popMsgIndex.value = 1;
-        } else {
-            popMsgIndex.value = 0;
-        }
         showPopup.value = true;
     }
 </script>
@@ -74,5 +75,9 @@
         border-radius: $border-radius;
         color: white;
         background-color: #01BEFF;
+    }
+    
+    .popup{
+        text-align: center;
     }
 </style>

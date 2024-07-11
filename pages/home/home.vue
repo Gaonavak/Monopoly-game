@@ -52,9 +52,7 @@
     import {
         ref
     } from 'vue';
-
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
-
     import {
         navList,
         fruit,
@@ -122,7 +120,7 @@
             }
         })
     };
-    
+
     // 南澳岛的经纬度
     const longitude = ref(117.062956);
     const latitude = ref(23.434194);
