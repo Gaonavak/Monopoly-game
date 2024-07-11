@@ -59,14 +59,6 @@ const _sfc_main = {
           break;
       }
     };
-    const longitude = common_vendor.ref(117.062956);
-    const latitude = common_vendor.ref(23.434194);
-    const place = common_vendor.ref({
-      title: "景点",
-      thumb: "/static/logo.png",
-      extra: "打卡",
-      desp: "这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。"
-    });
     const scanQRCode = () => {
       common_vendor.index.scanCode({
         success(res) {
@@ -77,6 +69,14 @@ const _sfc_main = {
         }
       });
     };
+    const longitude = common_vendor.ref(117.062956);
+    const latitude = common_vendor.ref(23.434194);
+    const place = common_vendor.ref({
+      title: "景点",
+      thumb: "/static/logo.png",
+      extra: "打卡",
+      desp: "这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。"
+    });
     const currentTabIndex = common_vendor.ref(0);
     const currentTabIndex_rank = common_vendor.ref(0);
     const tabs = common_vendor.ref(["商店", "周榜"]);

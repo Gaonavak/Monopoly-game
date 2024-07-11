@@ -1,13 +1,13 @@
 <template>
     <view class="my-btn-box">
-        <image v-for="(item,index) in arr" :key="index" :src="item.icon" mode="aspectFill" class="icon"
-            @click="onclick(item.path)">
+        <image class="icon" v-for="(item,index) in arr" :key="index" :src="item.icon" mode="aspectFill"
+            @click="naviTo(item.path)">
         </image>
     </view>
 </template>
 
 <script setup>
-    defineProps(['arr'])
+    defineProps(['arr']);
     import {
         naviTo
     } from '@/utils/common.js';

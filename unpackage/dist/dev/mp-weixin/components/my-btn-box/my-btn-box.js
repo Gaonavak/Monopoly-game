@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const utils_common = require("../../utils/common.js");
 const _sfc_main = {
   __name: "my-btn-box",
   props: ["arr"],
@@ -10,7 +11,7 @@ const _sfc_main = {
           return {
             a: index,
             b: item.icon,
-            c: common_vendor.o(($event) => _ctx.onclick(item.path), index)
+            c: common_vendor.o(($event) => common_vendor.unref(utils_common.naviTo)(item.path), index)
           };
         })
       };

@@ -111,16 +111,6 @@
         };
     };
 
-    // 南澳岛的经纬度
-    const longitude = ref(117.062956);
-    const latitude = ref(23.434194);
-
-    const place = ref({
-        title: '景点',
-        thumb: '/static/logo.png',
-        extra: '打卡',
-        desp: '这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。',
-    });
     // 扫描二维码
     const scanQRCode = () => {
         uni.scanCode({
@@ -132,6 +122,17 @@
             }
         })
     };
+    
+    // 南澳岛的经纬度
+    const longitude = ref(117.062956);
+    const latitude = ref(23.434194);
+
+    const place = ref({
+        title: '景点',
+        thumb: '/static/logo.png',
+        extra: '打卡',
+        desp: '这是景点的描述。这是景点的描述。这是景点的描述。这是景点的描述。',
+    });
 
     // 当前选中的标签索引
     const currentTabIndex = ref(0);

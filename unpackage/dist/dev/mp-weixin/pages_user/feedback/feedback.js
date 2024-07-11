@@ -56,7 +56,6 @@ const _sfc_main = {
         k: common_vendor.o(($event) => showPopup.value = $event),
         l: common_vendor.p({
           ["bg-color"]: "transparent",
-          radius: "0",
           modelValue: showPopup.value
         })
       };
