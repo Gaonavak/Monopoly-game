@@ -2,7 +2,7 @@ import {
     ref
 } from 'vue'
 
-export const rowCardData = ref([{
+export const firstSowCardData = ref([{
         title: '打卡点',
         icon: '/static/user/flag.png',
         path: '/pages_user/about/about'
@@ -18,6 +18,29 @@ export const rowCardData = ref([{
         path: '/pages_user/about/about'
     }
 ]);
+
+export const secondRowCardData = ref([{
+        title: '我的积分',
+        icon: '/static/user/reward.png',
+        path: '/pages_user/about/about'
+    },
+    {
+        title: '在途中',
+        icon: '/static/user/on-road.png',
+        path: '/pages_user/about/about'
+    },
+    {
+        title: '已完成',
+        icon: '/static/user/check.png',
+        path: '/pages_user/about/about'
+    },
+    {
+        title: '售后',
+        icon: '/static/user/after-sale.png',
+        path: '/pages_user/about/about'
+    }
+]);
+
 
 export const colCardData = ref([{
         title: '用户反馈',

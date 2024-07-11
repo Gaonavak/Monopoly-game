@@ -17,7 +17,10 @@
 
         <!-- 横向列表 -->
         <view class="rowCard">
-            <my-card-row :arr="rowCardData"></my-card-row>
+            <my-card-row :arr="firstSowCardData"></my-card-row>
+        </view>
+        <view class="rowCard">
+            <my-card-row :arr="secondRowCardData"></my-card-row>
         </view>
 
         <!-- 纵向列表 -->
@@ -37,7 +40,8 @@
         ref
     } from 'vue';
     import {
-        rowCardData,
+        firstSowCardData,
+        secondRowCardData,
         colCardData,
         cleanCacheCard
     } from '@/data/pages-user.js';

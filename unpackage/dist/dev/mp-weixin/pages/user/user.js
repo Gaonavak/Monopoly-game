@@ -25,12 +25,15 @@ const _sfc_main = {
         c: common_assets._imports_0,
         d: common_vendor.o(($event) => common_vendor.unref(utils_common.naviTo)("/pages_user/edit/edit")),
         e: common_vendor.p({
-          arr: common_vendor.unref(data_pagesUser.rowCardData)
+          arr: common_vendor.unref(data_pagesUser.firstSowCardData)
         }),
         f: common_vendor.p({
-          arr: common_vendor.unref(data_pagesUser.colCardData)
+          arr: common_vendor.unref(data_pagesUser.secondRowCardData)
         }),
         g: common_vendor.p({
+          arr: common_vendor.unref(data_pagesUser.colCardData)
+        }),
+        h: common_vendor.p({
           arr: common_vendor.unref(data_pagesUser.cleanCacheCard)
         })
       };
