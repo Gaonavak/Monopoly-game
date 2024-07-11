@@ -3,7 +3,9 @@
 ## 2024-07-11 足迹页面、个人主页、社区搜索框
 
 <div style="display: flex; flex-direction: row; padding: 0 40px">
-    <img src="./docx/PixPin_2024-07-11_17-43-41.png" alt="社区搜索框" style="width: 30%; height: 30%;"><img src="./docx/PixPin_2024-07-11_17-30-28.png" alt="个人主页" style="width: 30%; height: 30%;"><img src="./docx/PixPin_2024-07-11_17-06-08.png" alt="足迹页面" style="width: 30%; height: 30%;">
+    <img src="./docx/PixPin_2024-07-11_17-43-41.png" alt="社区搜索框" style="width: 30%; height: 30%;">
+    <img src="./docx/PixPin_2024-07-11_17-30-28.png" alt="个人主页" style="width: 30%; height: 30%;">
+    <img src="./docx/PixPin_2024-07-11_17-06-08.png" alt="足迹页面" style="width: 30%; height: 30%;">
 </div>
 
 ## 2024-07-11 反馈页面
