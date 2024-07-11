@@ -13,7 +13,8 @@
         "edit/edit",
         "clean/clean",
         "timeline/timeline",
-        "feedback/feedback"
+        "feedback/feedback",
+        "checkin/checkin"
       ]
     },
     {

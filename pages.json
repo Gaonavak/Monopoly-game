@@ -59,6 +59,13 @@
                 {
                     "navigationBarTitleText" : "用户反馈"
                 }
+            },
+            {
+                "path" : "checkin/checkin",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "打卡点"
+                }
             }
         ]
     },{

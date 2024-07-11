@@ -5,7 +5,7 @@ import {
 export const firstSowCardData = ref([{
         title: '打卡点',
         icon: '/static/user/flag.png',
-        path: '/pages_user/about/about'
+        path: '/pages_user/checkin/checkin'
     },
     {
         title: '足迹',
