@@ -1,5 +1,9 @@
 # 界面如下：
 
+## 2024-07-11 打卡页面
+
+<img src="./docx/PixPin_2024-07-11_23-23-08.gif" alt="打卡记录页面" style="width: 30%; height: 30%;">
+
 ## 2024-07-11 足迹页面、个人主页、社区搜索框
 
 <div style="display: flex; flex-direction: row; padding: 0 40px">
