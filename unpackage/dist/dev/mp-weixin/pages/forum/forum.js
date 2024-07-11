@@ -1,11 +1,12 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 if (!Math) {
-  (TnTabsItem + TnTabs + TnGraphicCard)();
+  (TnSearchBox + TnTabsItem + TnTabs + TnGraphicCard)();
 }
 const TnGraphicCard = () => "../../node-modules/tnuiv3p-tn-graphic-card/index.js";
 const TnTabs = () => "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs.js";
 const TnTabsItem = () => "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs-item.js";
+const TnSearchBox = () => "../../uni_modules/tuniaoui-vue3/components/search-box/src/search-box.js";
 const _sfc_main = {
   __name: "forum",
   setup(__props) {
@@ -36,6 +37,13 @@ const _sfc_main = {
         "https://resource.tuniaokj.com/images/album/xiong1.jpg"
       ]
     };
+    const searchValue = common_vendor.ref("");
+    const searchBtnClickEvent = (value) => {
+      common_vendor.index.showToast({
+        title: "你搜索了" + searchValue.value,
+        icon: "none"
+      });
+    };
     const currentTabIndex = common_vendor.ref(0);
     const tabsData = common_vendor.ref([
       {
@@ -56,27 +64,32 @@ const _sfc_main = {
     ]);
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.f(tabsData.value, (item, index, i0) => {
+        a: common_vendor.o(searchBtnClickEvent),
+        b: common_vendor.o(($event) => searchValue.value = $event),
+        c: common_vendor.p({
+          modelValue: searchValue.value
+        }),
+        d: common_vendor.f(tabsData.value, (item, index, i0) => {
           return {
             a: index,
-            b: "aeadbf01-1-" + i0 + ",aeadbf01-0",
+            b: "aeadbf01-2-" + i0 + ",aeadbf01-1",
             c: common_vendor.p({
               title: item.text
             })
           };
         }),
-        b: common_vendor.o(($event) => currentTabIndex.value = $event),
-        c: common_vendor.p({
+        e: common_vendor.o(($event) => currentTabIndex.value = $event),
+        f: common_vendor.p({
           scroll: false,
           modelValue: currentTabIndex.value
         }),
-        d: common_vendor.f(6, (i, k0, i0) => {
+        g: common_vendor.f(6, (i, k0, i0) => {
           return {
-            a: "aeadbf01-2-" + i0,
+            a: "aeadbf01-3-" + i0,
             b: i
           };
         }),
-        e: common_vendor.p({
+        h: common_vendor.p({
           avatar: graphicData.avatar,
           title: graphicData.title,
           description: graphicData.description,

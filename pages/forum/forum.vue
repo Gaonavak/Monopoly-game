@@ -1,5 +1,9 @@
 <template>
     <view class="forum">
+        <view class="search">
+            <TnSearchBox v-model="searchValue" @search="searchBtnClickEvent" />
+        </view>
+
         <TnTabs class="tabs" v-model="currentTabIndex" :scroll="false">
             <TnTabsItem v-for="(item, index) in tabsData" :key="index" :title="item.text" />
         </Tntabs>
@@ -22,6 +26,7 @@
     import TnGraphicCard from '@/node_modules/tnuiv3p-tn-graphic-card/index.vue';
     import TnTabs from '@/uni_modules/tuniaoui-vue3/components/tabs/src/tabs.vue';
     import TnTabsItem from '@/uni_modules/tuniaoui-vue3/components/tabs/src/tabs-item.vue';
+    import TnSearchBox from '@/uni_modules/tuniaoui-vue3/components/search-box/src/search-box.vue';
     import {
         ref
     } from 'vue';
@@ -53,6 +58,14 @@
         ],
     };
 
+    const searchValue = ref('');
+
+    const searchBtnClickEvent = (value) => {
+        uni.showToast({
+            title: '你搜索了' + searchValue.value,
+            icon: 'none'
+        })
+    }
     const currentTabIndex = ref(0)
     const tabsData = ref([{
             text: '关注',
@@ -76,6 +89,10 @@
     .forum {
         width: 100%;
         min-height: 100vh;
+    }
+
+    .search {
+        margin: 20rpx;
     }
 
     .scroll-view {

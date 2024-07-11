@@ -21,6 +21,9 @@
   width: 100%;
   min-height: 100vh;
 }
+.search.data-v-aeadbf01 {
+  margin: 20rpx;
+}
 .scroll-view.data-v-aeadbf01 {
   width: 100%;
   display: flex;
