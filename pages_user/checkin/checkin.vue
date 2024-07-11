@@ -3,11 +3,10 @@
         <view class="progress-box">
             <TnCircleProgress :percent="progressPercent" show-percent :radius="160" :ring-width="30"
                 :duration="anime_duration">
-
+                <!-- 进度显示 -->
                 <view class="progressPercent-text">
-                    <TnCountScroll :value="progressPercent" font-size="100rpx" text-color="#01BEFF"
+                    <TnCountScroll class="number" :value="progressPercent" font-size="100rpx" text-color="#01BEFF"
                         :duration="anime_duration" />
-                    <!-- {{progressPercent}} --> <!-- 没有动画 -->
                     <view class="unit">%</view>
                 </view>
             </TnCircleProgress>
@@ -82,15 +81,13 @@
     }
 
     .progressPercent-text {
-        font-size: 100rpx;
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
 
         .unit {
             font-size: 50rpx;
             display: flex;
-            align-items: end;
-            padding-bottom: 4rpx;
+            align-items: flex-end;
         }
     }
 

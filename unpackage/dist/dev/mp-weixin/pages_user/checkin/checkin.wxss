@@ -33,15 +33,13 @@
   padding-top: 150rpx;
 }
 .progressPercent-text.data-v-915d845d {
-  font-size: 100rpx;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 }
 .progressPercent-text .unit.data-v-915d845d {
   font-size: 50rpx;
   display: flex;
-  align-items: end;
-  padding-bottom: 4rpx;
+  align-items: flex-end;
 }
 .bottom-area.data-v-915d845d {
   width: 100%;
