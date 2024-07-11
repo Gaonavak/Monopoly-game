@@ -3,7 +3,7 @@
 ## 2024-07-11 足迹页面、个人主页
 
 <div style="display: flex; flex-direction: row; margin: 0 30px">
-    <img src="./docx/PixPin_2024-07-11_17-20-47.png" alt="个人主页" style="width: 50%; height: 50%;">
+    <img src="./docx/PixPin_2024-07-11_17-30-28.png" alt="个人主页" style="width: 50%; height: 50%;">
     <img src="./docx/PixPin_2024-07-11_17-06-08.png" alt="足迹页面" style="width: 50%; height: 50%;">
 </div>
 
