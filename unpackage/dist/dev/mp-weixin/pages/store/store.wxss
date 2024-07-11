@@ -24,72 +24,44 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* uni.scss */
-.store.data-v-c1a2745a {
-  width: 100%;
-  background: #F0F4F9;
-  display: flex;
-  flex-direction: column;
-}
-.store .scrollLayout.data-v-c1a2745a {
-  display: flex;
-  width: 100%;
-  /* 减去搜索框的高度 */
-  height: calc(100vh - 80rpx);
-  margin: 20rpx 0;
-}
-.store .scrollView.data-v-c1a2745a {
-  height: 100%;
-}
-.store .leftScroll.data-v-c1a2745a {
-  width: 150rpx;
-  height: 100%;
-  background: #f5f5f5;
-  border-right: 1px solid #efefef;
-}
-.store .row.data-v-c1a2745a {
-  line-height: 100rpx;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
+.out {
+  padding: 0 20px;
+  margin-top: 40px;
   position: relative;
 }
-.store .row.selected.data-v-c1a2745a {
-  background: #ffdcdc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.out input {
+  border: 1px solid #ccc;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  background: #fff;
 }
-.store .row.selected.data-v-c1a2745a::before {
-  content: "";
-  width: 6rpx;
-  height: 50%;
-  background: red;
+.out .pic {
+  width: 24px;
+  height: 24px;
+  z-index: 1;
   position: absolute;
-  left: 0;
+  top: 20px;
+  left: calc(50% - 12px);
+  transition: top 0.3s;
 }
-.store .rightScroll.data-v-c1a2745a {
-  flex: 1;
-  background: #F0F4F9;
+.out .pic.active {
+  top: -12px;
 }
-.store .rightScroll .productView.data-v-c1a2745a {
-  margin: 20rpx;
-  border-radius: 20rpx;
-  overflow: hidden;
+.out swiper {
+  width: 90vw;
+  height: 180px;
+  border: 1px solid green;
 }
-.store .rightScroll .productView.data-v-c1a2745a:first-child {
-  margin-top: 10rpx;
+.out swiper swiper-item {
+  width: 100%;
+  height: 100%;
+  background: pink;
 }
-.store .rightScroll .productView .productCategory.data-v-c1a2745a {
-  padding: 15rpx;
-  background: #9FDBFC;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.out swiper swiper-item:nth-child(2n) {
+  background: orange;
 }
-.store .rightScroll .productView .product-item.data-v-c1a2745a {
-  border-bottom: 1rpx solid #efefef;
-}
-.store .rightScroll .productView .product-item.data-v-c1a2745a:last-child {
-  border: none;
+.out image {
+  width: 100%;
+  height: 100%;
 }

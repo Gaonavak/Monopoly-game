@@ -31,10 +31,10 @@
         "selectedIconPath": "static/tabBar/home-filled.png"
       },
       {
-        "text": "商店",
+        "text": "论坛",
         "pagePath": "pages/store/store",
-        "iconPath": "static/tabBar/cart.png",
-        "selectedIconPath": "static/tabBar/cart-filled.png"
+        "iconPath": "static/user/forum.png",
+        "selectedIconPath": "static/tabBar/forum-ing.png"
       },
       {
         "text": "用户中心",
