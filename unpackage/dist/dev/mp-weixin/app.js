@@ -11,6 +11,7 @@ if (!Math) {
   "./pages_user/clean/clean.js";
   "./pages_user/timeline/timeline.js";
   "./pages_user/feedback/feedback.js";
+  "./pages_user/checkin/checkin.js";
   "./pages_home/store/store.js";
 }
 const _sfc_main = {
