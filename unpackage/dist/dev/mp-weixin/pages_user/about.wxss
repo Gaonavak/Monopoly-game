@@ -23,10 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+/* uni.scss */
 .about.data-v-a8066ee1 {
   width: 100%;
   height: 100vh;
-  background: #F7F7F7;
+  background: #F0F4F9;
   display: flex;
   flex-direction: column;
   align-items: center;

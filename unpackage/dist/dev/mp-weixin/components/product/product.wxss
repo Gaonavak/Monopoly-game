@@ -24,25 +24,36 @@
 /* 透明度 */
 /* 文章场景相关 */
 /* uni.scss */
-.content.data-v-1cf27b2a {
+.product.data-v-927ba98a {
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .image.data-v-927ba98a {
+  width: 250rpx;
+  height: 250rpx;
+  object-fit: cover;
+  margin: 10rpx;
+}
+.product .text.data-v-927ba98a {
+  width: 100%;
+  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-.logo.data-v-1cf27b2a {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-.text-area.data-v-1cf27b2a {
+.product .text .title.data-v-927ba98a, .product .text .description.data-v-927ba98a, .product .text .price.data-v-927ba98a {
+  flex: 1;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 }
-.title.data-v-1cf27b2a {
-  font-size: 36rpx;
-  color: #8f8f94;
+.product .text .title.data-v-927ba98a {
+  padding-top: 20rpx;
+  font-size: 40rpx;
 }
