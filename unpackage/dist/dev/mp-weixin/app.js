@@ -13,6 +13,7 @@ if (!Math) {
   "./pages_user/feedback/feedback.js";
   "./pages_user/checkin/checkin.js";
   "./pages_user/shopping/shopping.js";
+  "./pages_user/favorite/favorite.js";
   "./pages_home/store/store.js";
 }
 const _sfc_main = {
