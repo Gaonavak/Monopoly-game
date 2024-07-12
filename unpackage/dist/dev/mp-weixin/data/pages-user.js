@@ -26,12 +26,12 @@ const secondRowCardData = common_vendor.ref([
   {
     title: "在途中",
     icon: "/static/user/on-road.png",
-    path: "/pages_user/about/about"
+    path: "/pages_user/shopping/shopping"
   },
   {
     title: "已完成",
     icon: "/static/user/check.png",
-    path: "/pages_user/about/about"
+    path: "/pages_user/shopping/shopping"
   },
   {
     title: "售后",

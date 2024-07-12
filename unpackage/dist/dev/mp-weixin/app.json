@@ -14,7 +14,8 @@
         "clean/clean",
         "timeline/timeline",
         "feedback/feedback",
-        "checkin/checkin"
+        "checkin/checkin",
+        "shopping/shopping"
       ]
     },
     {
