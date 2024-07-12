@@ -1,0 +1,115 @@
+/* 
+自定的部分
+ */
+/* 
+ ==========================================================
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.my-product-card.data-v-ceb0e958 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.title.data-v-ceb0e958 {
+  font-size: 38rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title .left.data-v-ceb0e958 {
+  display: flex;
+  flex-direction: row;
+}
+.title .left .storeThumb.data-v-ceb0e958 {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 12rpx;
+}
+.title .left .storeName.data-v-ceb0e958 {
+  margin-left: 15rpx;
+  font-weight: bold;
+}
+.title .status.data-v-ceb0e958 {
+  color: red;
+}
+.content.data-v-ceb0e958 {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.content .thumb-box .thumb.data-v-ceb0e958 {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 15rpx;
+}
+.content .text.data-v-ceb0e958 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rpx;
+}
+.content .text .productName.data-v-ceb0e958 {
+  width: 300rpx;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content .text .productDesc.data-v-ceb0e958 {
+  margin-top: 10rpx;
+  color: grey;
+}
+.content .right.data-v-ceb0e958 {
+  margin-left: auto;
+  padding-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.content .right .price.data-v-ceb0e958 {
+  flex: 0.3;
+  text-align: end;
+  font-weight: bold;
+}
+.content .right .num.data-v-ceb0e958 {
+  flex: 0.7;
+  text-align: end;
+}
+.bottom.data-v-ceb0e958 {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bottom .more.data-v-ceb0e958 {
+  display: flex;
+  align-items: center;
+}
+.bottom .btns.data-v-ceb0e958 {
+  display: flex;
+  flex-direction: row;
+}
+.bottom .btns .transport.data-v-ceb0e958,
+.bottom .btns .comment.data-v-ceb0e958 {
+  margin-left: 40rpx;
+}
+.bottom .btns .btn.data-v-ceb0e958 {
+  color: black;
+  background-color: #fff;
+  border: 3rpx solid #eee;
+  border-radius: 30rpx;
+  padding: 15rpx 35rpx;
+}
