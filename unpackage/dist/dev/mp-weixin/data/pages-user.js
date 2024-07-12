@@ -14,7 +14,7 @@ const firstSowCardData = common_vendor.ref([
   {
     title: "收藏",
     icon: "/static/user/star.png",
-    path: "/pages_user/about/about"
+    path: "/pages_user/favorite/favorite"
   }
 ]);
 const secondRowCardData = common_vendor.ref([
