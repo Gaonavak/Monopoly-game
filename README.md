@@ -2,7 +2,7 @@
 
 ## 2024-07-12 购物订单页面
 
-<img src="./docx/PixPin_2024-07-12_17-44-43.png" alt="购物订单页面" style="width: 30%; height: 30%;">
+<img src="./docx/PixPin_2024-07-12_17-44-43.png" alt="购物订单页面" style="width: 50%; height: 50%;">
 
 ## 2024-07-12 打卡页面，折叠列表加上图标
 
