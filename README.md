@@ -1,10 +1,14 @@
 # 界面如下：
 
+## 2024-07-12 购物订单页面
+
+<img src="./docx/PixPin_2024-07-12_17-44-43.png" alt="购物订单页面" style="width: 30%; height: 30%;">
+
 ## 2024-07-12 打卡页面，折叠列表加上图标
 
-<img src="./docx/PixPin_2024-07-12_01-17-41.gif" alt="打卡记录页面" style="width: 30%; height: 30%;">
+<img src="./docx/PixPin_2024-07-12_01-17-41.gif" alt="打卡页面，折叠列表加上图标" style="width: 30%; height: 30%;">
 
-## 2024-07-11 打卡页面
+## 2024-07-11 打卡记录页面
 
 <img src="./docx/PixPin_2024-07-11_23-23-08.gif" alt="打卡记录页面" style="width: 30%; height: 30%;">
 
