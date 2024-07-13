@@ -34,6 +34,8 @@
         height: 100%;
         background:
             linear-gradient(to bottom, transparent, #fff 30%);
+        border-bottom-left-radius: 12rpx;
+        border-bottom-right-radius: 12rpx;
     }
 
     .list {

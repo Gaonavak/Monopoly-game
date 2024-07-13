@@ -19,7 +19,7 @@
 /* 文章场景相关 */
 .about.data-v-4334aad2 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #F0F4F9;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,4 @@
   margin-top: 20rpx;
   font-size: 1em;
   margin-bottom: 5px;
-}
-.footer.data-v-4334aad2 {
-  margin-bottom: 20rpx;
 }

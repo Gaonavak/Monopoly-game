@@ -10,7 +10,9 @@
         <view class="version">版本号: 1.0.0</view>
         <view class="developer">开发者: 张三</view>
         <view class="email">邮箱: zhangsan@example.com</view>
-        <TnFooter class="footer" content="Copyright © 2024 汕头大学-三下乡-科技队" :fixed="true" />
+
+        <TnFooter class="footer" content="Copyright © 2024 汕头大学-三下乡-科技队" offset-bottom="30rpx" />
+
 
     </view>
 </template>
@@ -22,7 +24,7 @@
 <style lang="scss" scoped>
     .about {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         background: $bg-base;
         display: flex;
         flex-direction: column;
@@ -37,8 +39,8 @@
         align-items: flex-end;
 
         .logo {
-            width: 100px; // 根据需要调整图标大小
-            height: 100px; // 根据需要调整图标大小
+            width: 100px;
+            height: 100px;
         }
     }
 
@@ -65,9 +67,5 @@
         margin-top: 20rpx;
         font-size: 1em;
         margin-bottom: 5px;
-    }
-    
-    .footer{
-        margin-bottom: 20rpx;
     }
 </style>

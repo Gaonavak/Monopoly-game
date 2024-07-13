@@ -73,12 +73,11 @@
 <style lang="scss" scoped>
     .checkin {
         width: 100%;
-        height: 100vh;
         min-height: 100vh;
+        background-color: $bg-base;
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-color: $bg-base;
     }
 
     .progress-box {

@@ -153,6 +153,7 @@
     .home {
         width: 100%;
         height: 100vh;
+        background-color: #8CAED1;
     }
 
     .map {

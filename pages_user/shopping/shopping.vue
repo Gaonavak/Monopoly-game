@@ -8,13 +8,13 @@
             <TnTabsItem v-for="(item, index) in tabsData" :key="index" :title="item.text" />
         </TnTabs>
 
-        <view class="card-box">
+        <scroll-view scroll-y class="card-box">
             <view v-for="i in 3">
                 <view class="card">
                     <my-product-card v-for="product in products" :key="product.id" :product="product" />
                 </view>
             </view>
-        </view>
+        </scroll-view>
     </view>
 </template>
 
@@ -54,7 +54,6 @@
 <style lang="scss" scoped>
     .shopping {
         width: 100%;
-        height: 100%;
         min-height: 100vh;
         background-color: $bg-base;
     }
@@ -70,11 +69,14 @@
     }
 
     .card-box {
+        background-color: $bg-base;
+
         .card {
             margin: 20rpx;
         }
-        &:last-child{
-            padding-bottom: 20rpx;
+
+        &:last-child {
+            padding-bottom: $padding-bottom;
         }
     }
 </style>
