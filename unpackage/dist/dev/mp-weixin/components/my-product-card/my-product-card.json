@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "tn-bubble-box": "../../uni_modules/tuniaoui-vue3/components/bubble-box/src/bubble-box",
-    "tn-button": "../../uni_modules/tuniaoui-vue3/components/button/src/button"
-  }
-}

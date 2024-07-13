@@ -1,1 +1,0 @@
-<view id="{{b}}" class="{{['data-v-0f682932', c]}}" style="{{d}}" catchtap="{{e}}"><block wx:if="{{$slots.d}}"><slot></slot></block><block wx:else>{{a}}</block></view>
