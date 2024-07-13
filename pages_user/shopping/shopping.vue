@@ -54,7 +54,7 @@
 <style lang="scss" scoped>
     .shopping {
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
         background-color: $bg-base;
     }
 
@@ -69,6 +69,8 @@
     }
 
     .card-box {
+        flex: 1;
+        height: 100%;
         background-color: $bg-base;
 
         .card {

@@ -51,7 +51,7 @@
     } from '@/utils/common.js';
 
     const userName = ref('张三')
-    const avatarUrl = ref('/static/avatar.jpg');
+    const avatarUrl = ref('/static/avatar/avatar.jpg');
 </script>
 
 <style lang="scss" scoped>
