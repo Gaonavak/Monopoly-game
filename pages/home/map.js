@@ -13,7 +13,7 @@ export const markers = ref([{
         id: 1,
         latitude: 23.4299,
         longitude: 116.9472,
-        thumb: 'https://hellouniapp.dcloud.net.cn/static/location.png',
+        thumb: '/static/localize.png',
         description: 'aaa',
         extra: '不知道',
         title: '长山尾灯塔',
@@ -22,13 +22,13 @@ export const markers = ref([{
         id: 2,
         latitude: 23.4160,
         longitude: 116.9732,
-        thumb: 'https://hellouniapp.dcloud.net.cn/static/location.png',
+        thumb: '/static/localize.png',
         description: '不知道',
         extra: '不知道',
         title: '田宅地质公园'
     }
 ]);
-export const showPopup = ref(false);
+export const showPopup = ref(true);
 export const showCard = ref(false);
 export const cardData = ref({});
 
