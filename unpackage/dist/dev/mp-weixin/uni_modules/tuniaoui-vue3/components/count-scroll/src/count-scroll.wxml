@@ -1,1 +1,0 @@
-<view class="{{['data-v-781ff58d', e]}}" style="{{f}}"><view class="{{['data-v-781ff58d', d]}}"><view wx:for="{{a}}" wx:for-item="item" wx:key="b" class="{{['data-v-781ff58d', c]}}" style="{{item.c}}"><view wx:for="{{item.a}}" wx:for-item="listItem" wx:key="b" class="{{['data-v-781ff58d', b]}}">{{listItem.a}}</view></view></view></view>

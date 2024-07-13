@@ -1,1 +1,0 @@
-<view class="my-card-row data-v-b31a7f34"><view wx:for="{{a}}" wx:for-item="item" wx:key="c" class="item data-v-b31a7f34" bindtap="{{item.d}}"><image class="icon data-v-b31a7f34" src="{{item.a}}" mode="aspectFill"></image><view class="title data-v-b31a7f34">{{item.b}}</view></view></view>

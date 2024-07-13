@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "社区",
-  "usingComponents": {
-    "tn-graphic-card": "../../node-modules/tnuiv3p-tn-graphic-card/index",
-    "tn-tabs": "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs",
-    "tn-tabs-item": "../../uni_modules/tuniaoui-vue3/components/tabs/src/tabs-item",
-    "tn-search-box": "../../uni_modules/tuniaoui-vue3/components/search-box/src/search-box"
-  }
-}
