@@ -118,5 +118,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-7d952f2c"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-7d952f2c"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/footer/src/footer.vue"]]);
 wx.createComponent(Component);

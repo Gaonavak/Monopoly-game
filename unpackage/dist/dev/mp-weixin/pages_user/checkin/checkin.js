@@ -76,5 +76,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-915d845d"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-915d845d"], ["__file", "D:/Work/小程序开发工具/G/pages_user/checkin/checkin.vue"]]);
 wx.createPage(MiniProgramPage);

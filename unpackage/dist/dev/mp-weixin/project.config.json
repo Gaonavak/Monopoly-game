@@ -5,10 +5,10 @@
     "include": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
-    "postcss": false,
-    "minified": false,
+    "postcss": true,
+    "minified": true,
     "newFeature": true,
     "bigPackageSizeSupport": true,
     "babelSetting": {
@@ -18,8 +18,8 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.4.9",
-  "appid": "wx7fe178465de20a7d",
+  "libVersion": "3.5.0",
+  "appid": "wxf37b3e60523c4b01",
   "projectname": "reborn",
   "condition": {},
   "editorSetting": {

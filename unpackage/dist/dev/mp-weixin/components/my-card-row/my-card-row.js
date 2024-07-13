@@ -23,5 +23,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-b31a7f34"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-b31a7f34"], ["__file", "D:/Work/小程序开发工具/G/components/my-card-row/my-card-row.vue"]]);
 wx.createComponent(Component);

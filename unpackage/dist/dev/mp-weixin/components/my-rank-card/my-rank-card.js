@@ -47,5 +47,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-b7bdbf13"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-b7bdbf13"], ["__file", "D:/Work/小程序开发工具/G/components/my-rank-card/my-rank-card.vue"]]);
 wx.createComponent(Component);

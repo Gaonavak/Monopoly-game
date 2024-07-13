@@ -75,7 +75,7 @@ const _sfc_main$1 = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Form = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main$1, [["__scopeId", "data-v-ebf51555"]]);
+const Form = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main$1, [["__scopeId", "data-v-ebf51555"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/form/src/form.vue"]]);
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "form-item",
   props: uni_modules_tuniaouiVue3_components_form_src_formItem.formItemProps,
@@ -175,7 +175,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const FormItem = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-9bb1a075"]]);
+const FormItem = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-9bb1a075"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/form/src/form-item.vue"]]);
 uni_modules_tuniaouiVue3_utils_vue_install.withInstall(Form, {
   FormItem
 });

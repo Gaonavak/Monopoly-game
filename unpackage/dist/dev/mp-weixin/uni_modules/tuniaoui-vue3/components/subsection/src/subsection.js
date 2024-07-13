@@ -69,5 +69,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-4288fe58"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-4288fe58"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/subsection/src/subsection.vue"]]);
 wx.createComponent(Component);

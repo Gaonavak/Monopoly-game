@@ -18,5 +18,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-ceebadbf"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-ceebadbf"], ["__file", "D:/Work/小程序开发工具/G/components/my-btn-box/my-btn-box.vue"]]);
 wx.createComponent(Component);

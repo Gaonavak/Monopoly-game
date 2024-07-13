@@ -39,5 +39,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-2b5f0ee8"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-2b5f0ee8"], ["__file", "D:/Work/小程序开发工具/G/components/my-store-card/my-store-card.vue"]]);
 wx.createComponent(Component);

@@ -46,5 +46,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-4e517efe"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-4e517efe"], ["__file", "D:/Work/小程序开发工具/G/node_modules/@tuniao/tnui-vue3-uniapp/components/photo-album/src/photo-album.vue"]]);
 wx.createComponent(Component);

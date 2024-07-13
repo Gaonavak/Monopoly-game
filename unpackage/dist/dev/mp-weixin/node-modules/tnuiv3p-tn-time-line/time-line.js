@@ -16,4 +16,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-wx.createComponent(_sfc_main);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/Work/小程序开发工具/G/node_modules/tnuiv3p-tn-time-line/time-line.vue"]]);
+wx.createComponent(Component);

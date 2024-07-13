@@ -72,5 +72,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-781ff58d"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-781ff58d"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/count-scroll/src/count-scroll.vue"]]);
 wx.createComponent(Component);

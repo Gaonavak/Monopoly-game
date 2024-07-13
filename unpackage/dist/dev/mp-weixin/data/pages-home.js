@@ -1,22 +1,5 @@
 "use strict";
 const common_vendor = require("../common/vendor.js");
-const navList = common_vendor.ref([
-  {
-    title: "关于",
-    icon: "/static/user/info.png",
-    path: "/pages_user/about/about"
-  },
-  {
-    title: "帮助",
-    icon: "/static/user/phone.png",
-    path: "/pages_user/contact/contact"
-  },
-  {
-    title: "开发者",
-    icon: "/static/dev.png",
-    path: "/pages_home/location/location"
-  }
-]);
 const fruit = common_vendor.ref({
   title: ["水果"],
   list: [
@@ -62,6 +45,29 @@ const fruit = common_vendor.ref({
     }
   ]
 });
+const polyline = common_vendor.ref([{
+  points: [
+    {
+      latitude: 23.4299,
+      longitude: 116.9472
+    },
+    {
+      latitude: 23.416,
+      longitude: 116.9732
+    },
+    {
+      latitude: 23.4178,
+      longitude: 116.9947
+    },
+    {
+      latitude: 23.4109,
+      longitude: 117.0344
+    }
+  ],
+  color: "#FF0000DD",
+  width: 2,
+  dottedLine: true
+}]);
 const group1 = common_vendor.ref([{
   avatar: "/static/logo.png",
   name: "张三",
@@ -219,4 +225,4 @@ exports.fruit = fruit;
 exports.group1 = group1;
 exports.group2 = group2;
 exports.group3 = group3;
-exports.navList = navList;
+exports.polyline = polyline;

@@ -1,0 +1,1 @@
+{"bsonType":"object","required":["_id","userId","address"],"permission":{"read":true,"create":true,"update":true,"delete":true},"properties":{"_id":{"description":"ID，系统自动生成","bsonType":"objectId"},"userId":{"description":"用户编号","bsonType":"string"},"address":{"description":"用户收藏的地址信息","bsonType":"string"}}}

@@ -36,7 +36,7 @@
 }
 .btn-box2.data-v-07e72d3c {
   position: absolute;
-  top: 300rpx;
+  top: 0rpx;
   right: 0;
   z-index: 5;
   margin: 30rpx;
@@ -68,4 +68,27 @@
   width: 100%;
   max-width: 690rpx;
   margin: 0 auto;
+}
+.checkIn-card.data-v-07e72d3c {
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  right: 0;
+  border-radius: 20rpx;
+  z-index: 5;
+}
+.card-content.data-v-07e72d3c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+.close-icon.data-v-07e72d3c {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
 }

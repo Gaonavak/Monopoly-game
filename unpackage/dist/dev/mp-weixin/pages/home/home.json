@@ -2,9 +2,11 @@
   "navigationBarTitleText": "主页",
   "usingComponents": {
     "my-btn-box": "../../components/my-btn-box/my-btn-box",
+    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons",
     "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card",
     "my-store-card": "../../components/my-store-card/my-store-card",
     "my-rank-card": "../../components/my-rank-card/my-rank-card",
-    "tn-switch-tab": "../../uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab"
+    "tn-switch-tab": "../../uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab",
+    "tn-popup": "../../uni_modules/tuniaoui-vue3/components/popup/src/popup"
   }
 }

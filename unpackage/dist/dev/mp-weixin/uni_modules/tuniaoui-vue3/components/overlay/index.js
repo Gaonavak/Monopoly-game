@@ -62,7 +62,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-2319383f"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-2319383f"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/overlay/src/overlay.vue"]]);
 uni_modules_tuniaouiVue3_utils_vue_install.withNoopInstall(Component);
 exports.Component = Component;
 exports.overlayProps = overlayProps;

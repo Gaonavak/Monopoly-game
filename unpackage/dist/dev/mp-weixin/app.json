@@ -52,5 +52,10 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "aa"
+    }
+  },
   "usingComponents": {}
 }

@@ -208,5 +208,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-20d23020"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-20d23020"], ["__file", "D:/Work/小程序开发工具/G/node_modules/tnuiv3p-tn-graphic-card/index.vue"]]);
 wx.createComponent(Component);

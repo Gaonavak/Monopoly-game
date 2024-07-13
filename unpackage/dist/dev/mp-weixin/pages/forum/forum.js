@@ -12,25 +12,25 @@ const _sfc_main = {
   setup(__props) {
     const graphicData = {
       id: 1,
-      avatar: "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-      title: "文章标题",
-      description: "2023年6月30日",
+      avatar: "/static/avatar.jpg",
+      title: "张三",
+      description: "2024年7月3日",
       // tags: ['标签1', '标签2'],
-      content: "小时候养老院里有一家的爷爷和奶奶。那个奶奶是个特别泼辣和急脾气的人，那个爷爷性子很慢，整天乐呵呵的。他俩出去遛弯，就只能听到那个奶奶不停的说话，那爷爷听着。前段时间，那个爷爷突发心脏病去世了。那个奶奶说了句，死老头子，磨磨蹭蹭一辈子，就这件事干的这么利索。说完沉默了一下就哭了。",
+      content: "我最近去了一趟南澳旅行，那里的美景让我流连忘返。南澳的自然风光真是令人惊叹，海岸线蜿蜒曲折，碧蓝的海水与白沙滩相映成趣。早晨的日出壮丽无比，仿佛金色的光芒洒满大地，让人心旷神怡。南澳，真是一个值得一去再去的地方。",
       images: [
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg"
+        "/static/1.jpg",
+        "/static/2.jpg",
+        "/static/3.jpg",
+        "/static/4.jpg"
       ],
       viewCount: 100,
       commentCount: 101,
       likeCount: 102,
       viewUserAvatars: [
+        "/static/logo.png",
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
-        "https://resource.tuniaokj.com/images/album/xiong1.jpg",
+        "/static/avatar1.jpg",
+        "/static/03-6.png",
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
         "https://resource.tuniaokj.com/images/album/xiong1.jpg",
@@ -105,5 +105,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-aeadbf01"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-aeadbf01"], ["__file", "D:/Work/小程序开发工具/G/pages/forum/forum.vue"]]);
 wx.createPage(MiniProgramPage);

@@ -17,7 +17,7 @@ const _sfc_main = {
   __name: "user",
   setup(__props) {
     const userName = common_vendor.ref("张三");
-    const avatarUrl = common_vendor.ref("/static/logo.png");
+    const avatarUrl = common_vendor.ref("/static/avatar.jpg");
     return (_ctx, _cache) => {
       return {
         a: avatarUrl.value,
@@ -40,5 +40,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-0f7520f0"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-0f7520f0"], ["__file", "D:/Work/小程序开发工具/G/pages/user/user.vue"]]);
 wx.createPage(MiniProgramPage);

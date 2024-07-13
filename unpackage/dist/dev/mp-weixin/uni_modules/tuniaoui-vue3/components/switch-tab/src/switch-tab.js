@@ -74,5 +74,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-d709ea0c"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-d709ea0c"], ["__file", "D:/Work/小程序开发工具/G/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue"]]);
 wx.createComponent(Component);

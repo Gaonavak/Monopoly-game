@@ -79,5 +79,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-14aea6d3"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-14aea6d3"], ["__file", "D:/Work/小程序开发工具/G/pages_user/timeline/timeline.vue"]]);
 wx.createPage(MiniProgramPage);
