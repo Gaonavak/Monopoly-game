@@ -1,22 +1,7 @@
 import {
     ref
 } from 'vue';
-export const navList = ref([{
-        title: '关于',
-        icon: '/static/user/info.png',
-        path: '/pages_user/about/about'
-    },
-    {
-        title: '帮助',
-        icon: '/static/user/phone.png',
-        path: '/pages_user/contact/contact'
-    },
-    {
-        title: '开发者',
-        icon: '/static/dev.png',
-        path: '/pages_home/location/location'
-    }
-]);
+
 
 export const fruit = ref({
     title: ['水果'],
@@ -59,6 +44,29 @@ export const fruit = ref({
         }
     ],
 });
+
+export const polyline = ref([{
+    points: [{
+            latitude: 23.4299,
+            longitude: 116.9472
+        },
+        {
+            latitude: 23.4160,
+            longitude: 116.9732
+        },
+        {
+            latitude: 23.4178,
+            longitude: 116.9947
+        },
+        {
+            latitude: 23.4109,
+            longitude: 117.0344
+        }
+    ],
+    color: '#FF0000DD',
+    width: 2,
+    dottedLine: true
+}]); // 地图上的路线
 
 export const group1 = ref([{
     avatar: '/static/logo.png',

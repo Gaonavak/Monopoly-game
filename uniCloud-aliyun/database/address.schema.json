@@ -1,0 +1,1 @@
+{"bsonType":"object","required":["latitude","longitude","address"],"permission":{"read":true,"create":true,"update":true,"delete":true},"properties":{"_id":{"description":"ID，系统自动生成"},"latitude":{"bsonType":"number","description":"地址的纬度"},"longitude":{"bsonType":"number","description":"地址的经度"},"address":{"bsonType":"string","description":"详细地址"}}}
