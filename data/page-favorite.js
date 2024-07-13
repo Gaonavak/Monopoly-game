@@ -1,35 +1,39 @@
-import {
-    ref
-} from 'vue'
+// fetchData.js
+import { ref } from 'vue';
 
-export const places = ref([{
-    id: 1,
-    title: '南澳岛 1 ',
-    image: '/static/logo.png',
-    desc: '南澳是广东唯一的海岛县，位于广东省东南部海面，地处东经11653′－117°19′，北纬23°11′－23°32′，北回归线从主岛穿过。 南澳海域面积4600平方公里，总面积约115.054平方千米, 由南澳岛及周边35个主要岛屿组成，其中主岛112.049平方公里。',
-    isFavorite: true
-}, {
-    id: 2,
-    title: '南澳岛 2',
-    image: '/static/logo.png',
-    desc: '南澳是广东唯一的海岛县，位于广东省东南部海面，地处东经11653′－117°19′，北纬23°11′－23°32′，北回归线从主岛穿过。 南澳海域面积4600平方公里，总面积约115.054平方千米, 由南澳岛及周边35个主要岛屿组成，其中主岛112.049平方公里。',
-    isFavorite: false
-}, {
-    id: 3,
-    title: '南澳岛 3',
-    image: '/static/logo.png',
-    desc: '南澳是广东唯一的海岛县，位于广东省东南部海面，地处东经11653′－117°19′，北纬23°11′－23°32′，北回归线从主岛穿过。 南澳海域面积4600平方公里，总面积约115.054平方千米, 由南澳岛及周边35个主要岛屿组成，其中主岛112.049平方公里。',
-    isFavorite: true
-}, {
-    id: 4,
-    title: '南澳岛 4',
-    image: '/static/logo.png',
-    desc: '南澳是广东唯一的海岛县，位于广东省东南部海面，地处东经11653′－117°19′，北纬23°11′－23°32′，北回归线从主岛穿过。 南澳海域面积4600平方公里，总面积约115.054平方千米, 由南澳岛及周边35个主要岛屿组成，其中主岛112.049平方公里。',
-    isFavorite: true
-}, {
-    id: 5,
-    title: '南澳岛 5',
-    image: '/static/logo.png',
-    desc: '南澳是广东唯一的海岛县，位于广东省东南部海面，地处东经11653′－117°19′，北纬23°11′－23°32′，北回归线从主岛穿过。 南澳海域面积4600平方公里，总面积约115.054平方千米, 由南澳岛及周边35个主要岛屿组成，其中主岛112.049平方公里。',
-    isFavorite: false
-}])
+export const places = ref([]);
+
+export const fetchFavoriteAddresses = async (userId) => {
+    try {
+        const db = uniCloud.database();
+        const collection = db.collection('user_favorite_address');
+        const res = await collection.where({
+            userId: userId
+        }).get();
+
+        if (res.result.data && res.result.data.length > 0) {
+            // 将数据库中的数据映射到 places 中
+            places.value = res.result.data.map((item, index) => ({
+                id: item._id, // 使用数据库中的唯一ID
+                title: item.title,
+                image: '/static/logo.png', // 可以根据需要替换为实际图片路径
+                desc: item.extra,
+                isFavorite: true
+            }));
+        } else {
+            console.error('用户收藏地址数据获取失败');
+        }
+    } catch (error) {
+        console.error('获取用户收藏地址数据时出错：', error);
+    }
+};
+
+export const deleteFavoriteAddress = async (id) => {
+    try {
+        const db = uniCloud.database();
+        const collection = db.collection('user_favorite_address');
+        await collection.doc(id).remove();
+    } catch (error) {
+        console.error('删除收藏地址时出错：', error);
+    }
+};
