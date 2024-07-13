@@ -80,14 +80,17 @@
 
 <style lang="scss" scoped>
     .timeline {
+        width: 100%;
+        min-height: 100vh;
+        background-color: $bg-base;
         position: relative;
         width: 100%;
         padding: 30rpx;
+        
+        &:last-child{
+            padding-bottom: $padding-bottom;
+        }
     }
-
-    // .time-line__month {
-    //     min-height: auto;
-    // }
 
     .time-line__day {
         .time-line__title {

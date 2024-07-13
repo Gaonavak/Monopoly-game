@@ -66,6 +66,20 @@
                 {
                     "navigationBarTitleText" : "打卡点"
                 }
+            },
+            {
+                "path" : "shopping/shopping",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "购物"
+                }
+            },
+            {
+                "path" : "favorite/favorite",
+                "style" : 
+                {
+                    "navigationBarTitleText" : "我的收藏"
+                }
             }
         ]
     },{
