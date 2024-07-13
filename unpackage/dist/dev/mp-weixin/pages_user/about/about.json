@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "关于我们",
-  "usingComponents": {
-    "tn-footer": "../../uni_modules/tuniaoui-vue3/components/footer/src/footer"
-  }
-}
