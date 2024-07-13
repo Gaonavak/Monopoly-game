@@ -154,7 +154,7 @@
     // 当前选中的标签索引
     const currentTabIndex = ref(0);
     const currentTabIndex_rank = ref(0);
-    const tabs = ref(['商店', '周榜']);
+    const tabs = ref(['榜单', '商店']);
     const tabs_rank = ref(['日榜', '周榜', '月榜']);
 
 </script>
