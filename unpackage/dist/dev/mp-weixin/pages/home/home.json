@@ -3,8 +3,8 @@
   "usingComponents": {
     "my-btn-box": "../../components/my-btn-box/my-btn-box",
     "uni-card": "../../uni_modules/uni-card/components/uni-card/uni-card",
-    "my-store-card": "../../components/my-store-card/my-store-card",
     "my-rank-card": "../../components/my-rank-card/my-rank-card",
+    "my-store-card": "../../components/my-store-card/my-store-card",
     "tn-switch-tab": "../../uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab"
   }
 }

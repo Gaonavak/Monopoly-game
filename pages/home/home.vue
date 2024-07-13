@@ -16,33 +16,32 @@
         <!-- 选项卡 -->
         <TnSwitchTab class="switchBar" v-model="currentTabIndex" :tabs="tabs" active-bg-color="#8CAED1"
             inactive-bg-color="#E1E9F0">
-            <!-- 商店 -->
-            <view class="store" v-if="currentTabIndex === 0">
-                <view class="type-card">
-                    <my-store-card :arr="fruit"></my-store-card>
-                </view>
-                <view class="type-card">
-                    <my-store-card :arr="fruit" />
-                </view>
-            </view>
-
-            <!-- 周榜 -->
-            <view class="rank" v-if="currentTabIndex === 1">
+            <!-- 榜单 -->
+            <view class="rank" v-if="currentTabIndex === 0">
                 <view class="switchBar_rank">
                     <TnSwitchTab v-model="currentTabIndex_rank" :tabs="tabs_rank" active-bg-color="#FFA726"
-                        inactive-bg-color="#E1E9F0">
-                        <view class="dayList" v-if="currentTabIndex_rank === 0">
+                        inactive-bg-color="#FFD392">
+                        <view class="ranklist" v-if="currentTabIndex_rank === 0">
                             <my-rank-card :arr="group1" />
                         </view>
-                        <view class="weekList" v-if="currentTabIndex_rank === 1">
+                        <view class="ranklist" v-if="currentTabIndex_rank === 1">
                             <my-rank-card :arr="group2" />
                         </view>
-                        <view class="monthList" v-if="currentTabIndex_rank === 2">
+                        <view class="ranklist" v-if="currentTabIndex_rank === 2">
                             <my-rank-card :arr="group3" />
                         </view>
                     </TnSwitchTab>
                 </view>
+            </view>
 
+            <!-- 商店 -->
+            <view class="store" v-if="currentTabIndex === 1">
+                <view class="type-card">
+                    <my-store-card :arr="fruit" />
+                </view>
+                <view class="type-card">
+                    <my-store-card :arr="fruit" />
+                </view>
             </view>
         </TnSwitchTab>
     </view>
@@ -135,7 +134,7 @@
     // 当前选中的标签索引
     const currentTabIndex = ref(0);
     const currentTabIndex_rank = ref(0);
-    const tabs = ref(['商店', '周榜']);
+    const tabs = ref(['榜单', '商店']);
     const tabs_rank = ref(['日榜', '周榜', '月榜']);
     const btns = ref([{
             title: '扫描二维码',
@@ -189,27 +188,30 @@
         z-index: 5;
     }
 
-    .store {
-        width: 100%;
-        max-width: 690rpx;
-        margin: 100rpx auto;
-
-        .type-card {
-            margin: 110rpx auto;
-        }
-    }
-
     .switchBar {
         margin-top: -30rpx;
+    }
 
-        .switchBar_rank {
-            margin-top: 80rpx;
+    .rank,
+    .store {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:last-child {
+            padding-bottom: 20rpx;
         }
     }
 
-    .rank {
+    .switchBar_rank {
         width: 100%;
         max-width: 690rpx;
-        margin: 0 auto;
+        margin-top: 60rpx;
+    }
+
+    .type-card {
+        width: 100%;
+        max-width: 690rpx;
+        margin-top: 90rpx;
     }
 </style>

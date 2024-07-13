@@ -50,22 +50,26 @@
   border-radius: 20rpx;
   z-index: 5;
 }
-.store.data-v-07e72d3c {
-  width: 100%;
-  max-width: 690rpx;
-  margin: 100rpx auto;
-}
-.store .type-card.data-v-07e72d3c {
-  margin: 110rpx auto;
-}
 .switchBar.data-v-07e72d3c {
   margin-top: -30rpx;
 }
-.switchBar .switchBar_rank.data-v-07e72d3c {
-  margin-top: 80rpx;
+.rank.data-v-07e72d3c,
+.store.data-v-07e72d3c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.rank.data-v-07e72d3c {
+.rank.data-v-07e72d3c:last-child,
+.store.data-v-07e72d3c:last-child {
+  padding-bottom: 20rpx;
+}
+.switchBar_rank.data-v-07e72d3c {
   width: 100%;
   max-width: 690rpx;
-  margin: 0 auto;
+  margin-top: 60rpx;
+}
+.type-card.data-v-07e72d3c {
+  width: 100%;
+  max-width: 690rpx;
+  margin-top: 90rpx;
 }
