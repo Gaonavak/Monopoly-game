@@ -569,12 +569,6 @@
             path: scanQRCode // 这里不应该调用函数，只需要指定函数名即可
         }
     ]);
-
-    // 当前选中的标签索引
-    const currentTabIndex = ref(0);
-    const currentTabIndex_rank = ref(0);
-    const tabs = ref(['商店', '周榜']);
-    const tabs_rank = ref(['日榜', '周榜', '月榜']);
 </script>
 
 <style lang="scss"
