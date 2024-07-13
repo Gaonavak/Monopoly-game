@@ -1,9 +1,7 @@
 import {
     ref
 } from 'vue';
-import {
-    markers as defaultMarkers
-} from '@/data/pages-home.js';
+
 
 export const longitude = ref(117.062956);
 export const latitude = ref(23.434194);
