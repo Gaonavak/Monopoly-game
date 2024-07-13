@@ -18,9 +18,15 @@
 /* 透明度 */
 /* 文章场景相关 */
 .timeline.data-v-14aea6d3 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F0F4F9;
   position: relative;
   width: 100%;
   padding: 30rpx;
+}
+.timeline.data-v-14aea6d3:last-child {
+  padding-bottom: 30rpx;
 }
 .time-line__day .time-line__title.data-v-14aea6d3 {
   font-size: 32rpx;

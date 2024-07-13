@@ -19,7 +19,7 @@
 /* 文章场景相关 */
 .contact.data-v-161deec3 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #F0F4F9;
   display: flex;
   flex-direction: column;

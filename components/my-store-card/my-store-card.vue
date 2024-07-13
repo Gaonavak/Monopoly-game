@@ -19,6 +19,7 @@
     defineProps(['arr'])
     import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
+
     const currentTabIndex = ref(0)
     const buy = () => {
         uni.showToast({
@@ -35,11 +36,9 @@
     .card-goods {
         width: 100%;
         padding: 20rpx;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20rpx;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30rpx 20rpx;
     }
 
     .item {
@@ -47,9 +46,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 10rpx;
-        width: calc(33.33% - 40rpx);
-        box-sizing: border-box;
     }
 
     .thumb {
@@ -59,11 +55,8 @@
         border-radius: 20rpx;
     }
 
-    .name {
-        margin-top: 15rpx;
-    }
-
+    .name,
     .price {
-        margin-top: 20rpx;
+        margin-top: 15rpx;
     }
 </style>

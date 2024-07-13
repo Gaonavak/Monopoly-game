@@ -13,7 +13,7 @@ const _sfc_main = {
         a: common_assets._imports_0$1,
         b: common_vendor.p({
           content: "Copyright © 2024 汕头大学-三下乡-科技队",
-          fixed: true
+          ["offset-bottom"]: "30rpx"
         })
       };
     };
