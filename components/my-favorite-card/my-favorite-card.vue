@@ -2,15 +2,25 @@
     <view class="my-favorite-card">
         <view class="title">
             <view class="left">
-                <image class="image" :src="place.image" mode="aspectFit"></image>
+                <image class="image"
+                    :src="place.image"
+                    mode="aspectFit"></image>
                 <view class="name">{{place.title}}</view>
             </view>
             <view class="right">
                 <view class="star">
-                    <TnIcon v-if="!place.isFavorite" name="star" size="50rpx" @click="toggleFavorite" />
-                    <TnIcon v-else name="star-fill" size="50rpx" color="#c1ff31" @click="toggleFavorite" />
+                    <TnIcon v-if="!place.isFavorite"
+                        name="star"
+                        size="50rpx"
+                        @click="toggleFavorite" />
+                    <TnIcon v-else
+                        name="star-fill"
+                        size="50rpx"
+                        color="#c1ff31"
+                        @click="toggleFavorite" />
                 </view>
-                <view class="checkin" @click="checkin">
+                <view class="checkin"
+                    @click="checkin">
                     <button>打卡</button>
                 </view>
             </view>
@@ -25,7 +35,9 @@
         ref
     } from 'vue';
     import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
-
+    import {
+        naviTo
+    } from '@/utils/common.js'
     const props = defineProps(['place'])
     const emit = defineEmits(['update', 'checkin'])
 
@@ -33,12 +45,14 @@
         emit('update', !props.place.isFavorite);
     }
 
+
     const checkin = () => {
-        emit('checkin')
-    }
+        naviTo('/pages/home/home?showTask=true');
+    };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss"
+    scoped>
     .my-favorite-card {
         width: 100%;
         background-color: $bg-card;

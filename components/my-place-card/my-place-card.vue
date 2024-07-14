@@ -23,9 +23,10 @@
 
         <view class="bottom">
             <view class="btn-favorite"
-                @click="favorite">
+                @click="toggleFavoriteColor">
                 <TnIcon name="star"
-                    size="40rpx" />
+                    size="40rpx"
+                    :color="favoriteColor" />
             </view>
 
             <view class="btn-scan"
@@ -41,13 +42,13 @@
 <script setup>
     const props = defineProps(['title', 'thumb', 'desc'])
     const emits = defineEmits(['close', 'showTask', 'favorite'])
-    import {
-        ref
-    } from 'vue'
+    import { ref } from 'vue'
     import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
     import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
-    import {favorite} from '@/pages/home/map.js'
+    import { favorite } from '@/pages/home/map.js'
     
+    const favoriteColor = ref('#808080');
+
     const close = () => {
         emits('close')
     }
@@ -56,11 +57,13 @@
         emits('showTask');
     }
 
-
+    const toggleFavoriteColor = () => {
+        favoriteColor.value = favoriteColor.value === '#808080' ? '#c1ff31' : '#808080';
+        favorite(); // µ÷ÓÃ favorite º¯Êý
+    }
 </script>
 
-<style lang="scss"
-    scoped>
+<style lang="scss" scoped>
     .my-place-card {
         width: 100%;
         padding: 20rpx;
