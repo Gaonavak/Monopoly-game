@@ -21,23 +21,26 @@
                 地点详情
                 <view v-if="showCard"
                     class="card-place">
-                    <my-place-card :title="place.title"
-                        :thumb="place.thumb"
-                        :desc="place.desc"
+                    <my-place-card 
+                        :title="cardData.title"
+                        :thumb="cardData.thumb"
+                        :desc="cardData.desc"
                         @close="closePlaceAndTask"
                         @showTask="handleShowTask" />
                 </view>
-
                 <!-- 任务卡片 -->
-                <uni-transition v-if="showTask"
-                    class="card-task"
-                    show="true"
-                    :mode-class="['fade','slide-bottom']"
-                    :duration="600">
-                    <my-task-card :gif="task.gif"
-                        :title="task.title"
-                        :desc="task.desc" />
-                </uni-transition>
+                <TnPopup v-model="showTask"
+                    :overlay-closeable="true"
+                    radius="16"
+                    open-direction='bottom'
+                    height="800">
+                    <view class="tn-p-lg tn-white_bg tn-radius center">
+                        <my-task-card :gif="task.gif"
+                            :title="task.title"
+                            :desc="task.desc" />
+                    </view>
+                </TnPopup>
+
             </view>
         </map>
 
@@ -117,6 +120,7 @@
         longitude,
         latitude,
         markers,
+        extra,
         userLatitude,
         userLongitude,
         addressInfoRecomd,

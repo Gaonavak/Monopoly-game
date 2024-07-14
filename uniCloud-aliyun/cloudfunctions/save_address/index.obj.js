@@ -1,6 +1,6 @@
 'use strict';
 const db = uniCloud.database();
-const collection = db.collection('address');
+const collection = db.collection('user_favorite_address');
 
 exports.main = async (event, context) => {
   const { latitude, longitude, address } = event;

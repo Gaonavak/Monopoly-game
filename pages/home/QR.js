@@ -2,6 +2,10 @@ import {
     ref
 } from 'vue';
 
+import {
+    markers
+} from './map.js'; // 引入markers数组
+
 // 扫描二维码
 const openPoints = ref(0);
 const check_in = ref(0);
@@ -50,6 +54,14 @@ const scanQRCode = async () => {
             for (let location of locations) {
                 if (location.latitude === scannedLatitude && location.longitude === scannedLongitude) {
                     matchFound = true;
+
+                    // 找到匹配的标记点并更新其iconPath
+                    const marker = markers.value.find(marker => marker.latitude === scannedLatitude && marker
+                        .longitude === scannedLongitude);
+                    if (marker) {
+                        marker.iconPath = '/static/map/yellow_pin.png'; // 替换为新的图标路径
+                    }
+                    
                     break;
                 }
             }
@@ -75,6 +87,7 @@ const scanQRCode = async () => {
         });
     }
 };
+
 
 // 增加积分
 const addPoints = async () => {
