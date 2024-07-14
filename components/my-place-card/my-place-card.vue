@@ -46,7 +46,8 @@
     } from 'vue'
     import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
     import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
-
+    import {favorite} from '@/pages/home/map.js'
+    
     const close = () => {
         emits('close')
     }
@@ -55,9 +56,7 @@
         emits('showTask');
     }
 
-    const favorite = () => {
-        emits('favorite');
-    }
+
 </script>
 
 <style lang="scss"

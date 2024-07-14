@@ -12,26 +12,56 @@ export const markers = ref([{
         id: 1,
         latitude: 23.4299,
         longitude: 116.9472,
-        thumb: '/static/localize.png',
+        thumb: '/static/map/grey_pin.png',
         description: 'aaa',
         extra: '不知道',
         title: '长山尾灯塔',
+        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        width: 40,
+        height: 40
     },
     {
         id: 2,
         latitude: 23.4160,
         longitude: 116.9732,
-        thumb: '/static/localize.png',
+        thumb: '/static/map/grey_pin.png',
         description: '不知道',
         extra: '不知道',
-        title: '田宅地质公园'
+        title: '田宅地质公园',
+        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        width: 40,
+        height: 40
+    },
+    {
+        id: 3,
+        latitude: 23.4178,
+        longitude: 116.9947,
+        thumb: '/static/map/grey_pin.png',
+        description: '不知道',
+        extra: '不知道',
+        title: '石潭寺',
+        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        width: 40,
+        height: 40
+    },
+    {
+        id: 4,
+        latitude: 23.4178,
+        longitude: 116.9996,
+        thumb: '/static/map/grey_pin.png',
+        description: '不知道',
+        extra: '不知道',
+        title: '钱澳湾灯塔',
+        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        width: 40,
+        height: 40
     }
 ]);
 export const showPopup = ref(true);
 export const showCard = ref(false);
 export const cardData = ref({});
 export const showTask = ref(false);
-
+export const extra = ref();
 export const closePlaceAndTask = () => {
     showCard.value = false;
     showTask.value = false;
@@ -139,14 +169,14 @@ export const regionchange = (e) => {
 };
 
 // 保存地址信息到数据库（即用户收藏）
-export const saveAddress = async () => {
+export const favorite = async () => {
     try {
         const db = uniCloud.database();
-        const collection = db.collection('address');
+        const collection = db.collection('user_favorite_address');
         const data = {
-            latitude: latitude.value,
-            longitude: longitude.value,
-            address: address.value
+            userId: "1", // 用户编号
+            title: address.value, // 用户收藏的地址信息
+            extra: extra, // 额外信息简介
         };
         let res = await collection.add(data);
         uni.showModal({
@@ -169,7 +199,7 @@ export const updateMarkers = () => {
         id: 0,
         latitude: userLatitude.value,
         longitude: userLongitude.value,
-        iconPath: 'https://hellouniapp.dcloud.net.cn/static/location.png',
+        iconPath: '/static/map/me.png',
         width: 20,
         height: 20,
         callout: {
@@ -198,7 +228,7 @@ export const clickMap = (e) => {
         id: Date.now(),
         latitude: latitude,
         longitude: longitude,
-        iconPath: 'https://hellouniapp.dcloud.net.cn/static/location.png',
+        iconPath: '/static/map/map-pin.png',
         width: 20,
         height: 20,
     };
@@ -213,9 +243,10 @@ export const onMarkerTap = (event) => {
     const marker = markers.value.find(m => m.id === markerId);
     if (marker) {
         showCard.value = true;
+        extra.value = marker.extra;
         cardData.value = {
             title: marker.title,
-            thumb: marker.thumb,
+            thumb: '/static/logo.png',
             extra: marker.extra,
             desp: marker.description
         };
@@ -228,6 +259,7 @@ export const onMarkerTap = (event) => {
 export default {
     longitude,
     latitude,
+    extra,
     markers,
     userLatitude,
     userLongitude,
@@ -242,7 +274,7 @@ export default {
     moveToUserLocation,
     getLocationDetail,
     regionchange,
-    saveAddress,
+    favorite,
     updateMarkers,
     clickMap,
     onMarkerTap,
