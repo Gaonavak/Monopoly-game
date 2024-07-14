@@ -2,7 +2,7 @@
     <view class="mypoint">
         <view class="summary">
             <view class="title">总积分</view>
-            <view class="count">999</view>
+            <view class="count">{{openPoints}}</view>
         </view>
 
 
@@ -27,6 +27,7 @@
     import {
         ref
     } from 'vue';
+    import { openPoints,check_in } from '../../pages/home/QR';
 </script>
 
 <style lang="scss"

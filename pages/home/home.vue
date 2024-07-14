@@ -21,8 +21,7 @@
                 地点详情
                 <view v-if="showCard"
                     class="card-place">
-                    <my-place-card 
-                        :title="cardData.title"
+                    <my-place-card :title="cardData.title"
                         :thumb="cardData.thumb"
                         :desc="cardData.desc"
                         @close="closePlaceAndTask"
@@ -93,8 +92,10 @@
     //引用文件
     import {
         ref,
-        onMounted
+        onMounted,
+        getCurrentInstance
     } from 'vue';
+
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
     import TnPopup from '@/uni_modules/tuniaoui-vue3/components/popup/src/popup.vue'
     import MyPlaceCard from '@/components/my-place-card/my-place-card.vue'
@@ -120,7 +121,6 @@
         longitude,
         latitude,
         markers,
-        extra,
         userLatitude,
         userLongitude,
         addressInfoRecomd,
@@ -152,6 +152,16 @@
         isGetLocation(); // 调用获取位置的函数
         await fetchUserData(); // 调用获取用户数据的函数
     });
+
+    // 获取小程序上下文
+    const instance = getCurrentInstance();
+    if (instance) {
+        instance.proxy.$onLoad = (options) => {
+            if (options.showTask === 'true') {
+                showTask.value = true;
+            }
+        };
+    }
 
     const btns = ref([{
             title: '扫描二维码',

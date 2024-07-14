@@ -19,8 +19,8 @@
                 </view>
 
                 <view class="btn-scan"
-                    @click="scan">
-                    <TnIcon name="scan"
+                    @click="scanQRCode">
+                    <TnIcon name="scanQRCode"
                         offset-top="2rpx"
                         size="40rpx" />
                 </view>
@@ -31,16 +31,20 @@
 
 <script setup>
     const props = defineProps(['gif', 'title', 'desc'])
-    const emits = defineEmits(['share', 'scan'])
+    const emits = defineEmits(['share', 'scanQRCode'])
     import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
+    import {
+        scanQRCode,
+        fetchUserData,
+        openPoints,
+        check_in
+    } from '@/pages/home/QR.js';
 
     const share = () => {
         emits('share');
     }
 
-    const scan = () => {
-        emits('scan');
-    }
+
 </script>
 
 <style lang="scss"

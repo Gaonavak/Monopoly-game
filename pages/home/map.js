@@ -61,7 +61,7 @@ export const showPopup = ref(true);
 export const showCard = ref(false);
 export const cardData = ref({});
 export const showTask = ref(false);
-export const extra = ref();
+
 export const closePlaceAndTask = () => {
     showCard.value = false;
     showTask.value = false;
@@ -175,12 +175,12 @@ export const favorite = async () => {
         const collection = db.collection('user_favorite_address');
         const data = {
             userId: "1", // 用户编号
-            title: address.value, // 用户收藏的地址信息
-            extra: extra, // 额外信息简介
+            title: cardData.value.title, // 用户收藏的地址信息
+            extra: cardData.value.extra, // 额外信息简介
         };
         let res = await collection.add(data);
         uni.showModal({
-            content: '数据上传成功：' + JSON.stringify(res),
+            content: '成功收藏',
             showCancel: false
         });
     } catch (error) {
@@ -236,14 +236,14 @@ export const clickMap = (e) => {
     currentMarkerId.value = newMarker.id;
 };
 
+//点击标记点触发
 export const onMarkerTap = (event) => {
     const {
         markerId
     } = event.detail;
     const marker = markers.value.find(m => m.id === markerId);
     if (marker) {
-        showCard.value = true;
-        extra.value = marker.extra;
+        showCard.value = true;        
         cardData.value = {
             title: marker.title,
             thumb: '/static/logo.png',
@@ -259,7 +259,6 @@ export const onMarkerTap = (event) => {
 export default {
     longitude,
     latitude,
-    extra,
     markers,
     userLatitude,
     userLongitude,
@@ -268,6 +267,7 @@ export default {
     cardData,
     showPopup,
     showCard,
+    handleShowTask,
     isGetLocation,
     getAuthorizeInfo,
     getLocation,
