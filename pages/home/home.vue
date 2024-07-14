@@ -16,33 +16,30 @@
             <my-btn-box class="btn-box2"
                 :arr="btns">
             </my-btn-box>
+
+            <view class="card-box">
+                地点详情
+                <view v-if="showCard"
+                    class="card-place">
+                    <my-place-card :title="place.title"
+                        :thumb="place.thumb"
+                        :desc="place.desc"
+                        @close="closePlaceAndTask"
+                        @showTask="handleShowTask" />
+                </view>
+
+                <!-- 任务卡片 -->
+                <uni-transition v-if="showTask"
+                    class="card-task"
+                    show="true"
+                    :mode-class="['fade','slide-bottom']"
+                    :duration="600">
+                    <my-task-card :gif="task.gif"
+                        :title="task.title"
+                        :desc="task.desc" />
+                </uni-transition>
+            </view>
         </map>
-
-        <!-- 地点详情 -->
-        <uni-card v-if="showCard"
-            class="checkIn-card"
-            :title="cardData.title"
-            :thumbnail="cardData.thumb"
-            :extra="cardData.extra">
-            <view class="card-content">
-                <text>{{ cardData.desp }}</text>
-                <uni-icons type="close"
-                    class="close-icon"
-                    @click="closeCard" />
-            </view>
-        </uni-card>
-
-        <TnPopup v-model="showPopup"
-            :overlay-closeable="true"
-            radius="16"
-            open-direction='bottom'
-            height="800">
-            <view class="tn-p-lg tn-white_bg tn-radius center checkIn-card"
-                :title="cardData.title"
-                :thumbnail="cardData.thumb"
-                :extra="cardData.extra">
-            </view>
-        </TnPopup>
 
         <!-- 选项卡 -->
         <TnSwitchTab class="switchBar"
@@ -95,17 +92,18 @@
         ref,
         onMounted
     } from 'vue';
-
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
-
     import TnPopup from '@/uni_modules/tuniaoui-vue3/components/popup/src/popup.vue'
+    import MyPlaceCard from '@/components/my-place-card/my-place-card.vue'
 
     import {
         polyline,
         fruit,
         group1,
         group2,
-        group3
+        group3,
+        place,
+        task
     } from '@/data/pages-home';
 
     import {
@@ -126,6 +124,9 @@
         cardData,
         showPopup,
         showCard,
+        showTask,
+        handleShowTask,
+        closePlaceAndTask,
         isGetLocation,
         getAuthorizeInfo,
         getLocation,
@@ -135,16 +136,18 @@
         saveAddress,
         updateMarkers,
         clickMap,
-        onMarkerTap,
-        closeCard
+        onMarkerTap
     } from '@/pages/home/map.js';
 
+    const isPlaceCardVisiable = ref(true)
+    const handleClose = (res) => {
+        isPlaceCardVisiable.value = res;
+    }
     // 合并 onMounted 钩子
     onMounted(async () => {
         isGetLocation(); // 调用获取位置的函数
         await fetchUserData(); // 调用获取用户数据的函数
     });
-
 
     const btns = ref([{
             title: '扫描二维码',
@@ -179,15 +182,6 @@
         position: relative;
     }
 
-    .btn-box1 {
-        position: absolute;
-        top: 0rpx;
-        right: 0;
-        z-index: 5;
-        margin: 30rpx;
-        padding: 20rpx;
-    }
-
     .btn-box2 {
         position: absolute;
         top: 0rpx;
@@ -197,15 +191,32 @@
         padding: 20rpx;
     }
 
-    .checkIn-card {
+    .card-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         position: absolute;
         bottom: 40rpx;
-        left: 0;
-        right: 0;
         border-radius: 20rpx;
         z-index: 5;
+
+        // 拥有收藏和打卡按钮卡片
+        .card-place {
+            width: 100%;
+            max-width: 690rpx;
+        }
+
+        // 任务卡
+        .card-task {
+            width: 100%;
+            max-width: 690rpx;
+            margin-top: 30rpx;
+        }
     }
 
+
+    // 大选项卡，子内容是 rank 和 store
     .switchBar {
         margin-top: -30rpx;
     }
@@ -221,41 +232,17 @@
         }
     }
 
+    // 排行榜的日周月榜切换卡片
     .switchBar_rank {
         width: 100%;
         max-width: 690rpx;
         margin-top: 60rpx;
     }
 
+    // 商店货物的种类卡片
     .type-card {
         width: 100%;
         max-width: 690rpx;
         margin-top: 90rpx;
-    }
-
-    .checkIn-card {
-        position: absolute;
-        bottom: 50rpx;
-        left: 0;
-        right: 0;
-        border-radius: 20rpx;
-        z-index: 5;
-    }
-
-    .card-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        padding: 10px;
-    }
-
-    .close-icon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        color: #999;
-        cursor: pointer;
     }
 </style>

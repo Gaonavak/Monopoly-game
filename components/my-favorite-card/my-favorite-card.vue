@@ -41,7 +41,7 @@
 <style lang="scss" scoped>
     .my-favorite-card {
         width: 100%;
-        background-color: #fff;
+        background-color: $bg-card;
         border-radius: 20rpx;
     }
 

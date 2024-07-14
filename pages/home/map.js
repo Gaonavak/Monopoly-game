@@ -2,7 +2,6 @@ import {
     ref
 } from 'vue';
 
-
 export const longitude = ref(117.062956);
 export const latitude = ref(23.434194);
 export const userLatitude = ref(0);
@@ -31,6 +30,17 @@ export const markers = ref([{
 export const showPopup = ref(true);
 export const showCard = ref(false);
 export const cardData = ref({});
+export const showTask = ref(false);
+
+export const closePlaceAndTask = () => {
+    showCard.value = false;
+    showTask.value = false;
+};
+
+// 任务卡部分
+export const handleShowTask = () => {
+    showTask.value = true;
+}
 
 // 检查定位权限
 export const isGetLocation = (a = "scope.userLocation") => {
@@ -212,9 +222,6 @@ export const onMarkerTap = (event) => {
     }
 };
 
-export const closeCard = () => {
-    showCard.value = false;
-};
 
 
 
@@ -239,5 +246,5 @@ export default {
     updateMarkers,
     clickMap,
     onMarkerTap,
-    closeCard
+    closePlaceAndTask
 };
