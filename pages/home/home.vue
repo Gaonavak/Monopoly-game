@@ -97,7 +97,6 @@
     } from 'vue';
 
     import TnSwitchTab from '@/uni_modules/tuniaoui-vue3/components/switch-tab/src/switch-tab.vue'
-
     import TnPopup from '@/uni_modules/tuniaoui-vue3/components/popup/src/popup.vue'
 
     import {

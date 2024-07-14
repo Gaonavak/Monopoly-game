@@ -28,8 +28,8 @@ export const markers = ref([{
         title: '田宅地质公园'
     }
 ]);
-export const showPopup = ref(true);
-export const showCard = ref(false);
+export const showPopup = ref(false);
+export const showCard = ref(true);
 export const cardData = ref({});
 
 // 检查定位权限
