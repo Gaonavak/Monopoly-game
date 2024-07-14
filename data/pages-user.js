@@ -22,7 +22,7 @@ export const firstSowCardData = ref([{
 export const secondRowCardData = ref([{
         title: '我的积分',
         icon: '/static/user/reward.png',
-        path: '/pages_user/about/about'
+        path: '/pages_user/mypoint/mypoint'
     },
     {
         title: '在途中',
