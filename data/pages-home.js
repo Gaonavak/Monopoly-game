@@ -3,14 +3,14 @@ import {
 } from 'vue';
 export const place = {
     title: '南澳',
-    thumb: '/static/logo.png',
+    thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     desc: '你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好'
 }
 
 export const task = {
     title: '解谜',
-    gif: '/static/logo/logo-eat.gif',
-    thumb: '/static/logo/logo-sy.png',
+    gif: 'https://51shazhu.com/autoupload/20240714/IKwU/360X360/logo-eat.gif?type=ha',
+    thumb: 'https://0.z.wiki/autoupload/20240714/5ozW/2048X2048/logo-sy.png?type=ha',
     desc: '匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏匿藏'
 }
 
@@ -18,39 +18,39 @@ export const fruit = ref({
     title: ['水果'],
     list: [{
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         }, {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         },
         {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         },
         {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         }, {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         }, {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         },
         {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         },
         {
             name: '西瓜',
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             price: 999
         }
     ],
@@ -80,156 +80,156 @@ export const polyline = ref([{
 }]); // 地图上的路线
 
 export const group1 = ref([{
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 99
 }]);
 
 export const group2 = ref([{
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 77
 }]);
 
 export const group3 = ref([{
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66
 }, {
-    avatar: '/static/logo.png',
+    avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
     name: '张三',
     desc: '',
     grade: 66

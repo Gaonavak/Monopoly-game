@@ -1,7 +1,7 @@
 <template>
     <view class="about">
         <view class="logo-container">
-            <image class="logo" src="/static/logo.png" mode="widthFix"></image>
+            <image class="logo" src="https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha" mode="widthFix"></image>
         </view>
         <view class="title">三下乡-大富翁</view>
         <view class="description">
