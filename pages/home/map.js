@@ -246,7 +246,7 @@ export const onMarkerTap = (event) => {
         showCard.value = true;        
         cardData.value = {
             title: marker.title,
-            thumb: '/static/logo.png',
+            thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
             extra: marker.extra,
             desp: marker.description
         };
