@@ -16,7 +16,7 @@ export const fetchFavoriteAddresses = async (userId) => {
             places.value = res.result.data.map((item, index) => ({
                 id: item._id, // 使用数据库中的唯一ID
                 title: item.title,
-                image: '/static/logo.png', // 可以根据需要替换为实际图片路径
+                image: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha', // 可以根据需要替换为实际图片路径
                 desc: item.extra,
                 isFavorite: true
             }));
