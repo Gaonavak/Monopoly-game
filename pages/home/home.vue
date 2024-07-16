@@ -18,7 +18,7 @@
             </my-btn-box>
 
             <view class="card-box">
-                地点详情
+                <!-- 地点详情 -->
                 <view v-if="showCard"
                     class="card-place">
                     <my-place-card :title="cardData.title"

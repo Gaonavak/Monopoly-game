@@ -1,6 +1,4 @@
-import {
-    ref
-} from 'vue';
+import { ref } from 'vue';
 
 export const longitude = ref(117.062956);
 export const latitude = ref(23.434194);
@@ -8,15 +6,15 @@ export const userLatitude = ref(0);
 export const userLongitude = ref(0);
 export const addressInfoRecomd = ref('');
 export const currentMarkerId = ref(null);
-export const markers = ref([{
+export const markers = ref([
+    {
         id: 1,
         latitude: 23.4299,
         longitude: 116.9472,
-        thumb: '/static/map/grey_pin.png',
         description: 'aaa',
         extra: '不知道',
         title: '长山尾灯塔',
-        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        iconPath: '/static/map/grey_pin.png',
         width: 40,
         height: 40
     },
@@ -24,11 +22,10 @@ export const markers = ref([{
         id: 2,
         latitude: 23.4160,
         longitude: 116.9732,
-        thumb: '/static/map/grey_pin.png',
         description: '不知道',
         extra: '不知道',
         title: '田宅地质公园',
-        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        iconPath: '/static/map/grey_pin.png',
         width: 40,
         height: 40
     },
@@ -36,11 +33,10 @@ export const markers = ref([{
         id: 3,
         latitude: 23.4178,
         longitude: 116.9947,
-        thumb: '/static/map/grey_pin.png',
         description: '不知道',
         extra: '不知道',
         title: '石潭寺',
-        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        iconPath: '/static/map/grey_pin.png',
         width: 40,
         height: 40
     },
@@ -48,11 +44,10 @@ export const markers = ref([{
         id: 4,
         latitude: 23.4178,
         longitude: 116.9996,
-        thumb: '/static/map/grey_pin.png',
         description: '不知道',
         extra: '不知道',
         title: '钱澳湾灯塔',
-        iconPath: '/static/map/grey_pin.png', // 确认路径正确
+        iconPath: '/static/map/grey_pin.png',
         width: 40,
         height: 40
     }
@@ -195,32 +190,22 @@ export const favorite = async () => {
 // 更新标记点
 export const updateMarkers = () => {
     console.log('开始更新标记点');
-    markers.value = [{
+    const userMarker = {
         id: 0,
         latitude: userLatitude.value,
         longitude: userLongitude.value,
         iconPath: '/static/map/me.png',
         width: 20,
         height: 20,
-        callout: {
-            content: 'me',
-            color: '#ff0000',
-            fontSize: 12,
-            borderRadius: 5,
-            bgColor: '#ffffff',
-            padding: 5,
-            display: 'ALWAYS'
-        }
-    }];
+    };
+    markers.value = markers.value.filter(marker => marker.id !== 0); // 移除旧的用户位置标记
+    markers.value.push(userMarker); // 添加新的用户位置标记
 };
 
 // 点击地图时触发
 export const clickMap = (e) => {
     console.log("点击地图时:", e);
-    const {
-        latitude,
-        longitude
-    } = e.detail;
+    const { latitude, longitude } = e.detail;
     if (currentMarkerId.value !== null) {
         markers.value = markers.value.filter(marker => marker.id !== currentMarkerId.value);
     }
@@ -236,14 +221,13 @@ export const clickMap = (e) => {
     currentMarkerId.value = newMarker.id;
 };
 
-//点击标记点触发
+// 点击标记点触发
 export const onMarkerTap = (event) => {
-    const {
-        markerId
-    } = event.detail;
+    const { markerId } = event.detail;
+    if (markerId === 0) return;
     const marker = markers.value.find(m => m.id === markerId);
     if (marker) {
-        showCard.value = true;        
+        showCard.value = true;
         cardData.value = {
             title: marker.title,
             thumb: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
@@ -252,9 +236,6 @@ export const onMarkerTap = (event) => {
         };
     }
 };
-
-
-
 
 export default {
     longitude,
