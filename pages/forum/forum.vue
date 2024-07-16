@@ -14,7 +14,28 @@
         </Tntabs>
         <view class="scroll-view">
             <scroll-view scroll-y="true">
-                <view class="card"
+                <!-- 视频页面 -->
+                <view v-if="currentTabIndex === 4"
+                    class="waterfall">
+                    <TnWaterFall :data="videoData">
+                        <template #left="{ item }">
+                            <view class="water-card">
+                                <my-video-card :image="item.image"
+                                    :title="item.title" />
+                            </view>
+                        </template>
+                        <template #right="{ item }">
+                            <view class="water-card">
+                                <my-video-card :image="item.image"
+                                    :title="item.title" />
+                            </view>
+                        </template>
+                    </TnWaterFall>
+                </view>
+
+                <!-- 非视频页面 -->
+                <view v-else
+                    class="card"
                     v-for="i in 6"
                     :key="i">
                     <TnGraphicCard :avatar="graphicData.avatar"
@@ -30,15 +51,19 @@
                 </view>
             </scroll-view>
         </view>
-
     </view>
 </template>
 
 <script setup>
     import TnGraphicCard from '@/node_modules/tnuiv3p-tn-graphic-card/index.vue';
     import TnTabs from '@/uni_modules/tuniaoui-vue3/components/tabs/src/tabs.vue';
+    import TnWaterFall from '@/uni_modules/tuniaoui-vue3/components/water-fall/src/water-fall.vue'
     import TnTabsItem from '@/uni_modules/tuniaoui-vue3/components/tabs/src/tabs-item.vue';
     import TnSearchBox from '@/uni_modules/tuniaoui-vue3/components/search-box/src/search-box.vue';
+    import {
+        tabsData,
+        videoData
+    } from '@/data/page-forum.js'
     import {
         ref
     } from 'vue';
@@ -47,7 +72,6 @@
         avatar: '/static/avatar/avatar.jpg',
         title: '张三',
         description: '2024年7月3日',
-        // tags: ['标签1', '标签2'],
         content: '我最近去了一趟南澳旅行，那里的美景让我流连忘返。南澳的自然风光真是令人惊叹，海岸线蜿蜒曲折，碧蓝的海水与白沙滩相映成趣。早晨的日出壮丽无比，仿佛金色的光芒洒满大地，让人心旷神怡。南澳，真是一个值得一去再去的地方。',
         images: [
             '/static/show/1.jpg',
@@ -79,28 +103,13 @@
         })
     }
     const currentTabIndex = ref(0)
-    const tabsData = ref([{
-            text: '关注',
-        },
-        {
-            text: '推荐',
-        },
-        {
-            text: '热榜',
-        },
-        {
-            text: '搞笑',
-        },
-        {
-            text: '视频',
-        }
-    ]);
 </script>
 
 <style lang="scss"
     scoped>
     .forum {
         width: 100%;
+        height: 100%;
         min-height: 100vh;
     }
 
@@ -110,9 +119,10 @@
 
     .scroll-view {
         width: 100%;
+        height: 100%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         background-color: skyblue;
     }
 
@@ -124,5 +134,20 @@
         margin: 30rpx auto;
         background-color: #fff;
         box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+    }
+
+
+    .waterfall {
+        padding: 20rpx;
+
+        .left .water-card {
+            margin-bottom: 15rpx;
+            padding-right: 10rpx;
+        }
+
+        .right .water-card {
+            margin-bottom: 15rpx;
+            padding-left: 10rpx;
+        }
     }
 </style>
