@@ -2,6 +2,11 @@
 > 
 > 旧的 README 为 [README-history.md](./README-history.md)
 
+
+# 2024-07-16 视频页面瀑布流
+
+<img src="./docx/PixPin_2024-07-16_18-03-04.png" alt="视频页面瀑布流" style="width: 50%; height: 50%;">
+
 # 2024-07-14 我的积分页面
 
 <img src="./docx/PixPin_2024-07-14_20-43-49.png" alt="我的积分页面" style="width: 50%; height: 50%;">
