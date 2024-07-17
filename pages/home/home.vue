@@ -21,12 +21,12 @@
                 <!-- 景点详情和题目 -->
                 <view v-if="showCard"
                     class="card-place">
-                    <my-place-card :title="place.title"
+                    <my-place-card :title="cardData.title"
                         :thumb="place.thumb"
-                        :desc="place.desc"
+                        :desc="cardData.desp"
                         :gif="place.gif"
                         :quesTitle="place.quesTitle"
-                        :ques="place.desc"
+                        :ques="place.ques"
                         @close="closePlaceAndTask" />
                 </view>
             </view>
