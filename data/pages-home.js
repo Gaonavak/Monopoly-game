@@ -54,26 +54,36 @@ export const fruit = ref({
 
 export const polyline = ref([{
     points: [{
-            latitude: 23.4299,
-            longitude: 116.9472
+            latitude: 23.434086,
+            longitude: 116.981219
         },
         {
-            latitude: 23.4160,
-            longitude: 116.9732
+            latitude: 23.425053,
+            longitude: 117.023941
         },
         {
-            latitude: 23.4178,
-            longitude: 116.9947
+            latitude: 23.452142,
+            longitude: 117.10198
         },
         {
-            latitude: 23.4178,
-            longitude: 116.9996
+            latitude: 23.478733,
+            longitude: 117.122796
+        },
+        {
+            latitude: 23.441581,
+            longitude: 117.137131
+        },
+        {
+            latitude: 23.396026,
+            longitude: 117.106935
         }
     ],
     color: '#FF0000DD',
     width: 2,
     dottedLine: true
 }]); // 地图上的路线
+
+
 
 export const group1 = ref([{
     avatar: 'https://0.z.wiki/autoupload/20240714/mIJR/1683X2048/logo-hello.png?type=ha',
