@@ -1,0 +1,33 @@
+{
+    "bsonType": "object",
+    "required": [],
+    "permission": {
+        "read": true,
+        "create": true,
+        "update": true,
+        "delete": true
+    },
+    "properties": {
+        "userId": {
+            "description": "用户编号",
+            "bsonType": "string"
+        },
+        "title": {
+            "description": "用户收藏的地址信息",
+            "bsonType": "string"
+        },
+        "des": {
+            "description": "额外信息简介",
+            "bsonType": "string"
+        },
+        "time": {
+            "description": "时间",
+            "bsonType": "string",
+            "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}$"
+        },
+        "points": {
+            "description": "积分",
+            "bsonType": "int"
+        }
+    }
+}

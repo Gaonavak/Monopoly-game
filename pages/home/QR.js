@@ -9,6 +9,7 @@ import {
 // 扫描二维码
 const openPoints = ref(0);
 const check_in = ref(0);
+const point_title = ref(0);
 
 // 获取用户数据
 const fetchUserData = async () => {
@@ -59,9 +60,10 @@ const scanQRCode = async () => {
                     const marker = markers.value.find(marker => marker.latitude === scannedLatitude && marker
                         .longitude === scannedLongitude);
                     if (marker) {
+                        point_title.value = marker.title;
                         marker.iconPath = '/static/map/yellow_pin.png'; // 替换为新的图标路径
                     }
-                    
+
                     break;
                 }
             }
@@ -69,6 +71,7 @@ const scanQRCode = async () => {
             if (matchFound) {
                 console.log('打卡成功');
                 await addPoints(); // 调用 addPoints 方法增加积分
+                await insertPoints(); //调用插入方法增加积分
             } else {
                 console.log('地址匹配失败');
                 uni.showToast({
@@ -88,6 +91,27 @@ const scanQRCode = async () => {
     }
 };
 
+const insertPoints = async () => {
+    try {
+        const db = uniCloud.database();
+        const collection = db.collection('user_point');
+        const data = {
+            userId: "1", // 用户编号
+            title: point_title.value, // 用户收藏的地址信息
+            points: 10,
+            time: new Date().toISOString().split('T')[0].replace(/-/g, '.'),
+            des: "扫码打卡"
+        };
+        let res = await collection.add(data);
+    } catch (e) {
+        console.error('调用云函数插入数据失败', e);
+        uni.showToast({
+            title: '插入数据失败',
+            icon: 'none'
+        });
+    }
+};
+
 
 // 增加积分
 const addPoints = async () => {
@@ -95,15 +119,15 @@ const addPoints = async () => {
     const pointsToAdd = 10; // 每次增加的积分数
     const checkinToAdd = 1;
     try {
+        console.log("我进入了res");
         const res = await uniCloud.callFunction({
             name: 'updatePoints',
             data: {
                 userId: userId,
                 pointsToAdd: pointsToAdd,
-                checkinToAdd: checkinToAdd,
+                checkinToAdd: checkinToAdd
             }
         });
-
         if (res.result.success && res.result.updated === 1) {
             // 更新成功，更新前端显示的积分和打卡点
             openPoints.value += pointsToAdd;
