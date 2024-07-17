@@ -22,48 +22,72 @@
         </view>
 
         <view class="bottom">
-            <view class="btn-favorite"
-                @click="toggleFavoriteColor">
+            <!-- æœªæ”¶è— -->
+            <view v-if="favoriteStatus"
+                class="btn-favorite"
+                @click="togglefavoriteStatus">
                 <TnIcon name="star"
-                    size="40rpx"
-                    :color="favoriteColor" />
+                    size="40rpx" />
             </view>
 
+            <!-- æ”¶è—åŽ -->
+            <view v-else
+                class="btn-favorite"
+                @click="togglefavoriteStatus">
+                <TnIcon name="star-fill"
+                    size="40rpx"
+                    color="#c1ff31" />
+            </view>
+
+            <!-- ç‚¹å‡»æ‰“å¼€ä»»åŠ¡å¡ç‰‡ -->
             <view class="btn-scan"
-                @click="showTask">
+                @click="handleShowTask">
                 <TnIcon name="scan"
                     offset-top="2rpx"
                     size="40rpx" />
             </view>
         </view>
+
+        <TnPopup v-model="showTask"
+            radius="16rpx"
+            open-direction="bottom">
+            <my-task-card :gif="gif"
+                :title="ques-title"
+                :desc="ques" />
+        </TnPopup>
     </view>
 </template>
 
 <script setup>
-    const props = defineProps(['title', 'thumb', 'desc'])
-    const emits = defineEmits(['close', 'showTask', 'favorite'])
-    import { ref } from 'vue'
-    import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
-    import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
-    import { favorite } from '@/pages/home/map.js'
-    
-    const favoriteColor = ref('#808080');
+    const props = defineProps(['title', 'thumb', 'desc', 'gif', 'ques-title', 'ques']);
+    const emits = defineEmits(['close', 'favorite']);
+    import {
+        ref
+    } from 'vue';
+    import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue';
+    import TnPopup from '@/uni_modules/tuniaoui-vue3/components/popup/src/popup.vue';
+    import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue';
+    import {
+        favorite
+    } from '@/pages/home/map.js';
 
     const close = () => {
-        emits('close')
-    }
+        emits('close');
+    };
 
-    const showTask = () => {
-        emits('showTask');
-    }
+    const favoriteStatus = ref(false);
+    const togglefavoriteStatus = () => {
+        favoriteStatus.value = !favoriteStatus.value;
+    };
 
-    const toggleFavoriteColor = () => {
-        favoriteColor.value = favoriteColor.value === '#808080' ? '#c1ff31' : '#808080';
-        favorite(); // µ÷ÓÃ favorite º¯Êý
+    const showTask = ref(false);
+    const handleShowTask = () => {
+        showTask.value = true;
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss"
+    scoped>
     .my-place-card {
         width: 100%;
         padding: 20rpx;

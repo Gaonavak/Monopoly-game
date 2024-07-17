@@ -18,28 +18,17 @@
             </my-btn-box>
 
             <view class="card-box">
-                <!-- 地点详情 -->
+                <!-- 景点详情和题目 -->
                 <view v-if="showCard"
                     class="card-place">
                     <my-place-card :title="cardData.title"
                         :thumb="cardData.thumb"
                         :desc="cardData.desc"
-                        @close="closePlaceAndTask"
-                        @showTask="handleShowTask" />
+                        :gif="task.gif"
+                        :ques-title="task.title"
+                        :ques="task.desc"
+                        @close="closePlaceAndTask" />
                 </view>
-                <!-- 任务卡片 -->
-                <TnPopup v-model="showTask"
-                    :overlay-closeable="true"
-                    radius="16"
-                    open-direction='bottom'
-                    height="800">
-                    <view class="tn-p-lg tn-white_bg tn-radius center">
-                        <my-task-card :gif="task.gif"
-                            :title="task.title"
-                            :desc="task.desc" />
-                    </view>
-                </TnPopup>
-
             </view>
         </map>
 
@@ -126,10 +115,7 @@
         addressInfoRecomd,
         currentMarkerId,
         cardData,
-        showPopup,
         showCard,
-        showTask,
-        handleShowTask,
         closePlaceAndTask,
         isGetLocation,
         getAuthorizeInfo,
@@ -152,16 +138,6 @@
         isGetLocation(); // 调用获取位置的函数
         await fetchUserData(); // 调用获取用户数据的函数
     });
-
-    // 获取小程序上下文
-    const instance = getCurrentInstance();
-    if (instance) {
-        instance.proxy.$onLoad = (options) => {
-            if (options.showTask === 'true') {
-                showTask.value = true;
-            }
-        };
-    }
 
     const btns = ref([{
             title: '扫描二维码',
