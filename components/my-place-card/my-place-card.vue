@@ -52,14 +52,14 @@
             radius="16rpx"
             open-direction="bottom">
             <my-task-card :gif="gif"
-                :title="ques-title"
+                :title="quesTitle"
                 :desc="ques" />
         </TnPopup>
     </view>
 </template>
 
 <script setup>
-    const props = defineProps(['title', 'thumb', 'desc', 'gif', 'ques-title', 'ques']);
+    const props = defineProps(['title', 'thumb', 'desc', 'gif', 'quesTitle', 'ques']);
     const emits = defineEmits(['close', 'favorite']);
     import {
         ref
