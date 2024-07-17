@@ -9,12 +9,6 @@ export const tabsData = ref([{
     },
     {
         text: '热榜',
-    },
-    {
-        text: '搞笑',
-    },
-    {
-        text: '视频',
     }
 ]);
 

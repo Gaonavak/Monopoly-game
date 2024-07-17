@@ -21,12 +21,12 @@
                 <!-- 景点详情和题目 -->
                 <view v-if="showCard"
                     class="card-place">
-                    <my-place-card :title="cardData.title"
-                        :thumb="cardData.thumb"
-                        :desc="cardData.desc"
-                        :gif="task.gif"
-                        :ques-title="task.title"
-                        :ques="task.desc"
+                    <my-place-card :title="place.title"
+                        :thumb="place.thumb"
+                        :desc="place.desc"
+                        :gif="place.gif"
+                        :quesTitle="place.quesTitle"
+                        :ques="place.desc"
                         @close="closePlaceAndTask" />
                 </view>
             </view>
@@ -95,8 +95,7 @@
         group1,
         group2,
         group3,
-        place,
-        task
+        place
     } from '@/data/pages-home';
 
     import {
