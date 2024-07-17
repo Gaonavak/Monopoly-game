@@ -22,6 +22,7 @@
         </view>
 
         <view class="bottom">
+            <!-- 未收藏 -->
             <view v-if="favoriteStatus"
                 class="btn-favorite"
                 @click="togglefavoriteStatus">
@@ -29,6 +30,7 @@
                     size="40rpx" />
             </view>
 
+            <!-- 收藏后 -->
             <view v-else
                 class="btn-favorite"
                 @click="togglefavoriteStatus">
@@ -37,40 +39,50 @@
                     color="#c1ff31" />
             </view>
 
+            <!-- 点击打开任务卡片 -->
             <view class="btn-scan"
-                @click="showTask">
+                @click="handleShowTask">
                 <TnIcon name="scan"
                     offset-top="2rpx"
                     size="40rpx" />
             </view>
         </view>
+
+        <TnPopup v-model="showTask"
+            radius="16rpx"
+            open-direction="bottom">
+            <my-task-card :gif="gif"
+                :title="ques-title"
+                :desc="ques" />
+        </TnPopup>
     </view>
 </template>
 
 <script setup>
-    const props = defineProps(['title', 'thumb', 'desc'])
-    const emits = defineEmits(['close', 'showTask', 'favorite'])
+    const props = defineProps(['title', 'thumb', 'desc', 'gif', 'ques-title', 'ques']);
+    const emits = defineEmits(['close', 'favorite']);
     import {
         ref
-    } from 'vue'
-    import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue'
-    import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue'
+    } from 'vue';
+    import TnButton from '@/uni_modules/tuniaoui-vue3/components/button/src/button.vue';
+    import TnPopup from '@/uni_modules/tuniaoui-vue3/components/popup/src/popup.vue';
+    import TnIcon from '@/uni_modules/tuniaoui-vue3/components/icon/src/icon.vue';
     import {
         favorite
-    } from '@/pages/home/map.js'
-
-    const favoriteStatus = ref(false);
+    } from '@/pages/home/map.js';
 
     const close = () => {
-        emits('close')
-    }
+        emits('close');
+    };
 
-    const showTask = () => {
-        emits('showTask');
-    }
-
+    const favoriteStatus = ref(false);
     const togglefavoriteStatus = () => {
         favoriteStatus.value = !favoriteStatus.value;
+    };
+
+    const showTask = ref(false);
+    const handleShowTask = () => {
+        showTask.value = true;
     }
 </script>
 

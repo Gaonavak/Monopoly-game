@@ -1,4 +1,6 @@
-import { ref } from 'vue';
+import {
+    ref
+} from 'vue';
 
 export const longitude = ref(117.062956);
 export const latitude = ref(23.434194);
@@ -6,8 +8,7 @@ export const userLatitude = ref(0);
 export const userLongitude = ref(0);
 export const addressInfoRecomd = ref('');
 export const currentMarkerId = ref(null);
-export const markers = ref([
-    {
+export const markers = ref([{
         id: 1,
         latitude: 23.4299,
         longitude: 116.9472,
@@ -52,20 +53,12 @@ export const markers = ref([
         height: 40
     }
 ]);
-export const showPopup = ref(true);
-export const showCard = ref(false);
 export const cardData = ref({});
-export const showTask = ref(false);
+export const showCard = ref(false);
 
 export const closePlaceAndTask = () => {
     showCard.value = false;
-    showTask.value = false;
 };
-
-// 任务卡部分
-export const handleShowTask = () => {
-    showTask.value = true;
-}
 
 // 检查定位权限
 export const isGetLocation = (a = "scope.userLocation") => {
@@ -205,7 +198,10 @@ export const updateMarkers = () => {
 // 点击地图时触发
 export const clickMap = (e) => {
     console.log("点击地图时:", e);
-    const { latitude, longitude } = e.detail;
+    const {
+        latitude,
+        longitude
+    } = e.detail;
     if (currentMarkerId.value !== null) {
         markers.value = markers.value.filter(marker => marker.id !== currentMarkerId.value);
     }
@@ -223,7 +219,9 @@ export const clickMap = (e) => {
 
 // 点击标记点触发
 export const onMarkerTap = (event) => {
-    const { markerId } = event.detail;
+    const {
+        markerId
+    } = event.detail;
     if (markerId === 0) return;
     const marker = markers.value.find(m => m.id === markerId);
     if (marker) {
@@ -246,9 +244,7 @@ export default {
     addressInfoRecomd,
     currentMarkerId,
     cardData,
-    showPopup,
     showCard,
-    handleShowTask,
     isGetLocation,
     getAuthorizeInfo,
     getLocation,
