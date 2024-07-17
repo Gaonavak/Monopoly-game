@@ -9,7 +9,7 @@
         {
             "path": "pages/forum/forum",
             "style": {
-                "navigationBarTitleText": "社区"
+                "navigationBarTitleText": "研学讨论"
             }
         },
         {
@@ -105,7 +105,7 @@
                 "selectedIconPath": "static/tabBar/home-filled.png"
             },
             {
-                "text": "社区",
+                "text": "研学讨论",
                 "pagePath": "pages/forum/forum",
                 "iconPath": "static/forum/chatboxes.png",
                 "selectedIconPath": "static/forum/chatboxes-filled.png"
