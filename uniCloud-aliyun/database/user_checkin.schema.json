@@ -1,0 +1,1 @@
+{"bsonType":"object","required":[],"permission":{"read":true,"create":true,"update":true,"delete":true},"properties":{"_id":{"description":"ID，系统自动生成"},"userId":{"description":"用户特定的编号"},"checkin_area":{"description":"用户打卡的地址"}}}
