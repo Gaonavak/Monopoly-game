@@ -20,7 +20,7 @@
 
                 <view class="btn-scan"
                     @click="scanQRCode">
-                    <TnIcon name="scanQRCode"
+                    <TnIcon name="scan"
                         offset-top="2rpx"
                         size="40rpx" />
                 </view>
