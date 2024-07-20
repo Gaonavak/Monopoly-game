@@ -26,13 +26,13 @@
                     date: '1',
                     status: '打卡成功',
                     content: '南澳岛面积达117.73平方千米，海岸线长94.3千米。',
-                    image: '/static/exhibit.jpg'
+                    image: 'https://www.picgo.net/image/exhibit.koxMSm'
                 },
                 {
                     date: '2',
                     status: '打卡成功',
-                    content: '微信开发者工具真的难用，卡顿，恶心',
-                    image: '/static/exhibit.jpg'
+                    content: '南澳岛面积达117.73平方千米，海岸线长94.3千米。',
+                    image: 'https://www.picgo.net/image/exhibit.koxMSm'
                 },
             ],
         },
@@ -49,7 +49,7 @@
                 {
                     date: '3',
                     status: '打卡成功',
-                    content: '东南西北风，你是罗贯中。',
+                    content: '南澳岛面积达117.73平方千米，海岸线长94.3千米。',
                     image: ''
                 },
             ],

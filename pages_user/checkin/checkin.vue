@@ -103,7 +103,7 @@
         }, {
             title: '未打卡',
             icon: 'close-circle',
-            count: 10 - check_in.value,
+            count: 6 - check_in.value,
             content: '秋风起兮白云飞，草木黄落兮雁南归。兰有秀兮菊有芳，怀佳人兮不能忘。泛楼船兮济汾河，横中流兮扬素波。少壮几时兮奈老何！'
         }];
     };

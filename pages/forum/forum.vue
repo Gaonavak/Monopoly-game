@@ -69,7 +69,7 @@
     } from 'vue';
     const graphicData = {
         id: 1,
-        avatar: '/static/avatar/avatar.jpg',
+        avatar: 'https://www.picgo.net/image/avatar.koxRsl',
         title: '张三',
         description: '2024年7月3日',
         content: '我最近去了一趟南澳旅行，那里的美景让我流连忘返。南澳的自然风光真是令人惊叹，海岸线蜿蜒曲折，碧蓝的海水与白沙滩相映成趣。早晨的日出壮丽无比，仿佛金色的光芒洒满大地，让人心旷神怡。南澳，真是一个值得一去再去的地方。',
@@ -83,9 +83,9 @@
         commentCount: 101,
         likeCount: 102,
         viewUserAvatars: [
-            '/static/avatar/avatar.jpg',
+            'https://www.picgo.net/image/avatar.koxRsl',
             'https://resource.tuniaokj.com/images/album/xiong1.jpg',
-            '/static/avatar/avatar1.jpg',
+            'https://www.picgo.net/image/avatar1.koxjKG',
             'https://0.z.wiki/autoupload/20240714/70CT/2048X2048/03-6.png?type=ha',
             'https://resource.tuniaokj.com/images/album/xiong1.jpg',
             'https://resource.tuniaokj.com/images/album/xiong1.jpg',

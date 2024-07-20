@@ -11,7 +11,8 @@
             :polyline="polyline"
             @regionchange="regionchange"
             @tap="clickMap"
-            @markertap="onMarkerTap">
+            @markertap="onMarkerTap"
+            @callout="onCallout">
 
             <my-btn-box class="btn-box2"
                 :arr="btns">
@@ -21,7 +22,7 @@
                 <!-- 景点详情和题目 -->
                 <view v-if="showCard"
                     class="card-place">
-                    <my-place-card :title="cardData.title"
+                    <my-place-card 
                         :thumb="place.thumb"
                         :desc="cardData.desp"
                         :gif="place.gif"
@@ -125,9 +126,11 @@
         saveAddress,
         updateMarkers,
         clickMap,
-        onMarkerTap
+        onMarkerTap,
     } from '@/pages/home/map.js';
 
+
+    
     const isPlaceCardVisiable = ref(true)
     const handleClose = (res) => {
         isPlaceCardVisiable.value = res;

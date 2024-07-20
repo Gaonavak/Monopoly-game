@@ -43,27 +43,16 @@ const scanQRCode = async () => {
         if (data.latitude && data.longitude) {
             const scannedLatitude = data.latitude;
             const scannedLongitude = data.longitude;
-
-            // 获取云数据库中的地址信息
-            const db = uniCloud.database();
-            const collection = db.collection('address'); // 替换为你的集合名称
-            const dbRes = await collection.get();
-            const locations = dbRes.result.data;
-
+            
             // 遍历数据库中的地址信息，查找是否有匹配的经纬度
             let matchFound = false;
-            for (let location of locations) {
-                if (location.latitude === scannedLatitude && location.longitude === scannedLongitude) {
+           for (let marker of markers.value) {
+                if (marker.latitude === scannedLatitude && marker.longitude === scannedLongitude) {
                     matchFound = true;
 
-                    // 找到匹配的标记点并更新其iconPath
-                    const marker = markers.value.find(marker => marker.latitude === scannedLatitude && marker
-                        .longitude === scannedLongitude);
-                    if (marker) {
-                        point_title.value = marker.title;
-                        marker.iconPath = '/static/map/yellow_pin.png'; // 替换为新的图标路径
-                    }
-
+                    // 找到匹配的标记点并更新其 iconPath
+                    point_title.value = marker.title;
+                    marker.iconPath = '/static/map/yellow_pin.png'; // 替换为新的图标路径
                     break;
                 }
             }

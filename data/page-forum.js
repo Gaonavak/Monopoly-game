@@ -19,7 +19,7 @@ export const videoData = ref([{
     image: 'https://imgcdn.ccmapp.cn/4/860x/dl/source/6461cb7b6ebaf92ed1f83cc0.jpg',
     title: '你好2'
 }, {
-    image: '/static/logo.png',
+    image: 'https://www.picgo.net/image/logo-hello.koxpHy',
     title: '你好3'
 }, {
     image: 'https://imgcdn.ccmapp.cn/4/860x/dl/source/6461cb5f6ebaf92ed1f83cbe.jpg',
@@ -28,6 +28,6 @@ export const videoData = ref([{
     image: 'https://imgcdn.ccmapp.cn/4/860x/dl/source/6461cb7b6ebaf92ed1f83cc0.jpg',
     title: '你好2'
 }, {
-    image: '/static/logo.png',
+    image: 'https://www.picgo.net/image/logo-hello.koxpHy',
     title: '你好3'
 }])

@@ -51,7 +51,7 @@
     } from '@/utils/common.js';
 
     const userName = ref('张三')
-    const avatarUrl = ref('/static/avatar/avatar.jpg');
+    const avatarUrl = ref('https://www.picgo.net/image/avatar.koxRsl');
 </script>
 
 <style lang="scss" scoped>
